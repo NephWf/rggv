@@ -1,7 +1,7 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-09-10T11:52:53.124Z",
+  "exportedAt": "2026-09-10T11:53:06.782Z",
   "state": {
     "player": {
       "name": "NephWolf",
@@ -774,18 +774,30 @@
         "timeMinutes": 0,
         "wheelSpins": 0,
         "piggyDeposit": 0
+      },
+      {
+        "id": "mtvgxcbcjab7s",
+        "hod": 23,
+        "date": "2026-09-10",
+        "dice": 3,
+        "move": "23 → 26",
+        "cellNum": 26,
+        "cellType": "PS1",
+        "game": "asd",
+        "status": "Играется",
+        "time": null,
+        "rating": null,
+        "comment": ""
       }
     ],
-    "phase": "waiting_game",
-    "currentGame": null,
-    "pendingMove": {
-      "from": 23,
-      "to": 26,
-      "dice": 3,
-      "moveStr": "23 → 26",
+    "phase": "playing",
+    "currentGame": {
+      "name": "asd",
       "cellType": "PS1",
-      "direction": "forward"
+      "cellNum": 26,
+      "logId": "mtvgxcbcjab7s"
     },
+    "pendingMove": null,
     "lastDice": 3,
     "rules": "",
     "setupDone": true,
