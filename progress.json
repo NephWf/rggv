@@ -1,23 +1,1502 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": null,
+  "exportedAt": "2026-09-10T11:38:19.112Z",
   "state": {
     "player": {
-      "name": "",
+      "name": "NephWolf",
       "emoji": "🐺",
-      "color": "#7c5cff"
+      "color": "#20c997"
     },
-    "position": 0,
-    "cells": [],
-    "log": [],
-    "phase": "idle",
-    "currentGame": null,
-    "setupDone": false,
-    "points": 0,
-    "spinHistory": [],
+    "position": 23,
+    "cells": [
+      null,
+      {
+        "type": "GBA",
+        "revealed": false
+      },
+      {
+        "type": "Steam",
+        "revealed": false
+      },
+      {
+        "type": "Sonic",
+        "revealed": true
+      },
+      {
+        "type": "Gold",
+        "revealed": true
+      },
+      {
+        "type": "GB",
+        "revealed": false
+      },
+      {
+        "type": "SMD",
+        "revealed": false
+      },
+      {
+        "type": "Playstation",
+        "revealed": false
+      },
+      {
+        "type": "SNES",
+        "revealed": false
+      },
+      {
+        "type": "PS1",
+        "revealed": true
+      },
+      {
+        "type": "Megaman",
+        "revealed": false
+      },
+      {
+        "type": "Disney",
+        "revealed": false
+      },
+      {
+        "type": "PS1",
+        "revealed": false
+      },
+      {
+        "type": "SNES",
+        "revealed": false
+      },
+      {
+        "type": "Movies",
+        "revealed": true
+      },
+      {
+        "type": "Mario",
+        "revealed": false
+      },
+      {
+        "type": "Megaman",
+        "revealed": true
+      },
+      {
+        "type": "GB",
+        "revealed": false
+      },
+      {
+        "type": "DS",
+        "revealed": true
+      },
+      {
+        "type": "Mario",
+        "revealed": false
+      },
+      {
+        "type": "PSP",
+        "revealed": false
+      },
+      {
+        "type": "Steam",
+        "revealed": false
+      },
+      {
+        "type": "Movies",
+        "revealed": false
+      },
+      {
+        "type": "Castlevania",
+        "revealed": true
+      },
+      {
+        "type": "Capcom",
+        "revealed": false
+      },
+      {
+        "type": "Disney",
+        "revealed": false
+      },
+      {
+        "type": "PS1",
+        "revealed": true
+      },
+      {
+        "type": "GBA",
+        "revealed": true
+      },
+      {
+        "type": "DS",
+        "revealed": true
+      },
+      {
+        "type": "SMD",
+        "revealed": true
+      },
+      {
+        "type": "Gold",
+        "revealed": false
+      },
+      {
+        "type": "Mario",
+        "revealed": false
+      },
+      {
+        "type": "Sonic",
+        "revealed": true
+      },
+      {
+        "type": "Comix",
+        "revealed": false
+      },
+      {
+        "type": "GC",
+        "revealed": false
+      },
+      {
+        "type": "Dreamcast",
+        "revealed": false
+      },
+      {
+        "type": "GC",
+        "revealed": false
+      },
+      {
+        "type": "DS",
+        "revealed": false
+      },
+      {
+        "type": "NES",
+        "revealed": false
+      },
+      {
+        "type": "Castlevania",
+        "revealed": false
+      },
+      {
+        "type": "SNES",
+        "revealed": false
+      },
+      {
+        "type": "PS2",
+        "revealed": false
+      },
+      {
+        "type": "3DS",
+        "revealed": false
+      },
+      {
+        "type": "GB",
+        "revealed": false
+      },
+      {
+        "type": "Megaman",
+        "revealed": false
+      },
+      {
+        "type": "Castlevania",
+        "revealed": false
+      },
+      {
+        "type": "Konami",
+        "revealed": false
+      },
+      {
+        "type": "Castlevania",
+        "revealed": false
+      },
+      {
+        "type": "Nintendo",
+        "revealed": false
+      },
+      {
+        "type": "Comix",
+        "revealed": false
+      },
+      {
+        "type": "GB",
+        "revealed": false
+      },
+      {
+        "type": "3DS",
+        "revealed": false
+      },
+      {
+        "type": "SMD",
+        "revealed": false
+      },
+      {
+        "type": "Nintendo",
+        "revealed": false
+      },
+      {
+        "type": "Konami",
+        "revealed": false
+      },
+      {
+        "type": "DS",
+        "revealed": false
+      },
+      {
+        "type": "PS2",
+        "revealed": false
+      },
+      {
+        "type": "PSP",
+        "revealed": false
+      },
+      {
+        "type": "Playstation",
+        "revealed": false
+      },
+      {
+        "type": "Sonic",
+        "revealed": false
+      },
+      {
+        "type": "PS2",
+        "revealed": false
+      },
+      {
+        "type": "Capcom",
+        "revealed": false
+      },
+      {
+        "type": "Nintendo",
+        "revealed": false
+      },
+      {
+        "type": "SMD",
+        "revealed": false
+      },
+      {
+        "type": "Comix",
+        "revealed": false
+      },
+      {
+        "type": "Dreamcast",
+        "revealed": false
+      },
+      {
+        "type": "PSP",
+        "revealed": false
+      },
+      {
+        "type": "Disney",
+        "revealed": false
+      },
+      {
+        "type": "Playstation",
+        "revealed": false
+      },
+      {
+        "type": "Capcom",
+        "revealed": false
+      },
+      {
+        "type": "Movies",
+        "revealed": false
+      },
+      {
+        "type": "GBA",
+        "revealed": false
+      },
+      {
+        "type": "Dreamcast",
+        "revealed": false
+      },
+      {
+        "type": "Movies",
+        "revealed": false
+      },
+      {
+        "type": "3DS",
+        "revealed": false
+      },
+      {
+        "type": "Steam",
+        "revealed": false
+      },
+      {
+        "type": "GC",
+        "revealed": false
+      },
+      {
+        "type": "PS1",
+        "revealed": false
+      },
+      {
+        "type": "Megaman",
+        "revealed": false
+      },
+      {
+        "type": "Disney",
+        "revealed": false
+      },
+      {
+        "type": "Gold",
+        "revealed": false
+      },
+      {
+        "type": "GBA",
+        "revealed": false
+      },
+      {
+        "type": "SNES",
+        "revealed": false
+      },
+      {
+        "type": "NES",
+        "revealed": false
+      },
+      {
+        "type": "PS2",
+        "revealed": false
+      },
+      {
+        "type": "Konami",
+        "revealed": false
+      },
+      {
+        "type": "Dreamcast",
+        "revealed": false
+      },
+      {
+        "type": "Nintendo",
+        "revealed": false
+      },
+      {
+        "type": "Capcom",
+        "revealed": false
+      },
+      {
+        "type": "Playstation",
+        "revealed": false
+      },
+      {
+        "type": "Steam",
+        "revealed": false
+      },
+      {
+        "type": "Mario",
+        "revealed": false
+      },
+      {
+        "type": "Comix",
+        "revealed": false
+      },
+      {
+        "type": "3DS",
+        "revealed": false
+      },
+      {
+        "type": "PSP",
+        "revealed": false
+      },
+      {
+        "type": "Gold",
+        "revealed": false
+      },
+      {
+        "type": "GC",
+        "revealed": false
+      },
+      {
+        "type": "NES",
+        "revealed": false
+      },
+      {
+        "type": "Sonic",
+        "revealed": false
+      },
+      {
+        "type": "Konami",
+        "revealed": false
+      },
+      {
+        "type": "NES",
+        "revealed": false
+      }
+    ],
+    "log": [
+      {
+        "id": "mt0g9qejalazu",
+        "hod": 1,
+        "date": "2026-08-19",
+        "dice": 4,
+        "move": "0 → 4",
+        "cellNum": 4,
+        "cellType": "Gold",
+        "game": "Nightshade: The Claws of HEUGH (NES)",
+        "status": "Дроп",
+        "time": "0",
+        "rating": null,
+        "comment": "квест....",
+        "timeMinutes": 0,
+        "wheelSpins": 0
+      },
+      {
+        "id": "mt0gb2cjigaij",
+        "hod": 2,
+        "date": "2026-08-19",
+        "dice": 4,
+        "move": "4 → 0",
+        "cellNum": 0,
+        "cellType": "Старт",
+        "game": "—",
+        "status": "Старт",
+        "time": null,
+        "rating": null,
+        "comment": "Вернулся на Старт"
+      },
+      {
+        "id": "mt0ghny96407k",
+        "hod": 3,
+        "date": "2026-08-19",
+        "dice": 3,
+        "move": "0 → 3",
+        "cellNum": 3,
+        "cellType": "Sonic",
+        "game": "Sonic the Hedgehog 4: Episode I (STEAM)",
+        "status": "Пройдено",
+        "time": "3 ч 25 мин",
+        "rating": 7,
+        "comment": "Кайфовая игра.",
+        "timeMinutes": 205,
+        "wheelSpins": 5,
+        "piggyDeposit": 5
+      },
+      {
+        "id": "mt0pc1sdzv4ut",
+        "hod": 4,
+        "date": "2026-08-19",
+        "dice": 3,
+        "move": "3 → 9 (кубик 3 + 3 очк.)",
+        "cellNum": 9,
+        "cellType": "PS1",
+        "game": "Nantettantei Idol: The Jigsaw Puzzle",
+        "status": "Пройдено",
+        "time": "6 ч 33 мин",
+        "rating": 6,
+        "comment": "Пузл",
+        "timeMinutes": 393,
+        "wheelSpins": 8,
+        "piggyDeposit": 13
+      },
+      {
+        "id": "mt1y6wttic40m",
+        "hod": 5,
+        "date": "2026-08-20",
+        "dice": 5,
+        "move": "9 → 14",
+        "cellNum": 14,
+        "cellType": "Movies",
+        "game": "Iron Man (NDS)",
+        "status": "Пройдено",
+        "time": "2 ч 25 мин",
+        "rating": 6,
+        "comment": "",
+        "timeMinutes": 145,
+        "wheelSpins": 3,
+        "piggyDeposit": 40
+      },
+      {
+        "id": "mt2vb9l68q44o",
+        "hod": 6,
+        "date": "2026-08-21",
+        "dice": 2,
+        "move": "14 → 16",
+        "cellNum": 16,
+        "cellType": "Megaman",
+        "game": "Mega Man II (GB)",
+        "status": "Пройдено",
+        "time": "1 ч 25 мин",
+        "rating": 6.5,
+        "comment": "",
+        "timeMinutes": 85,
+        "wheelSpins": 2,
+        "piggyDeposit": 20
+      },
+      {
+        "id": "mt2yqtwxjij84",
+        "hod": 7,
+        "date": "2026-08-21",
+        "dice": 2,
+        "move": "16 → 18",
+        "cellNum": 18,
+        "cellType": "DS",
+        "game": "Dirt 2",
+        "status": "Пройдено",
+        "time": "5 ч 25 мин",
+        "rating": 5.5,
+        "comment": "Гонки не моё",
+        "timeMinutes": 325,
+        "wheelSpins": 8,
+        "piggyDeposit": 5
+      },
+      {
+        "id": "mt8hbr6mex4dg",
+        "hod": 8,
+        "date": "2026-08-25",
+        "dice": 1,
+        "move": "18 → 26 (кубик 1 + 7 очк.)",
+        "cellNum": 26,
+        "cellType": "PS1",
+        "game": "Simple 1500 Series Vol. 87: The Kyoutei",
+        "status": "Пройдено",
+        "time": "45 мин",
+        "rating": 5,
+        "comment": "Счастливый билетик",
+        "timeMinutes": 45,
+        "wheelSpins": 1,
+        "piggyDeposit": 15
+      },
+      {
+        "id": "mt8jb1ls5am63",
+        "hod": 9,
+        "date": "2026-08-25",
+        "dice": 5,
+        "move": "26 → 32 (кубик 5 + 1 очк.)",
+        "cellNum": 32,
+        "cellType": "Sonic",
+        "game": "Sonic Advance 3 (GBA)",
+        "status": "Дроп",
+        "time": "5 ч 10 мин",
+        "rating": 2,
+        "comment": "ЕБАЛ СОНИКА",
+        "timeMinutes": 310,
+        "wheelSpins": 6,
+        "piggyDeposit": 55
+      },
+      {
+        "id": "mtfxxz52dmhtx",
+        "hod": 10,
+        "date": "2026-08-30",
+        "dice": 6,
+        "move": "32 → 26",
+        "cellNum": 26,
+        "cellType": "PS1",
+        "game": "EOS: Edge of Skyhigh",
+        "status": "Пройдено",
+        "time": "2 ч 5 мин",
+        "rating": 7,
+        "comment": "Прикольно",
+        "timeMinutes": 125,
+        "wheelSpins": 3,
+        "piggyDeposit": 20
+      },
+      {
+        "id": "mtg3p402bznqq",
+        "hod": 11,
+        "date": "2026-08-30",
+        "dice": 6,
+        "move": "26 → 32",
+        "cellNum": 32,
+        "cellType": "Sonic",
+        "game": "Sonic Battle (GBA)",
+        "status": "Дроп",
+        "time": "2 мин",
+        "rating": null,
+        "comment": "ЕБАЛ СОНИКА",
+        "timeMinutes": 2,
+        "wheelSpins": 0,
+        "piggyDeposit": 2
+      },
+      {
+        "id": "mtg45k77jmi80",
+        "hod": 12,
+        "date": "2026-08-30",
+        "dice": null,
+        "move": "28 (реролл)",
+        "cellNum": 28,
+        "cellType": "DS",
+        "game": "Dancing with the Stars: We Dance!",
+        "status": "Пройдено",
+        "time": "20 мин",
+        "rating": 5,
+        "comment": "",
+        "timeMinutes": 20,
+        "wheelSpins": 0,
+        "piggyDeposit": 20
+      },
+      {
+        "id": "mtg5dbz1u7p7a",
+        "hod": 13,
+        "date": "2026-08-30",
+        "dice": 1,
+        "move": "28 → 29",
+        "cellNum": 29,
+        "cellType": "SMD",
+        "game": "Bubsy 2 (SMD)",
+        "status": "Реролл",
+        "time": "30 мин",
+        "rating": null,
+        "comment": "кал [инвентарь]",
+        "timeMinutes": 30,
+        "wheelSpins": 1
+      },
+      {
+        "id": "mtg6x4yhz812u",
+        "hod": 14,
+        "date": "2026-08-30",
+        "dice": null,
+        "move": "29 (реролл)",
+        "cellNum": 29,
+        "cellType": "SMD",
+        "game": "Flicky (SMD)",
+        "status": "Дроп",
+        "time": "8 мин",
+        "rating": null,
+        "comment": "",
+        "timeMinutes": 8,
+        "wheelSpins": 0,
+        "piggyDeposit": 8
+      },
+      {
+        "id": "mtg7k19m56t9r",
+        "hod": 15,
+        "date": "2026-08-30",
+        "dice": 3,
+        "move": "29 → 26",
+        "cellNum": 26,
+        "cellType": "PS1",
+        "game": "Courier Crisis",
+        "status": "Реролл",
+        "time": "1 ч 5 мин",
+        "rating": null,
+        "comment": "Кал лагучий, не приятный и сломанный [инвентарь]",
+        "timeMinutes": 65,
+        "wheelSpins": 2
+      },
+      {
+        "id": "mthalvb8pv2j2",
+        "hod": 16,
+        "date": "2026-08-31",
+        "dice": null,
+        "move": "26 (реролл)",
+        "cellNum": 26,
+        "cellType": "PS1",
+        "game": "Galeoz (PS1)",
+        "status": "Пройдено",
+        "time": "1 ч 20 мин",
+        "rating": 6.5,
+        "comment": "Прикольная, от первого лица играть невозможно",
+        "timeMinutes": 80,
+        "wheelSpins": 2,
+        "piggyDeposit": 15
+      },
+      {
+        "id": "mthdxwukut8je",
+        "hod": 17,
+        "date": "2026-08-31",
+        "dice": 1,
+        "move": "26 → 27",
+        "cellNum": 27,
+        "cellType": "GBA",
+        "game": "Santa Claus Saves the Earth",
+        "status": "Реролл",
+        "time": null,
+        "rating": null,
+        "comment": "Кал прифаером [инвентарь]"
+      },
+      {
+        "id": "mtk35tez1bw8j",
+        "hod": 18,
+        "date": "2026-09-02",
+        "dice": null,
+        "move": "27 (реролл)",
+        "cellNum": 27,
+        "cellType": "GBA",
+        "game": "Who Wants to be a Millionaire Junior Edition",
+        "status": "Пройдено",
+        "time": "29 мин",
+        "rating": 7,
+        "comment": "",
+        "timeMinutes": 29,
+        "wheelSpins": 0,
+        "piggyDeposit": 29
+      },
+      {
+        "id": "mtk4miq4sndlr",
+        "hod": 19,
+        "date": "2026-09-02",
+        "dice": 2,
+        "move": "27 → 29",
+        "cellNum": 29,
+        "cellType": "SMD",
+        "game": "Jeopardy! Sports Edition",
+        "status": "Реролл",
+        "time": null,
+        "rating": null,
+        "comment": "Реролл [инвентарь]"
+      },
+      {
+        "id": "mtk4vhij1amsb",
+        "hod": 20,
+        "date": "2026-09-02",
+        "dice": null,
+        "move": "29 (реролл)",
+        "cellNum": 29,
+        "cellType": "SMD",
+        "game": "Fire Mustang",
+        "status": "Дроп",
+        "time": "33 мин",
+        "rating": null,
+        "comment": "Ебал сегу",
+        "timeMinutes": 33,
+        "wheelSpins": 1,
+        "piggyDeposit": 3
+      },
+      {
+        "id": "mtk7eslt669ue",
+        "hod": 21,
+        "date": "2026-09-02",
+        "dice": 1,
+        "move": "29 → 28",
+        "cellNum": 28,
+        "cellType": "DS",
+        "game": "Power Rangers: Super Legends",
+        "status": "Дроп",
+        "time": "2 ч 30 мин",
+        "rating": 2,
+        "comment": "кал на 10 часов",
+        "timeMinutes": 150,
+        "wheelSpins": 4,
+        "piggyDeposit": 0
+      },
+      {
+        "id": "mtudaw2wutcod",
+        "hod": 22,
+        "date": "2026-09-09",
+        "dice": 5,
+        "move": "28 → 23",
+        "cellNum": 23,
+        "cellType": "Castlevania",
+        "game": "Castlevania II: Belmont's Revenge (GBC)",
+        "status": "Играется",
+        "time": null,
+        "rating": null,
+        "comment": ""
+      }
+    ],
+    "phase": "playing",
+    "currentGame": {
+      "name": "Castlevania II: Belmont's Revenge (GBC)",
+      "cellType": "Castlevania",
+      "cellNum": 23,
+      "logId": "mtudaw2wutcod"
+    },
+    "pendingMove": null,
+    "lastDice": 5,
+    "rules": "",
+    "setupDone": true,
+    "theme": "dark",
+    "appColors": {
+      "accent": "#7c5cff",
+      "accentHover": "#9b82ff",
+      "platform": "#4dabf7",
+      "special": "#f06595",
+      "green": "#3dd68c",
+      "red": "#ff6b6b"
+    },
+    "points": -1,
+    "currentGameSpins": 0,
+    "currentGameWheelMinutes": 0,
+    "spinHistory": [
+      {
+        "id": "mt0hx8qcufow8",
+        "date": "2026-08-19",
+        "game": "Sonic the Hedgehog 4: Episode I (STEAM)",
+        "title": "Шаровая молния",
+        "detail": "d6=6 → −6",
+        "delta": -6,
+        "pointsAfter": -6,
+        "cost": 30,
+        "gameId": "mt0ghny96407k"
+      },
+      {
+        "id": "mt0j6y263d0q6",
+        "date": "2026-08-19",
+        "game": "Sonic the Hedgehog 4: Episode I (STEAM)",
+        "title": "Два по цене одного",
+        "detail": "Компетитив перхапс (+5) + Орел или решка (+1)",
+        "delta": 6,
+        "pointsAfter": 0,
+        "cost": 35,
+        "gameId": "mt0ghny96407k"
+      },
+      {
+        "id": "mt0kt8wlrwgww",
+        "date": "2026-08-19",
+        "game": "Sonic the Hedgehog 4: Episode I (STEAM)",
+        "title": "Тройное очко",
+        "detail": "+3",
+        "delta": 3,
+        "pointsAfter": 3,
+        "cost": 40,
+        "gameId": "mt0ghny96407k"
+      },
+      {
+        "id": "mt0mhbureynfn",
+        "date": "2026-08-19",
+        "game": "Sonic the Hedgehog 4: Episode I (STEAM)",
+        "title": "Контролер рандома",
+        "detail": "загадал 3, d6=6",
+        "delta": -1,
+        "pointsAfter": 2,
+        "cost": 45,
+        "gameId": "mt0ghny96407k"
+      },
+      {
+        "id": "mt0p1i29agjr9",
+        "date": "2026-08-19",
+        "game": "Sonic the Hedgehog 4: Episode I (STEAM)",
+        "title": "Плюс очко",
+        "detail": "+1",
+        "delta": 1,
+        "pointsAfter": 3,
+        "cost": 50,
+        "gameId": "mt0ghny96407k"
+      },
+      {
+        "id": "mt1ika86bkpfm",
+        "date": "2026-08-20",
+        "game": "Nantettantei Idol: The Jigsaw Puzzle",
+        "title": "Шаровая молния",
+        "detail": "d6=2 → −2",
+        "delta": -2,
+        "pointsAfter": -2,
+        "cost": 30,
+        "gameId": "mt0pc1sdzv4ut"
+      },
+      {
+        "id": "mt1jtxtyt0s71",
+        "date": "2026-08-20",
+        "game": "Nantettantei Idol: The Jigsaw Puzzle",
+        "title": "Контролер рандома",
+        "detail": "загадал 4, d6=6",
+        "delta": -1,
+        "pointsAfter": -3,
+        "cost": 35,
+        "gameId": "mt0pc1sdzv4ut"
+      },
+      {
+        "id": "mt1m75cpr6knx",
+        "date": "2026-08-20",
+        "game": "Nantettantei Idol: The Jigsaw Puzzle",
+        "title": "Орел или решка",
+        "detail": "орёл → +1",
+        "delta": 1,
+        "pointsAfter": -2,
+        "cost": 40,
+        "gameId": "mt0pc1sdzv4ut"
+      },
+      {
+        "id": "mt1o0rhqpr02h",
+        "date": "2026-08-20",
+        "game": "Nantettantei Idol: The Jigsaw Puzzle",
+        "title": "Пиздак",
+        "detail": "−3",
+        "delta": -3,
+        "pointsAfter": -5,
+        "cost": 45,
+        "gameId": "mt0pc1sdzv4ut"
+      },
+      {
+        "id": "mt1quf60uqi26",
+        "date": "2026-08-20",
+        "game": "Nantettantei Idol: The Jigsaw Puzzle",
+        "title": "Минус очко",
+        "detail": "−1",
+        "delta": -1,
+        "pointsAfter": -6,
+        "cost": 50,
+        "gameId": "mt0pc1sdzv4ut"
+      },
+      {
+        "id": "mt1sap8nb767x",
+        "date": "2026-08-20",
+        "game": "Nantettantei Idol: The Jigsaw Puzzle",
+        "title": "Два по цене одного",
+        "detail": "Плюс очко (+1) + Орел орел или решка решка (+2)",
+        "delta": 3,
+        "pointsAfter": -3,
+        "cost": 55,
+        "gameId": "mt0pc1sdzv4ut"
+      },
+      {
+        "id": "mt1va3aqy6m55",
+        "date": "2026-08-20",
+        "game": "Nantettantei Idol: The Jigsaw Puzzle",
+        "title": "Орел или решка",
+        "detail": "орёл → +1",
+        "delta": 1,
+        "pointsAfter": -2,
+        "cost": 60,
+        "gameId": "mt0pc1sdzv4ut"
+      },
+      {
+        "id": "mt1xg39wddffv",
+        "date": "2026-08-20",
+        "game": "Nantettantei Idol: The Jigsaw Puzzle",
+        "title": "Компетитив перхапс",
+        "detail": "выпало -9",
+        "delta": -9,
+        "pointsAfter": -11,
+        "cost": 65,
+        "gameId": "mt0pc1sdzv4ut"
+      },
+      {
+        "id": "mt2qrzqzjc0dm",
+        "date": "2026-08-21",
+        "game": "Iron Man (NDS)",
+        "title": "Два по цене одного",
+        "detail": "Подсрачник (-2) + Цепная молния (+5)",
+        "delta": 3,
+        "pointsAfter": -8,
+        "cost": 30,
+        "gameId": "mt1y6wttic40m"
+      },
+      {
+        "id": "mt2s4spos3ia7",
+        "date": "2026-08-21",
+        "game": "Iron Man (NDS)",
+        "title": "Компетитив перхапс",
+        "detail": "выпало -1",
+        "delta": -1,
+        "pointsAfter": -9,
+        "cost": 35,
+        "gameId": "mt1y6wttic40m"
+      },
+      {
+        "id": "mt2togrz7ad74",
+        "date": "2026-08-21",
+        "game": "Iron Man (NDS)",
+        "title": "Минус очко",
+        "detail": "−1",
+        "delta": -1,
+        "pointsAfter": -10,
+        "cost": 40,
+        "gameId": "mt1y6wttic40m"
+      },
+      {
+        "id": "mt2wqden0eyl7",
+        "date": "2026-08-21",
+        "game": "Mega Man II (GB)",
+        "title": "Орел или решка",
+        "detail": "решка → -1",
+        "delta": -1,
+        "pointsAfter": -11,
+        "cost": 30,
+        "gameId": "mt2vb9l68q44o"
+      },
+      {
+        "id": "mt2y04dqpabfc",
+        "date": "2026-08-21",
+        "game": "Mega Man II (GB)",
+        "title": "Компетитив перхапс",
+        "detail": "выпало -1",
+        "delta": -1,
+        "pointsAfter": -12,
+        "cost": 35,
+        "gameId": "mt2vb9l68q44o"
+      },
+      {
+        "id": "mt306sd4dao8l",
+        "date": "2026-08-21",
+        "game": "Dirt 2",
+        "title": "Пиздак",
+        "detail": "−3",
+        "delta": -3,
+        "pointsAfter": -15,
+        "cost": 30,
+        "gameId": "mt2yqtwxjij84"
+      },
+      {
+        "id": "mt750g3ggyfha",
+        "date": "2026-08-24",
+        "game": "Dirt 2",
+        "title": "Два по цене одного",
+        "detail": "Подсрачник (-2) + Контролер рандома (-1)",
+        "delta": -3,
+        "pointsAfter": -18,
+        "cost": 35,
+        "gameId": "mt2yqtwxjij84"
+      },
+      {
+        "id": "mt76hb0dcd4ls",
+        "date": "2026-08-24",
+        "game": "Dirt 2",
+        "title": "Орел орел или решка решка",
+        "detail": "решка → -2",
+        "delta": -2,
+        "pointsAfter": -20,
+        "cost": 40,
+        "gameId": "mt2yqtwxjij84"
+      },
+      {
+        "id": "mt784ldt92mwh",
+        "date": "2026-08-24",
+        "game": "Dirt 2",
+        "title": "Рандомайзер",
+        "detail": "−d6=3",
+        "delta": -3,
+        "pointsAfter": -23,
+        "cost": 45,
+        "gameId": "mt2yqtwxjij84"
+      },
+      {
+        "id": "mt7a2n7jtqplt",
+        "date": "2026-08-24",
+        "game": "Dirt 2",
+        "title": "Двадцатигранник",
+        "detail": "d20=7 → +1",
+        "delta": 1,
+        "pointsAfter": -22,
+        "cost": 50,
+        "gameId": "mt2yqtwxjij84"
+      },
+      {
+        "id": "mt7c1ydko4p5m",
+        "date": "2026-08-24",
+        "game": "Dirt 2",
+        "title": "Обнуление",
+        "detail": "Обнуление",
+        "delta": 0,
+        "pointsAfter": 0,
+        "cost": 55,
+        "gameId": "mt2yqtwxjij84"
+      },
+      {
+        "id": "mt7d63f06e7p8",
+        "date": "2026-08-24",
+        "game": "Dirt 2",
+        "title": "Плюс очко",
+        "detail": "+1",
+        "delta": 1,
+        "pointsAfter": 1,
+        "cost": 30,
+        "gameId": "mt2yqtwxjij84"
+      },
+      {
+        "id": "mt8g9055ppr2z",
+        "date": "2026-08-25",
+        "game": "Dirt 2",
+        "gameId": "mt2yqtwxjij84",
+        "title": "Компетитив перхапс",
+        "detail": "выпало +6",
+        "delta": 6,
+        "pointsAfter": 7,
+        "cost": 35
+      },
+      {
+        "id": "mt8im81285v14",
+        "date": "2026-08-25",
+        "game": "Simple 1500 Series Vol. 87: The Kyoutei",
+        "gameId": "mt8hbr6mex4dg",
+        "title": "Плюс очко",
+        "detail": "+1",
+        "delta": 1,
+        "pointsAfter": 1,
+        "cost": 30
+      },
+      {
+        "id": "mt8kidmtily5x",
+        "date": "2026-08-25",
+        "game": "Sonic Advance 3 (GBA)",
+        "gameId": "mt8jb1ls5am63",
+        "title": "Пиздак",
+        "detail": "−3",
+        "delta": -3,
+        "pointsAfter": -3,
+        "cost": 30
+      },
+      {
+        "id": "mta5t11j2vjfo",
+        "date": "2026-08-26",
+        "game": "Sonic Advance 3 (GBA)",
+        "gameId": "mt8jb1ls5am63",
+        "title": "Цепная молния",
+        "detail": "d6=3 → +3",
+        "delta": 3,
+        "pointsAfter": 0,
+        "cost": 35
+      },
+      {
+        "id": "mta6v0x3e9bc6",
+        "date": "2026-08-26",
+        "game": "Sonic Advance 3 (GBA)",
+        "gameId": "mt8jb1ls5am63",
+        "title": "Орел орел или решка решка",
+        "detail": "решка → -2",
+        "delta": -2,
+        "pointsAfter": -2,
+        "cost": 40
+      },
+      {
+        "id": "mta8m6b7x4xf4",
+        "date": "2026-08-26",
+        "game": "Sonic Advance 3 (GBA)",
+        "gameId": "mt8jb1ls5am63",
+        "title": "Двадцатигранник",
+        "detail": "d20=14 → -1",
+        "delta": -1,
+        "pointsAfter": -3,
+        "cost": 45
+      },
+      {
+        "id": "mtcyleuigmnok",
+        "date": "2026-08-28",
+        "game": "Sonic Advance 3 (GBA)",
+        "gameId": "mt8jb1ls5am63",
+        "title": "Орел орел или решка решка",
+        "detail": "решка → -2",
+        "delta": -2,
+        "pointsAfter": -5,
+        "cost": 50
+      },
+      {
+        "id": "mtd0ky12839gy",
+        "date": "2026-08-28",
+        "game": "Sonic Advance 3 (GBA)",
+        "gameId": "mt8jb1ls5am63",
+        "title": "Компетитив перхапс",
+        "detail": "выпало +8",
+        "delta": 8,
+        "pointsAfter": 3,
+        "cost": 55
+      },
+      {
+        "id": "mtfzq83dsn729",
+        "date": "2026-08-30",
+        "game": "EOS: Edge of Skyhigh",
+        "gameId": "mtfxxz52dmhtx",
+        "title": "Минус очко",
+        "detail": "−1",
+        "delta": -1,
+        "pointsAfter": 2,
+        "cost": 30
+      },
+      {
+        "id": "mtg10gofsofem",
+        "date": "2026-08-30",
+        "game": "EOS: Edge of Skyhigh",
+        "gameId": "mtfxxz52dmhtx",
+        "title": "Шаровая молния",
+        "detail": "d6=5 → −5",
+        "delta": -5,
+        "pointsAfter": -3,
+        "cost": 35
+      },
+      {
+        "id": "mtg2h6g7lmxqv",
+        "date": "2026-08-30",
+        "game": "EOS: Edge of Skyhigh",
+        "gameId": "mtfxxz52dmhtx",
+        "title": "Шаровая молния",
+        "detail": "d6=6 → −6",
+        "delta": -6,
+        "pointsAfter": -9,
+        "cost": 40
+      },
+      {
+        "id": "mtg6hu3ad7zw3",
+        "date": "2026-08-30",
+        "game": "Bubsy 2 (SMD)",
+        "gameId": "mtg5dbz1u7p7a",
+        "title": "Рандомайзер",
+        "detail": "−d6=4",
+        "delta": -4,
+        "pointsAfter": -13,
+        "cost": 30
+      },
+      {
+        "id": "mth30jalgr9oy",
+        "date": "2026-08-31",
+        "game": "Courier Crisis",
+        "gameId": "mtg7k19m56t9r",
+        "title": "Пиздак",
+        "detail": "−3",
+        "delta": -3,
+        "pointsAfter": -16,
+        "cost": 30
+      },
+      {
+        "id": "mth49vwda47px",
+        "date": "2026-08-31",
+        "game": "Courier Crisis",
+        "gameId": "mtg7k19m56t9r",
+        "title": "Орел орел или решка решка",
+        "detail": "решка → -2",
+        "delta": -2,
+        "pointsAfter": -18,
+        "cost": 35
+      },
+      {
+        "id": "mthbwby07evaw",
+        "date": "2026-08-31",
+        "game": "Galeoz (PS1)",
+        "gameId": "mthalvb8pv2j2",
+        "title": "Тройное очко",
+        "detail": "+3",
+        "delta": 3,
+        "pointsAfter": -15,
+        "cost": 30
+      },
+      {
+        "id": "mthd7zyt4wegy",
+        "date": "2026-08-31",
+        "game": "Galeoz (PS1)",
+        "gameId": "mthalvb8pv2j2",
+        "title": "Финишный ветер",
+        "detail": "клетка 26 → -1",
+        "delta": -1,
+        "pointsAfter": -16,
+        "cost": 35
+      },
+      {
+        "id": "mtk61xoafzqln",
+        "date": "2026-09-02",
+        "game": "Fire Mustang",
+        "gameId": "mtk4vhij1amsb",
+        "title": "Смена полюса",
+        "detail": "-16 → 16",
+        "delta": 32,
+        "pointsAfter": 16,
+        "cost": 30
+      },
+      {
+        "id": "mtk7f2bk1p1vq",
+        "date": "2026-09-02",
+        "game": "Power Rangers: Super Legends",
+        "gameId": "mtk7eslt669ue",
+        "title": "Шаровая молния",
+        "detail": "d6=6 → −6",
+        "delta": -6,
+        "pointsAfter": 10,
+        "cost": 30
+      },
+      {
+        "id": "mtk8uoqvofxtn",
+        "date": "2026-09-02",
+        "game": "Power Rangers: Super Legends",
+        "gameId": "mtk7eslt669ue",
+        "title": "Два по цене одного",
+        "detail": "Подсрачник (-2) + Пиздак (-3)",
+        "delta": -5,
+        "pointsAfter": 5,
+        "cost": 35
+      },
+      {
+        "id": "mtkae7rl7s1ky",
+        "date": "2026-09-02",
+        "game": "Power Rangers: Super Legends",
+        "gameId": "mtk7eslt669ue",
+        "title": "Пиздак",
+        "detail": "−3",
+        "delta": -3,
+        "pointsAfter": 2,
+        "cost": 40
+      },
+      {
+        "id": "mtkc286dt9req",
+        "date": "2026-09-02",
+        "game": "Power Rangers: Super Legends",
+        "gameId": "mtk7eslt669ue",
+        "title": "Стрик",
+        "detail": "последняя игра Дроп → −3",
+        "delta": -3,
+        "pointsAfter": -1,
+        "cost": 45
+      }
+    ],
+    "wheelItems": [
+      {
+        "id": "w0_plus1",
+        "title": "Плюс очко",
+        "description": "Очевидное плюс очко.",
+        "key": "plus1"
+      },
+      {
+        "id": "w1_minus1",
+        "title": "Минус очко",
+        "description": "Очевидное минус очко.",
+        "key": "minus1"
+      },
+      {
+        "id": "w2_minus2",
+        "title": "Подсрачник",
+        "description": "Минус 2 очка.",
+        "key": "minus2"
+      },
+      {
+        "id": "w3_minus3",
+        "title": "Пиздак",
+        "description": "Минус 3 очка.",
+        "key": "minus3"
+      },
+      {
+        "id": "w4_plus2",
+        "title": "Двойное очко",
+        "description": "Очевидные плюс 2 очка.",
+        "key": "plus2"
+      },
+      {
+        "id": "w5_plus3",
+        "title": "Тройное очко",
+        "description": "Очевидные плюс 3 очка.",
+        "key": "plus3"
+      },
+      {
+        "id": "w6_coin1",
+        "title": "Орел или решка",
+        "description": "Брось монетку: один исход — плюс очко, другой — минус очко.",
+        "key": "coin1"
+      },
+      {
+        "id": "w7_double",
+        "title": "Два по цене одного",
+        "description": "Колесо роллится ещё два раза. Выполняются оба результата (рероллы колеса игнорируются).",
+        "key": "double"
+      },
+      {
+        "id": "w8_reset",
+        "title": "Обнуление",
+        "description": "Очки = 0. Все рероллы уничтожаются. Серия прохождений сбрасывается. Стоимость следующих прокрутов — снова с 30 мин. Уже накрученное время за игру сохраняется.",
+        "key": "reset"
+      },
+      {
+        "id": "w9_chain_plus",
+        "title": "Цепная молния",
+        "description": "Брось d6 и получи столько плюс очков, сколько выпало.",
+        "key": "chain_plus"
+      },
+      {
+        "id": "w10_chain_minus",
+        "title": "Шаровая молния",
+        "description": "Брось d6 и получи столько минус очков, сколько выпало.",
+        "key": "chain_minus"
+      },
+      {
+        "id": "w11_randomizer",
+        "title": "Рандомайзер",
+        "description": "Монетка (плюс/минус), затем d6 — добавляешь или вычитаешь выпавшее.",
+        "key": "randomizer"
+      },
+      {
+        "id": "w12_coin2",
+        "title": "Орел орел или решка решка",
+        "description": "Монетка: плюс 2 очка или минус 2 очка.",
+        "key": "coin2"
+      },
+      {
+        "id": "w13_comp",
+        "title": "Компетитив перхапс",
+        "description": "Случайное число от −10 до +10 без нуля.",
+        "key": "comp"
+      },
+      {
+        "id": "w14_controller",
+        "title": "Контролер рандома",
+        "description": "Загадай число 1–6, брось d6. Совпало — плюс 3, иначе минус 1.",
+        "key": "controller"
+      },
+      {
+        "id": "w15_risk",
+        "title": "Риск",
+        "description": "d4: чётное прибавляет, нечётное минусует это число.",
+        "key": "risk"
+      },
+      {
+        "id": "w16_d20",
+        "title": "Двадцатигранник",
+        "description": "d20: 1–3 = −2; 4–10 = +1; 11–17 = −1; 18–20 = +2.",
+        "key": "d20"
+      },
+      {
+        "id": "w17_karma",
+        "title": "Карма",
+        "description": "Если за эту игру плюсов уже больше, чем минусов — −2. Иначе +2.",
+        "key": "karma"
+      },
+      {
+        "id": "w18_double_risk",
+        "title": "Двойной риск",
+        "description": "Монетка: затем d8 в плюс или d8 в минус.",
+        "key": "double_risk"
+      },
+      {
+        "id": "w19_polarity",
+        "title": "Смена полюса",
+        "description": "Все текущие очки инвертируются.",
+        "key": "polarity"
+      },
+      {
+        "id": "w20_finish_wind",
+        "title": "Финишный ветер",
+        "description": "Если клетка ≥ 51 — +3. Иначе −1.",
+        "key": "finish_wind"
+      },
+      {
+        "id": "w21_tail_wind",
+        "title": "Попутный ветер",
+        "description": "Если клетка ≤ 50 — +3. Иначе −1.",
+        "key": "tail_wind"
+      },
+      {
+        "id": "w22_streak",
+        "title": "Стрик",
+        "description": "Если последняя завершённая игра была «Пройдено» — +3. Если «Дроп» — −3.",
+        "key": "streak"
+      },
+      {
+        "id": "w23_ladder",
+        "title": "Лесенка",
+        "description": "d6: 1–2 = −2; 3–4 = 0; 5–6 = +3.",
+        "key": "ladder"
+      },
+      {
+        "id": "w24_pocket_reroll",
+        "title": "Реролл в карман",
+        "description": "+1 реролл в инвентарь.",
+        "key": "pocket_reroll"
+      },
+      {
+        "id": "w25_anti_reroll",
+        "title": "Антиреролл",
+        "description": "Минус один реролл из инвентаря. Если реролла нет — −1 очко.",
+        "key": "anti_reroll"
+      },
+      {
+        "id": "w26_lucky7",
+        "title": "Счастливая семёрка",
+        "description": "2d6: сумма 7 или 11 → +4, иначе +1.",
+        "key": "lucky7"
+      },
+      {
+        "id": "w27_home_region",
+        "title": "Домашний регион",
+        "description": "Платформенная клетка → +3. Спецролл → +1.",
+        "key": "home_region"
+      },
+      {
+        "id": "w28_ricochet",
+        "title": "Рикошет",
+        "description": "+d4. Если выпало 4 — ещё +1.",
+        "key": "ricochet"
+      },
+      {
+        "id": "w29_piggy15",
+        "title": "Минуты в карман",
+        "description": "+15 минут в копилку. Очки не меняются.",
+        "key": "piggy15"
+      },
+      {
+        "id": "w30_luck_kick",
+        "title": "Пинок удачи",
+        "description": "80% +2, 20% +5.",
+        "key": "luck_kick"
+      }
+    ],
     "inventoryRerolls": 0,
-    "piggyMinutes": 0,
-    "piggyThreshold": 100
+    "consecutiveDone": 0,
+    "piggyMinutes": 50,
+    "piggyThreshold": 100,
+    "currentGameSpinCosts": [],
+    "nextDiceDir": "back"
   }
 }
