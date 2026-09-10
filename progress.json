@@ -1,7 +1,7 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-09-10T14:39:04.992Z",
+  "exportedAt": "2026-09-10T14:41:20.789Z",
   "state": {
     "player": {
       "name": "NephWolf",
@@ -796,6 +796,7 @@
     "points": -1,
     "currentGameSpins": 0,
     "currentGameWheelMinutes": 0,
+    "currentGameSpinCosts": [],
     "spinHistory": [
       {
         "id": "mt0hx8qcufow8",
@@ -1496,7 +1497,6 @@
     "consecutiveDone": 0,
     "piggyMinutes": 50,
     "piggyThreshold": 100,
-    "currentGameSpinCosts": [],
     "nextDiceDir": "back"
   }
 }
