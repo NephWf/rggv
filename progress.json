@@ -1,14 +1,14 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-09-10T12:02:20.960Z",
+  "exportedAt": "2026-09-10T12:03:04.134Z",
   "state": {
     "player": {
       "name": "NephWolf",
       "emoji": "🐺",
       "color": "#20c997"
     },
-    "position": 21,
+    "position": 23,
     "cells": [
       null,
       {
@@ -93,7 +93,7 @@
       },
       {
         "type": "Steam",
-        "revealed": true
+        "revealed": false
       },
       {
         "type": "Movies",
@@ -767,42 +767,20 @@
         "cellNum": 23,
         "cellType": "Castlevania",
         "game": "Castlevania II: Belmont's Revenge (GBC)",
-        "status": "Пройдено",
-        "time": "0",
+        "status": "Играется",
+        "time": null,
         "rating": null,
-        "comment": "",
-        "timeMinutes": 0,
-        "wheelSpins": 0,
-        "piggyDeposit": 0
-      },
-      {
-        "id": "mtvgxcbcjab7s",
-        "hod": 23,
-        "date": "2026-09-10",
-        "dice": 3,
-        "move": "23 → 26",
-        "cellNum": 26,
-        "cellType": "PS1",
-        "game": "asd",
-        "status": "Дроп",
-        "time": "30 мин",
-        "rating": null,
-        "comment": "",
-        "timeMinutes": 30,
-        "wheelSpins": 1,
-        "piggyDeposit": 0
+        "comment": ""
       }
     ],
-    "phase": "waiting_game",
-    "currentGame": null,
-    "pendingMove": {
-      "from": 26,
-      "to": 21,
-      "dice": 5,
-      "moveStr": "26 → 21",
-      "cellType": "Steam",
-      "direction": "back"
+    "phase": "playing",
+    "currentGame": {
+      "name": "Castlevania II: Belmont's Revenge (GBC)",
+      "cellType": "Castlevania",
+      "cellNum": 23,
+      "logId": "mtudaw2wutcod"
     },
+    "pendingMove": null,
     "lastDice": 5,
     "rules": "",
     "setupDone": true,
@@ -815,9 +793,10 @@
       "green": "#3dd68c",
       "red": "#ff6b6b"
     },
-    "points": 1,
+    "points": -1,
     "currentGameSpins": 0,
     "currentGameWheelMinutes": 0,
+    "currentGameSpinCosts": [],
     "spinHistory": [
       {
         "id": "mt0hx8qcufow8",
@@ -1324,17 +1303,6 @@
         "delta": -3,
         "pointsAfter": -1,
         "cost": 45
-      },
-      {
-        "id": "mtvh04a32cfc8",
-        "date": "2026-09-10",
-        "game": "asd",
-        "gameId": "mtvgxcbcjab7s",
-        "title": "Орел орел или решка решка",
-        "detail": "орёл → +2",
-        "delta": 2,
-        "pointsAfter": 1,
-        "cost": 30
       }
     ],
     "wheelItems": [
@@ -1529,7 +1497,6 @@
     "consecutiveDone": 0,
     "piggyMinutes": 50,
     "piggyThreshold": 100,
-    "currentGameSpinCosts": [],
     "nextDiceDir": "back"
   }
 }
