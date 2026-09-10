@@ -1,7 +1,7 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-09-10T11:55:17.133Z",
+  "exportedAt": "2026-09-10T11:55:37.654Z",
   "state": {
     "player": {
       "name": "NephWolf",
@@ -785,9 +785,11 @@
         "cellType": "PS1",
         "game": "asd",
         "status": "Играется",
-        "time": null,
+        "time": "30 мин",
         "rating": null,
-        "comment": ""
+        "comment": "",
+        "timeMinutes": 30,
+        "wheelSpins": 1
       }
     ],
     "phase": "playing",
