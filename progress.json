@@ -1,7 +1,7 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-09-10T14:43:22.025Z",
+  "exportedAt": "2026-09-10T14:44:41.577Z",
   "state": {
     "player": {
       "name": "NephWolf",
@@ -768,11 +768,9 @@
         "cellType": "Castlevania",
         "game": "Castlevania II: Belmont's Revenge (GBC)",
         "status": "Играется",
-        "time": "1 ч 45 мин",
+        "time": null,
         "rating": null,
-        "comment": "",
-        "timeMinutes": 105,
-        "wheelSpins": 3
+        "comment": ""
       }
     ],
     "phase": "playing",
@@ -795,9 +793,10 @@
       "green": "#3dd68c",
       "red": "#ff6b6b"
     },
-    "points": 5,
-    "currentGameSpins": 3,
-    "currentGameWheelMinutes": 105,
+    "points": -1,
+    "currentGameSpins": 0,
+    "currentGameWheelMinutes": 0,
+    "currentGameSpinCosts": [],
     "spinHistory": [
       {
         "id": "mt0hx8qcufow8",
@@ -1304,39 +1303,6 @@
         "delta": -3,
         "pointsAfter": -1,
         "cost": 45
-      },
-      {
-        "id": "mtvmzlo1tgplh",
-        "date": "2026-09-10",
-        "game": "Castlevania II: Belmont's Revenge (GBC)",
-        "gameId": "mtudaw2wutcod",
-        "title": "Контролер рандома",
-        "detail": "загадал 6, d6=1",
-        "delta": -1,
-        "pointsAfter": -2,
-        "cost": 30
-      },
-      {
-        "id": "mtvmzne4rqqpo",
-        "date": "2026-09-10",
-        "game": "Castlevania II: Belmont's Revenge (GBC)",
-        "gameId": "mtudaw2wutcod",
-        "title": "Попутный ветер",
-        "detail": "клетка 23 → +3",
-        "delta": 3,
-        "pointsAfter": 1,
-        "cost": 35
-      },
-      {
-        "id": "mtvmzqx00tjbz",
-        "date": "2026-09-10",
-        "game": "Castlevania II: Belmont's Revenge (GBC)",
-        "gameId": "mtudaw2wutcod",
-        "title": "Риск",
-        "detail": "d4=4 → +4",
-        "delta": 4,
-        "pointsAfter": 5,
-        "cost": 40
       }
     ],
     "wheelItems": [
@@ -1531,11 +1497,6 @@
     "consecutiveDone": 0,
     "piggyMinutes": 50,
     "piggyThreshold": 100,
-    "currentGameSpinCosts": [
-      30,
-      35,
-      40
-    ],
     "nextDiceDir": "back"
   }
 }
