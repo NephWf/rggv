@@ -218,6 +218,7 @@ footer{text-align:center;padding:1.5rem .5rem;color:var(--text-muted);font-size:
 <div class="main-tabs">
   <button class="main-tab active" data-tab="map" onclick="switchTab('map')">🗺️ Карта и лог</button>
   <button class="main-tab" data-tab="wheel" onclick="switchTab('wheel')">🎡 Колесо</button>
+  <button class="main-tab" data-tab="rules" onclick="switchTab('rules')">📜 Правила</button>
 </div>
 <div id="panel-map" class="tab-panel active">
   <div class="win-banner" id="win-banner"><h2>🏆 Финиш достигнут!</h2><p>Ивент завершён.</p></div>
@@ -279,12 +280,125 @@ footer{text-align:center;padding:1.5rem .5rem;color:var(--text-muted);font-size:
     </div>
     <div class="empty" id="empty-spins"><div class="emoji">🎡</div><div>История пуста</div></div>
   </div>
+  <div class="card">
+    <h2>📜 Пункты колеса</h2>
+    <div id="wheel-items-list" class="wheel-items-list"></div>
+  </div>
+</div>
+<div id="panel-rules" class="tab-panel">
+  <div class="card">
+    <h2>📜 Правила ивента</h2>
+    <div id="rules-content" class="rules-content"></div>
+  </div>
 </div>
 <footer>RGGV by NW · зрительская витрина · данные из progress.json</footer>
 </div>
 <script>
 const PLATFORMS=['NES','SNES','GC','SMD','Dreamcast','PS1','PS2','PSP','GB','GBA','DS','3DS','Steam'];
 const PIGGY_THRESHOLD=100;
+const RULES_HTML = `
+<h3>Цель</h3>
+<p>RGGV by NW — соло-ивент. Бросая кубик D6, дойти по карте от Старта (0) до Финиша (100), проходя игры по выпавшим клеткам.</p>
+<h3>Карта</h3>
+<ul><li>100 клеток, путь «змейкой». Клетки скрыты, пока на них не наступишь.</li>
+<li>Типы клеток: <strong>Платформы</strong> и <strong>Спецроллы</strong> (по 4 копии каждого типа, всего 100).</li></ul>
+<h3>Ходы</h3>
+<ul><li><strong>Пройдено</strong> — игра завершена → бросок D6 и движение <em>вперёд</em>.</li>
+<li><strong>Дроп</strong> — сдаёшься → бросок D6 и движение <em>назад</em>.</li>
+<li>После «Двигаться» фишка идёт по клеткам, затем появляется кнопка «Выбрать игру».</li>
+<li>Перелёт за 100 останавливает на клетке 100 — эту игру тоже нужно пройти.</li>
+<li>Ивент завершается только после статуса «Пройдено» на клетке 100. Дроп с финишной клетки — бросок назад.</li></ul>
+<h3>Реролл</h3>
+<p>Рероллы делятся на два типа: <strong>обязательные</strong> и <strong>по желанию</strong>.</p>
+<p>В приложении: свободный реролл (с указанием причины) или реролл из инвентаря (тратит 1 предмет). Реролл в инвентарь: за <strong>2 пройденные игры подряд</strong> — +1; за каждую следующую в серии — ещё +1. Дроп сбрасывает серию.</p>
+<p><strong>Копилка:</strong> доп. минуты после колеса (не потраченные на прокруты) копятся в копилку. За каждые <strong>100 мин</strong> — +1 реролл. Излишек переносится.</p>
+<h4>Обязательный реролл</h4>
+<p>Игра подлежит обязательному рероллу, если:</p>
+<ul>
+<li>Она не подходит ни под один критерий прохождения из раздела «Критерии прохождения игры».</li>
+<li>Это дополнение, требующее оригинальную игру для запуска.</li>
+<li>Это ММО или подобная игра, где для прохождения нужны действия в онлайне, которые невозможно выполнить в одиночку. Если онлайн нужен только для запуска — реролл не делается.</li>
+<li>Это игра на угадывание слов. Критерий: в жанре указано Trivia, Game Show или Quiz.</li>
+<li>Игра физически непроходима без участия другого человека (например, серия We Were Here).</li>
+<li>Игру нельзя стримить по правилам Twitch или есть риск бана (включая платформы рестрима).</li>
+<li>Это демоверсия или Proto-версия.</li>
+<li>Игра не была выпущена (Cancelled).</li>
+<li>Игра уже пройдена стримером в текущем сезоне RGG-LAND. Такие игры также нельзя заказать/выбрать через Колесо Добра, Предметы, Эффекты, Спецроллы и глобальные ивенты. Если та же игра выпала на другую платформу — реролл не делается.</li>
+<li>В приложении есть <strong>Архив игр</strong> прошлых ивентов (SPRGGB NW, SPRGG NW, Solo RGG NW, SPRGG2 NW) и текущего RGGV. При вводе названия игра сверяется со списком пройденных и дропнутых.</li>
+<li>Игра отсутствует в интернете.</li>
+<li>Игра в чёрном списке RGG: Welcome to the Game 1 &amp; 2; S.T.A.L.K.E.R.: Тень Чернобыля; Чистое небо; Зов Припяти; S.T.A.L.K.E.R. 2: Heart of Chornobyl.</li>
+</ul>
+<h4>Реролл по желанию</h4>
+<p>Стример может рероллить игру по желанию, если:</p>
+<ul>
+<li>Нет перевода на английский или русский, а знание другого языка нужно для прохождения. Фанатские переводы разрешены.</li>
+<li>Плохая эмуляция или баги, мешающие прохождению.</li>
+<li>Не запускается или есть технические проблемы (включая слабый ПК).</li>
+<li>Нужен специальный девайс (всё, кроме геймпада, клавиатуры и мыши). Эмулируемый стилус DS/3DS считается мышью.</li>
+<li>Визуальная новелла или текстовый квест (жанр Visual Novel / Text Adventure).</li>
+<li>RPG (жанр Role-playing).</li>
+<li>Спортивная игра (жанр Sports).</li>
+<li>Симулятор, включая казино, пачинко, автоматы и F1 (жанр Simulation).</li>
+<li>Стратегия (жанр Strategy).</li>
+<li>PS3 и тег Ingame или ниже на <a href="https://rpcs3.net/compatibility" target="_blank" rel="noopener">RPCS3 Compatibility List</a>.</li>
+<li>Wii U и тег Runs или ниже на <a href="https://compat.cemu.info/" target="_blank" rel="noopener">Cemu Compatibility List</a>.</li>
+<li>Платформа Windows и проблемы с запуском на современной Windows.</li>
+<li>Игра в раннем доступе.</li>
+</ul>
+<p>По любому из критериев реролл можно сделать в любой момент после начала игры.</p>
+<h3>Очки и движение</h3>
+<ul>
+<li>Очки копятся через <strong>Колесо добра</strong>.</li>
+<li>При движении <em>вперёд</em> положительные очки прибавляются к кубику и затем сбрасываются в 0.</li>
+<li>Отрицательные очки на ход не влияют и переносятся между играми, пока не выйдешь в плюс.</li>
+</ul>
+<h3>Колесо добра</h3>
+<ul>
+<li>Доступно только во время текущей игры.</li>
+<li>Стоимость прокрута: 1-й — <strong>30 мин</strong>, каждый следующий +5 мин (35, 40…).</li>
+<li><strong>Обнуление</strong> сбрасывает стоимость следующих прокрутов к 30 мин, очки и рероллы. Уже накрученное время за игру сохраняется.</li>
+<li>Время прохождения = сумма всех прокрутов за игру (до и после обнуления) + доп. минуты после последнего колеса.</li>
+<li>История прокрутов ведётся с привязкой к названию игры.</li>
+</ul>
+<h3>Оценка</h3>
+<p>При «Пройдено» / «Дроп» оценка выставляется ползунком NS–10 (NS = без оценки).</p>
+<h3>Сохранение</h3>
+<p>Прогресс хранится локально в браузере. В настройках доступны полный экспорт и импорт JSON.</p>
+`;
+const DEFAULT_WHEEL_ITEMS = [
+  {title:'Плюс очко',description:'Очевидное плюс очко.',key:'plus1'},
+  {title:'Минус очко',description:'Очевидное минус очко.',key:'minus1'},
+  {title:'Подсрачник',description:'Минус 2 очка.',key:'minus2'},
+  {title:'Пиздак',description:'Минус 3 очка.',key:'minus3'},
+  {title:'Двойное очко',description:'Очевидные плюс 2 очка.',key:'plus2'},
+  {title:'Тройное очко',description:'Очевидные плюс 3 очка.',key:'plus3'},
+  {title:'Орел или решка',description:'Брось монетку: один исход — плюс очко, другой — минус очко.',key:'coin1'},
+  {title:'Два по цене одного',description:'Колесо роллится ещё два раза. Выполняются оба результата (рероллы колеса игнорируются).',key:'double'},
+  {title:'Обнуление',description:'Очки = 0. Все рероллы уничтожаются. Серия прохождений сбрасывается. Стоимость следующих прокрутов — снова с 30 мин. Уже накрученное время за игру сохраняется.',key:'reset'},
+  {title:'Цепная молния',description:'Брось d6 и получи столько плюс очков, сколько выпало.',key:'chain_plus'},
+  {title:'Шаровая молния',description:'Брось d6 и получи столько минус очков, сколько выпало.',key:'chain_minus'},
+  {title:'Рандомайзер',description:'Монетка (плюс/минус), затем d6 — добавляешь или вычитаешь выпавшее.',key:'randomizer'},
+  {title:'Орел орел или решка решка',description:'Монетка: плюс 2 очка или минус 2 очка.',key:'coin2'},
+  {title:'Компетитив перхапс',description:'Случайное число от −10 до +10 без нуля.',key:'comp'},
+  {title:'Контролер рандома',description:'Загадай число 1–6, брось d6. Совпало — плюс 3, иначе минус 1.',key:'controller'},
+  {title:'Риск',description:'d4: чётное прибавляет, нечётное минусует это число.',key:'risk'},
+  {title:'Двадцатигранник',description:'d20: 1–3 = −2; 4–10 = +1; 11–17 = −1; 18–20 = +2.',key:'d20'},
+  {title:'Карма',description:'Если за эту игру плюсов уже больше, чем минусов — −2. Иначе +2.',key:'karma'},
+  {title:'Двойной риск',description:'Монетка: затем d8 в плюс или d8 в минус.',key:'double_risk'},
+  {title:'Смена полюса',description:'Все текущие очки инвертируются.',key:'polarity'},
+  {title:'Финишный ветер',description:'Если клетка ≥ 51 — +3. Иначе −1.',key:'finish_wind'},
+  {title:'Попутный ветер',description:'Если клетка ≤ 50 — +3. Иначе −1.',key:'tail_wind'},
+  {title:'Стрик',description:'Если последняя завершённая игра была «Пройдено» — +3. Если «Дроп» — −3.',key:'streak'},
+  {title:'Лесенка',description:'d6: 1–2 = −2; 3–4 = 0; 5–6 = +3.',key:'ladder'},
+  {title:'Реролл в карман',description:'+1 реролл в инвентарь.',key:'pocket_reroll'},
+  {title:'Антиреролл',description:'Минус один реролл из инвентаря. Если реролла нет — −1 очко.',key:'anti_reroll'},
+  {title:'Счастливая семёрка',description:'2d6: сумма 7 или 11 → +4, иначе +1.',key:'lucky7'},
+  {title:'Домашний регион',description:'Платформенная клетка → +3. Спецролл → +1.',key:'home_region'},
+  {title:'Рикошет',description:'+d4. Если выпало 4 — ещё +1.',key:'ricochet'},
+  {title:'Минуты в карман',description:'+15 минут в копилку. Очки не меняются.',key:'piggy15'},
+  {title:'Пинок удачи',description:'80% +2, 20% +5.',key:'luck_kick'}
+];
+
 const DATA_URLS=[
   'https://raw.githubusercontent.com/NephWf/rggv/main/progress.json',
   'progress.json'
@@ -404,6 +518,18 @@ function renderAll(){
       sb.appendChild(tr);
     });
   }
+  renderWheelItems();
+}
+function renderWheelItems(){
+  const list=document.getElementById('wheel-items-list'); if(!list) return;
+  const items=(state&&state.wheelItems&&state.wheelItems.length)?state.wheelItems:DEFAULT_WHEEL_ITEMS;
+  list.innerHTML='';
+  items.forEach(function(item){
+    const div=document.createElement('div');
+    div.className='wheel-item';
+    div.innerHTML='<div class="wheel-item-title">'+esc(item.title||'')+'</div><div class="wheel-item-desc">'+esc(item.description||'')+'</div>';
+    list.appendChild(div);
+  });
 }
 async function loadProgress(manual){
   try{
@@ -429,6 +555,7 @@ async function loadProgress(manual){
     if(!state) renderAll();
   }
 }
+const rc=document.getElementById('rules-content'); if(rc) rc.innerHTML=RULES_HTML;
 renderAll();
 loadProgress();
 setInterval(loadProgress, 20000);
