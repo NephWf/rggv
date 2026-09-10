@@ -1,7 +1,7 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-09-10T11:55:03.382Z",
+  "exportedAt": "2026-09-10T11:55:17.133Z",
   "state": {
     "player": {
       "name": "NephWolf",
@@ -810,9 +810,9 @@
       "green": "#3dd68c",
       "red": "#ff6b6b"
     },
-    "points": -1,
-    "currentGameSpins": 0,
-    "currentGameWheelMinutes": 0,
+    "points": 1,
+    "currentGameSpins": 1,
+    "currentGameWheelMinutes": 30,
     "spinHistory": [
       {
         "id": "mt0hx8qcufow8",
@@ -1319,6 +1319,17 @@
         "delta": -3,
         "pointsAfter": -1,
         "cost": 45
+      },
+      {
+        "id": "mtvh04a32cfc8",
+        "date": "2026-09-10",
+        "game": "asd",
+        "gameId": "mtvgxcbcjab7s",
+        "title": "Орел орел или решка решка",
+        "detail": "орёл → +2",
+        "delta": 2,
+        "pointsAfter": 1,
+        "cost": 30
       }
     ],
     "wheelItems": [
@@ -1513,7 +1524,9 @@
     "consecutiveDone": 1,
     "piggyMinutes": 50,
     "piggyThreshold": 100,
-    "currentGameSpinCosts": [],
+    "currentGameSpinCosts": [
+      30
+    ],
     "nextDiceDir": "forward"
   }
 }
