@@ -343,6 +343,19 @@ footer{text-align:center;padding:1.5rem .5rem;color:var(--text-muted);font-size:
           <button class="btn btn-secondary btn-sm" onclick="resetAppColors()">↩ Сбросить цвета</button>
         </div>
       </div>
+      <div class="card"><h2>📡 Витрина для зрителей</h2>
+        <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:0.85rem; line-height:1.5;">Токен хранится только в этом браузере, в экспорт прогресса не попадает. Нужен доступ Contents: Read and write к репозиторию <strong>NephWf/rggv</strong>.</p>
+        <div class="form-group"><label>GitHub token</label><input type="password" id="gh-token" placeholder="ghp_… или github_pat_…" autocomplete="off"></div>
+        <div class="form-group"><label>Репозиторий</label><input type="text" id="gh-repo" placeholder="NephWf/rggv"></div>
+        <label style="display:flex;align-items:center;gap:.5rem;font-size:.88rem;margin:.4rem 0 0.85rem;cursor:pointer;">
+          <input type="checkbox" id="gh-auto"> Публиковать автоматически после изменений
+        </label>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button class="btn btn-primary btn-sm" onclick="saveGithubSettings(); publishToGitHub(true)">📡 Опубликовать сейчас</button>
+          <button class="btn btn-secondary btn-sm" onclick="saveGithubSettings()">💾 Сохранить настройки</button>
+        </div>
+        <p id="gh-status" style="color:var(--text-muted);font-size:.82rem;margin-top:.65rem;">Токен: Settings → Developer settings → Personal access tokens</p>
+      </div>
       <div class="card"><h2>💾 Прогресс ивента</h2>
         <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:1rem; line-height:1.5;">Экспорт сохраняет весь прогресс: карту, лог, очки, колесо, инвентарь, настройки. Импорт полностью заменяет текущие данные.</p>
         <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
@@ -1276,7 +1289,7 @@ const storage=(function(){
     remove(key){if(ok){try{window.localStorage.removeItem(key);}catch(e){}} delete mem[key];}
   };
 })();
-function saveState(){storage.set('rggv_v2',JSON.stringify(state));}
+function saveState(){storage.set('rggv_v2',JSON.stringify(state)); scheduleGithubPublish();}
 function loadState(){
   try{
     const raw=storage.get('rggv_v2');
@@ -1356,6 +1369,7 @@ function syncSettingsUI(){
   selectInPicker('settings-emoji-picker',settingsEmoji,true);
   selectInPicker('settings-color-picker',settingsColor,false);
   updateSettingsPreview(); syncColorInputs(); applyTheme(state.theme||'dark');
+  if(typeof syncGithubSettingsUI==='function') syncGithubSettingsUI();
 }
 function updateSettingsPreview(){
   const token=document.getElementById('settings-preview-token'), nameEl=document.getElementById('settings-preview-name');
@@ -1381,10 +1395,87 @@ function exportFullProgress(){
   download('rggv-progress-'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify(payload,null,2),'application/json');
   showToast('Прогресс экспортирован','success');
 }
-function publishForViewers(){
+function publishForViewers(){publishToGitHub(true);}
+function getGithubSettings(){
+  return {
+    token:(storage.get('rggv_gh_token')||'').trim(),
+    repo:(storage.get('rggv_gh_repo')||'NephWf/rggv').trim()||'NephWf/rggv',
+    auto:storage.get('rggv_gh_auto')==='1'
+  };
+}
+function saveGithubSettings(){
+  const token=(document.getElementById('gh-token')||{}).value;
+  const repo=(document.getElementById('gh-repo')||{}).value;
+  const auto=!!(document.getElementById('gh-auto')||{}).checked;
+  if(typeof token==='string') storage.set('rggv_gh_token', token.trim());
+  if(typeof repo==='string') storage.set('rggv_gh_repo', (repo.trim()||'NephWf/rggv'));
+  storage.set('rggv_gh_auto', auto?'1':'0');
+  syncGithubSettingsUI();
+  showToast('Настройки витрины сохранены','success');
+}
+function syncGithubSettingsUI(){
+  const s=getGithubSettings();
+  const t=document.getElementById('gh-token'), r=document.getElementById('gh-repo'), a=document.getElementById('gh-auto');
+  if(t&&!t.value) t.value=s.token;
+  if(r) r.value=s.repo;
+  if(a) a.checked=s.auto;
+  const st=document.getElementById('gh-status');
+  if(st&&!st.dataset.busy) st.textContent=s.token?(s.auto?'Автопубликация включена · '+s.repo:'Токен сохранён · публикация вручную'):'Сначала вставь GitHub token';
+}
+function toBase64Utf8(str){
+  const bytes=new TextEncoder().encode(str);
+  let bin='';
+  bytes.forEach(function(b){bin+=String.fromCharCode(b);});
+  return btoa(bin);
+}
+let ghPublishTimer=null, ghPublishing=false;
+function scheduleGithubPublish(){
+  const s=getGithubSettings();
+  if(!s.auto||!s.token) return;
+  if(ghPublishTimer) clearTimeout(ghPublishTimer);
+  ghPublishTimer=setTimeout(function(){publishToGitHub(false);}, 8000);
+}
+async function publishToGitHub(manual){
+  const s=getGithubSettings();
+  const statusEl=document.getElementById('gh-status');
+  if(!s.token){
+    if(manual){
+      const payload={app:'RGGV by NW',version:APP_VERSION,exportedAt:new Date().toISOString(),state};
+      download('progress.json',JSON.stringify(payload,null,2),'application/json');
+      showToast('Нет токена — скачан progress.json. Залей вручную или добавь токен в Настройках','error');
+    }
+    return;
+  }
+  if(ghPublishing) return;
+  ghPublishing=true;
+  if(statusEl){statusEl.dataset.busy='1'; statusEl.textContent='Публикую для зрителей…';}
   const payload={app:'RGGV by NW',version:APP_VERSION,exportedAt:new Date().toISOString(),state};
-  download('progress.json',JSON.stringify(payload,null,2),'application/json');
-  showToast('Скачан progress.json — залей его в репозиторий вместо старого','success');
+  const body=JSON.stringify(payload,null,2);
+  const api='https://api.github.com/repos/'+s.repo+'/contents/progress.json';
+  const headers={'Authorization':'Bearer '+s.token,'Accept':'application/vnd.github+json','Content-Type':'application/json'};
+  try{
+    let sha=null;
+    const got=await fetch(api,{headers:headers});
+    if(got.ok){
+      const meta=await got.json();
+      sha=meta.sha||null;
+    } else if(got.status!==404){
+      throw new Error('GitHub '+got.status);
+    }
+    const put=await fetch(api,{method:'PUT',headers:headers,body:JSON.stringify({message:'rggv: обновление витрины',content:toBase64Utf8(body),sha:sha||undefined,branch:'main'})});
+    if(!put.ok){
+      const err=await put.json().catch(function(){return {};});
+      throw new Error(err.message||('GitHub '+put.status));
+    }
+    if(statusEl) statusEl.textContent='Опубликовано '+new Date().toLocaleTimeString();
+    if(manual) showToast('Зрители увидят обновление через несколько секунд','success');
+  }catch(e){
+    if(statusEl) statusEl.textContent='Ошибка публикации: '+(e.message||e);
+    if(manual) showToast('Не вышло опубликовать: '+(e.message||e),'error');
+  }finally{
+    if(statusEl) delete statusEl.dataset.busy;
+    ghPublishing=false;
+  }
 }
 function importFullProgress(event){
   const file=event.target.files&&event.target.files[0]; event.target.value=''; if(!file) return;

@@ -285,7 +285,10 @@ footer{text-align:center;padding:1.5rem .5rem;color:var(--text-muted);font-size:
 <script>
 const PLATFORMS=['NES','SNES','GC','SMD','Dreamcast','PS1','PS2','PSP','GB','GBA','DS','3DS','Steam'];
 const PIGGY_THRESHOLD=100;
-const DATA_URL='progress.json';
+const DATA_URLS=[
+  'https://raw.githubusercontent.com/NephWf/rggv/main/progress.json',
+  'progress.json'
+];
 let state=null, lastStamp='';
 
 function switchTab(name){
@@ -404,9 +407,16 @@ function renderAll(){
 }
 async function loadProgress(manual){
   try{
-    const res=await fetch(DATA_URL+'?t='+Date.now(),{cache:'no-store'});
-    if(!res.ok) throw new Error('HTTP '+res.status);
-    const raw=await res.json();
+    let raw=null, ok=false;
+    for(let i=0;i<DATA_URLS.length;i++){
+      try{
+        const res=await fetch(DATA_URLS[i]+'?t='+Date.now(),{cache:'no-store'});
+        if(!res.ok) continue;
+        raw=await res.json();
+        ok=true; break;
+      }catch(err){}
+    }
+    if(!ok) throw new Error('нет данных');
     const loaded=raw&&raw.state?raw.state:raw;
     if(!loaded||typeof loaded!=='object') throw new Error('bad json');
     state=loaded;
