@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RGGV by NW — Random Game Gauntlet Vsolyanka</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAhCAYAAACWY4jDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXNSURBVFhHpVhNaF5FFD33s0RN8EvAqAnYVYqC6EIafxa2oC60jQVdVVBMESlYjdVadRWVIoqpC5EKbtIkENq9+ENprdTiJo1ZWRADcRE3n1QIQi2hNuPi/syd+15eYp3wvjP3zsydeefMnXkttfsGExJABKQEgAAkAJQE1RbUEu3/VTYXqG45EVscK/HLIMlbyctoFI9aol1TknRqRrU4ZNMDXda6mNAiAkAEIgAgEJGz5dW5S2Gvi1oIIHE2o1ocovGhZgQRWixIQhJlUmKVWDGlRoRzdh0WroQGRTJmi+e4PpQZTCFVBqwOo6xuI9RSO4RrVUUyZqvKeESdI9ogmcEUwn/IoYhaol3jWl8xbc9PtJM46uyMm8ihiEL2plCr2WZPVTHrYk+0CU6xaHul2r0DSghu625j9smXcUdPH6AsEGG+s4TXvpvBlX9Wtau16+Sj9z6Kse27zA/iyptnp3Fu+SIIhPd27MXuoQe4gQgJwOq1q9j/9TH88ufv6L+5jck9r+P2nj50/l7BS19+iktX/sLdt96JL54aw403dHFs8Lq+XZzDBz+c4F1FfO+0mPqQQ6aS7nC3cgsYXAVtLhZHlz46nXW21tIt45wCfk3abmvwOaSb0HKJwfap7XCjRkqNraeO/y1juBPNajlU9OS+ZfzCV2BNDkHAeCPC8MAQfnzuCBZGP8aRR/ZanwJbEJU1gNHtFMo+q5eES0/xe5+rEGSulta1idDK907Jm90RSc75QoFAK5MjMWR80htGo2afxZVxa65u83tFCmVkjSkhrbm6LKKluWMoHOmeVQqKvQujsrSLdo2pnGo7zxHFisN5fL3fBolCaLqHMgNCiTHEjpGh7ZgfncD8CxN4X7cfD3UsZobLwg7f7qYp60W+Zb/NkwCsiV93Tm0OFco4nzhYKWFK6yiZI41XMKuxNJSeoi6Exglt3B7W5RSyZdTmkNGXlTHVlDlVTPuBx1huOHbBUaWfz0Wes1BBx4rf5xZPUY7nOfN8qL+HMkvattD5DTtOjGN45m0cOjtt/pFtw7iw7ygu7DuKV4dHnDKRW8bMss7F83nSfa4q83Z6Shv7pS5+xco9BBOIeTOmlW7uYb8lu95nI6Xua268KhzjuTaLJD+xHYZ1ORRY1JxRkoSKguUyZ1wMdjiFWubRbsZu6K0noY+SY+Y1SQjuQ+Fbrr+7jZndr8i3nE4DzHeW8MaZqcq33I6t9+CTx19kiohYZVLGefxbZ47j/PLPIBDGdz6LXdseLBSxIt92vmicxCCFRCPCqcU5fHhulqUi+ZaL9xDknjBqVC0NWKCjSOvxnhEPl5Ygj2Flvfw+Vn54+nIOXRObLoc0dwzdfs37O2x0j7qfnSPp/g6UJ59N7jSzObmTjdeF+D45Zv7a0DG1OVS5Z6B+qxqeX76Ih6YP4+Gpw/h84ZvMoMX0zMuPsa7xM7udyyt4+uQ4dk4exDMn38Ufl1c0mBuax9l0TqmaeyjcM1Ks6tCzk+TWVmWSxOIuuXNVGVFN2zWG/YW4brzN3XwPeQYiw64oK1kQR1c53nKoMWe0Z13OuLh+vFPGsN07KO9J6O++BVMjYxjo6QX0dAHwU2cJh04fr5xyvjx/32M4MDwik3G8BOCd05N2yiUkEAg3benCxBP7cf/AEFavXcWBrz7Dr5eWbT4rHAZ39W/FsT0H0bWlC6cW5/DR97P8JtKesSaHuJQsx6ZalH8PsSnUSVv2ZtR5fQgdYk8RRmp26rl2p1Qlh2B7VvawyxVrFIz+Ijcsl6BZYhlhcfWbzY9pQrCR/ZpzOYeot28wpcr/bSdBtR1qifZ1l80H0WVE22PlHpJKnieilmjXlNyFa6VSHnMvfaKdxJGQFVM7Y00OxW+3iEbRJjCzKTHFU0XrZU+0CdWciVibQ2w7oQJ6+qosyViPHNXs4i98KVRyZkOU8RveQwg0edTiFMjItSYs/uRUtGcd5rMCESWyw38BaPL55ff8DsEAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAhCAYAAACWY4jDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXNSURBVFhHpVhNaF5FFD33s0RN8EvAqAnYVYqC6EIafxa2oC60jQVdVVBMESlYjdVadRWVIoqpC5EKbtIkENq9+ENprdTiJo1ZWRADcRE3n1QIQi2hNuPi/syd+15eYp3wvjP3zsydeefMnXkttfsGExJABKQEgAAkAJQE1RbUEu3/VTYXqG45EVscK/HLIMlbyctoFI9aol1TknRqRrU4ZNMDXda6mNAiAkAEIgAgEJGz5dW5S2Gvi1oIIHE2o1ocovGhZgQRWixIQhJlUmKVWDGlRoRzdh0WroQGRTJmi+e4PpQZTCFVBqwOo6xuI9RSO4RrVUUyZqvKeESdI9ogmcEUwn/IoYhaol3jWl8xbc9PtJM46uyMm8ihiEL2plCr2WZPVTHrYk+0CU6xaHul2r0DSghu625j9smXcUdPH6AsEGG+s4TXvpvBlX9Wtau16+Sj9z6Kse27zA/iyptnp3Fu+SIIhPd27MXuoQe4gQgJwOq1q9j/9TH88ufv6L+5jck9r+P2nj50/l7BS19+iktX/sLdt96JL54aw403dHFs8Lq+XZzDBz+c4F1FfO+0mPqQQ6aS7nC3cgsYXAVtLhZHlz46nXW21tIt45wCfk3abmvwOaSb0HKJwfap7XCjRkqNraeO/y1juBPNajlU9OS+ZfzCV2BNDkHAeCPC8MAQfnzuCBZGP8aRR/ZanwJbEJU1gNHtFMo+q5eES0/xe5+rEGSulta1idDK907Jm90RSc75QoFAK5MjMWR80htGo2afxZVxa65u83tFCmVkjSkhrbm6LKKluWMoHOmeVQqKvQujsrSLdo2pnGo7zxHFisN5fL3fBolCaLqHMgNCiTHEjpGh7ZgfncD8CxN4X7cfD3UsZobLwg7f7qYp60W+Zb/NkwCsiV93Tm0OFco4nzhYKWFK6yiZI41XMKuxNJSeoi6Exglt3B7W5RSyZdTmkNGXlTHVlDlVTPuBx1huOHbBUaWfz0Wes1BBx4rf5xZPUY7nOfN8qL+HMkvattD5DTtOjGN45m0cOjtt/pFtw7iw7ygu7DuKV4dHnDKRW8bMss7F83nSfa4q83Z6Shv7pS5+xco9BBOIeTOmlW7uYb8lu95nI6Xua268KhzjuTaLJD+xHYZ1ORRY1JxRkoSKguUyZ1wMdjiFWubRbsZu6K0noY+SY+Y1SQjuQ+Fbrr+7jZndr8i3nE4DzHeW8MaZqcq33I6t9+CTx19kiohYZVLGefxbZ47j/PLPIBDGdz6LXdseLBSxIt92vmicxCCFRCPCqcU5fHhulqUi+ZaL9xDknjBqVC0NWKCjSOvxnhEPl5Ygj2Flvfw+Vn54+nIOXRObLoc0dwzdfs37O2x0j7qfnSPp/g6UJ59N7jSzObmTjdeF+D45Zv7a0DG1OVS5Z6B+qxqeX76Ih6YP4+Gpw/h84ZvMoMX0zMuPsa7xM7udyyt4+uQ4dk4exDMn38Ufl1c0mBuax9l0TqmaeyjcM1Ks6tCzk+TWVmWSxOIuuXNVGVFN2zWG/YW4brzN3XwPeQYiw64oK1kQR1c53nKoMWe0Z13OuLh+vFPGsN07KO9J6O++BVMjYxjo6QX0dAHwU2cJh04fr5xyvjx/32M4MDwik3G8BOCd05N2yiUkEAg3benCxBP7cf/AEFavXcWBrz7Dr5eWbT4rHAZ39W/FsT0H0bWlC6cW5/DR97P8JtKesSaHuJQsx6ZalH8PsSnUSVv2ZtR5fQgdYk8RRmp26rl2p1Qlh2B7VvawyxVrFIz+Ijcsl6BZYhlhcfWbzY9pQrCR/ZpzOYeot28wpcr/bSdBtR1qifZ1l80H0WVE22PlHpJKnieilmjXlNyFa6VSHnMvfaKdxJGQFVM7Y00OxW+3iEbRJjCzKTHFU0XrZU+0CdWciVibQ2w7oQJ6+qosyViPHNXs4i98KVRyZkOU8RveQwg0edTiFMjItSYs/uRUtGcd5rMCESWyw38BaPL55ff8DsEAAAAASUVORK5CYII=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0d12;--bg-card:#13171f;--bg-elevated:#1a1f2b;--bg-cell:#1e2433;--border:#2a3142;--text:#e8ecf4;--text-muted:#8b95a8;--accent:#7c5cff;--accent-hover:#9b82ff;--green:#3dd68c;--yellow:#f5c542;--red:#ff6b6b;--blue:#4dabf7;--orange:#ff9f43;--pink:#f06595;--platform:#4dabf7;--special:#f06595;--glow-accent:rgba(124,92,255,.1);--glow-pink:rgba(240,101,149,.07)}
+html.theme-light{--bg:#f0f2f7;--bg-card:#fff;--bg-elevated:#e8ebf2;--bg-cell:#dde1eb;--border:#c8cedc;--text:#1a1f2b;--text-muted:#5a6478;--glow-accent:rgba(124,92,255,.08);--glow-pink:rgba(240,101,149,.06)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Rubik,system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5;background-image:radial-gradient(ellipse at 15% 0%,var(--glow-accent) 0%,transparent 45%),radial-gradient(ellipse at 85% 100%,var(--glow-pink) 0%,transparent 45%);transition:background .3s,color .3s}
+.container{max-width:1100px;margin:0 auto;padding:1rem 1.25rem 3rem}
+header{text-align:center;padding:1.75rem .5rem 1.25rem;position:relative}
+header::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100px;height:3px;background:linear-gradient(90deg,var(--accent),var(--pink));border-radius:2px}
+.logo{font-family:'Press Start 2P',cursive;font-size:clamp(1rem,2.8vw,1.45rem);background:linear-gradient(135deg,#7c5cff,#f06595,#4dabf7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.5rem;line-height:1.45}
+.subtitle{color:var(--text-muted);font-size:.9rem}
+.main-tabs{display:flex;gap:.4rem;margin:1.5rem 0 1.25rem;background:var(--bg-card);padding:.35rem;border-radius:12px;border:1px solid var(--border)}
+.main-tab{flex:1;padding:.7rem 1rem;border:none;border-radius:9px;background:transparent;color:var(--text-muted);font-family:inherit;font-size:.92rem;font-weight:600;cursor:pointer;transition:all .2s}
+.main-tab.active{background:linear-gradient(135deg,var(--accent),#6a4de0);color:#fff;box-shadow:0 3px 12px rgba(124,92,255,.35)}
+.main-tab:hover:not(.active){color:var(--text);background:var(--bg-elevated)}
+.tab-panel{display:none}.tab-panel.active{display:block}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:1.25rem;margin-bottom:1.25rem;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.card h2{font-size:1.05rem;font-weight:600;margin-bottom:.9rem;display:flex;align-items:center;gap:.45rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tag{padding:.3rem .65rem;border-radius:999px;font-size:.78rem;font-weight:500;border:1px solid transparent}
+.tag.platform{background:rgba(77,171,247,.12);color:var(--platform);border-color:rgba(77,171,247,.28)}
+.tag.special{background:rgba(240,101,149,.12);color:var(--special);border-color:rgba(240,101,149,.28)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.65rem 1.2rem;border:none;border-radius:9px;font-family:inherit;font-size:.9rem;font-weight:600;cursor:pointer;transition:all .18s}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#6a4de0);color:#fff;box-shadow:0 3px 14px rgba(124,92,255,.3)}
+.btn-primary:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.btn-secondary{background:var(--bg-elevated);color:var(--text);border:1px solid var(--border)}
+.btn-secondary:hover{border-color:var(--accent);background:var(--bg-cell)}
+.btn-success{background:linear-gradient(135deg,#2ecc71,#27ae60);color:#fff}
+.btn-success:hover{filter:brightness(1.08)}
+.btn-danger{background:rgba(255,107,107,.15);color:var(--red);border:1px solid rgba(255,107,107,.35)}
+.btn-danger:hover{background:rgba(255,107,107,.25)}
+.btn-warning{background:rgba(245,197,66,.15);color:var(--yellow);border:1px solid rgba(245,197,66,.35)}
+.btn-warning:hover{background:rgba(245,197,66,.25)}
+.btn-sm{padding:.4rem .75rem;font-size:.82rem}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none!important}
+input,select,textarea{background:var(--bg-elevated);border:1px solid var(--border);border-radius:8px;padding:.55rem .8rem;color:var(--text);font-family:inherit;font-size:.92rem;width:100%;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(124,92,255,.18)}
+textarea{resize:vertical;min-height:80px}
+label{font-size:.78rem;font-weight:500;color:var(--text-muted);display:block;margin-bottom:.3rem}
+.form-group{margin-bottom:.9rem}
+.map-header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:1rem}
+.player-badge{display:flex;align-items:center;gap:.6rem;background:var(--bg-elevated);padding:.4rem .85rem .4rem .45rem;border-radius:999px;border:1px solid var(--border)}
+.player-token{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.15rem;border:2px solid rgba(255,255,255,.25);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+html.theme-light .player-token{border-color:rgba(0,0,0,.2);box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.player-name{font-weight:600;font-size:.95rem}
+.progress-wrap{flex:1;min-width:160px;max-width:280px}
+.progress-bar-bg{background:var(--bg-elevated);border-radius:999px;height:10px;overflow:hidden;border:1px solid var(--border)}
+.progress-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--pink));border-radius:999px;transition:width .45s ease;width:0}
+.progress-text{display:flex;justify-content:space-between;font-size:.75rem;color:var(--text-muted);margin-top:.25rem}
+.map-grid-wrap{display:flex;justify-content:center;overflow-x:auto;padding:.5rem 0}
+.map-grid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));grid-template-rows:repeat(10,minmax(0,1fr));gap:4px;width:min(100%,620px);aspect-ratio:1}
+.cell{position:relative;background:var(--bg-cell);border:1px solid var(--border);border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:.65rem;font-weight:600;color:var(--text-muted);overflow:hidden;min-width:0;min-height:0;aspect-ratio:1}
+.cell .num{font-size:clamp(.55rem,1.6vw,.72rem);opacity:.7;line-height:1}
+.cell .type{font-size:clamp(.45rem,1.3vw,.6rem);font-weight:700;margin-top:1px;line-height:1.1;text-align:center;padding:0 1px;word-break:break-all;max-width:100%;overflow:hidden}
+.cell.revealed.platform{background:rgba(77,171,247,.12);border-color:rgba(77,171,247,.4)}
+.cell.revealed.platform .type{color:var(--platform)}
+.cell.revealed.special{background:rgba(240,101,149,.12);border-color:rgba(240,101,149,.4)}
+.cell.revealed.special .type{color:var(--special)}
+.cell.current{box-shadow:0 0 0 2px var(--accent),0 0 14px rgba(124,92,255,.45);z-index:2}
+.cell .token{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(.9rem,2.5vw,1.25rem);pointer-events:none;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5));z-index:3;animation:tokenHop .22s ease}
+@keyframes tokenHop{0%{transform:scale(.7) translateY(8px);opacity:.4}55%{transform:scale(1.18) translateY(-7px);opacity:1}100%{transform:scale(1) translateY(0);opacity:1}}
+.cell.walk-from{box-shadow:0 0 0 2px rgba(124,92,255,.35)}
+.cell.finish-reached{background:rgba(61,214,140,.15);border-color:var(--green)}
+.game-panel{margin-top:1.25rem;background:var(--bg-elevated);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.25rem;display:none}
+.game-panel.visible{display:block}
+.game-panel-header{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-bottom:.9rem}
+.game-title{font-size:1.15rem;font-weight:700;flex:1}
+.game-cell-type{font-size:.85rem;padding:.25rem .65rem;border-radius:999px;font-weight:600}
+.game-cell-type.platform{background:rgba(77,171,247,.15);color:var(--platform)}
+.game-cell-type.special{background:rgba(240,101,149,.15);color:var(--special)}
+.game-actions{display:flex;flex-wrap:wrap;gap:.6rem}
+.idle-panel{margin-top:1.25rem;text-align:center;padding:1.25rem;background:var(--bg-elevated);border:1px dashed var(--border);border-radius:12px;color:var(--text-muted);display:none}
+.idle-panel.visible{display:block}
+.stats-row{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;margin-bottom:1rem}
+.stat-box.span3{grid-column:span 3}
+@media(max-width:640px){.stats-row{grid-template-columns:repeat(2,1fr)}.stat-box.span3{grid-column:span 2}}
+.stat-box{background:var(--bg-elevated);border:1px solid var(--border);border-radius:10px;padding:.7rem;text-align:center}
+.stat-box .val{font-size:1.35rem;font-weight:700;color:var(--accent)}
+.stat-box .lbl{font-size:.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.03em;margin-top:.15rem}
+.table-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
+.table-wrap.full-log{max-height:none;overflow:visible}
+.catalog-hits{display:flex;flex-direction:column;gap:.35rem;margin-top:.45rem;max-height:220px;overflow-y:auto;padding-right:.2rem;scrollbar-width:thin;scrollbar-color:var(--accent) var(--bg-elevated)}
+.catalog-hit{background:var(--bg-elevated);border:1px solid var(--border);border-radius:9px;padding:.45rem .65rem;font-size:.8rem;text-align:left;cursor:pointer}
+.catalog-hit:hover{border-color:var(--accent)}
+.catalog-hit .hit-title{font-weight:600;margin-bottom:.1rem}
+.catalog-hit .hit-meta{color:var(--text-muted);font-size:.75rem}
+.catalog-filters{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .75rem}
+*{scrollbar-width:thin;scrollbar-color:var(--accent) var(--bg-elevated)}
+*::-webkit-scrollbar{width:8px;height:8px}
+*::-webkit-scrollbar-track{background:var(--bg-elevated);border-radius:999px}
+*::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--accent),var(--pink));border-radius:999px;border:2px solid var(--bg-elevated)}
+*::-webkit-scrollbar-thumb:hover{background:var(--accent-hover)}
+
+.list-expand-btn{width:100%;margin-top:.45rem;padding:.4rem .75rem;border:1px dashed var(--border);background:var(--bg-elevated);color:var(--text-muted);border-radius:9px;font-family:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
+.list-expand-btn:hover{border-color:var(--accent);color:var(--text);background:var(--bg-cell)}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th{background:var(--bg-elevated);padding:.6rem .7rem;text-align:left;font-weight:600;color:var(--text-muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.03em;position:sticky;top:0;z-index:1;white-space:nowrap}
+td{padding:.55rem .7rem;border-top:1px solid var(--border);vertical-align:middle}
+tr:hover td{background:rgba(124,92,255,.04)}
+.badge{display:inline-block;padding:.15rem .45rem;border-radius:5px;font-size:.72rem;font-weight:600}
+.badge.started{background:rgba(77,171,247,.15);color:var(--blue)}
+.badge.done{background:rgba(61,214,140,.15);color:var(--green)}
+.badge.drop{background:rgba(255,107,107,.15);color:var(--red)}
+.badge.start{background:rgba(77,171,247,.18);color:var(--blue)}
+.badge.reroll{background:rgba(245,197,66,.15);color:var(--yellow)}
+.badge.playing{background:rgba(124,92,255,.15);color:var(--accent)}
+.badge.finish{background:rgba(61,214,140,.2);color:var(--green)}
+.toolbar{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem;align-items:center}
+.spacer{flex:1}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;z-index:200;padding:1rem;backdrop-filter:blur(5px)}
+.modal-overlay.open{display:flex}
+.modal{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;width:100%;max-width:420px;max-height:92vh;overflow-y:auto;box-shadow:0 24px 60px rgba(0,0,0,.55);animation:modalIn .25s ease}
+.modal.wide{max-width:min(1100px,96vw)}
+.modal.wide .table-wrap{max-height:min(70vh,640px)}
+@keyframes modalIn{from{opacity:0;transform:scale(.94) translateY(10px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal h3{font-size:1.15rem;margin-bottom:1rem;text-align:center}
+.modal-actions{display:flex;gap:.6rem;justify-content:flex-end;margin-top:1.25rem}
+.modal-actions .btn{flex:1}
+.dice-big{width:110px;height:110px;margin:.5rem auto 1.25rem;background:linear-gradient(145deg,#2a3142,#1c212c);border:3px solid var(--accent);border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:3.2rem;font-weight:700;box-shadow:0 8px 28px rgba(124,92,255,.3);user-select:none;overflow:hidden;flex-shrink:0;line-height:1;text-align:center;box-sizing:border-box;padding:.25rem}
+.dice-big .coin-emoji{font-size:2.6rem;line-height:1;display:block}
+.dice-big .coin-label{font-size:.85rem;font-weight:700;margin-top:.25rem;line-height:1.1;color:var(--text)}
+.dice-big.rolling{animation:shake .5s ease-in-out}
+@keyframes shake{0%,100%{transform:rotate(0) scale(1)}25%{transform:rotate(-14deg) scale(1.06)}50%{transform:rotate(14deg) scale(1.1)}75%{transform:rotate(-8deg) scale(1.04)}}
+.dice-direction{text-align:center;font-size:.9rem;color:var(--text-muted);margin-bottom:.5rem}
+.dice-direction.back{color:var(--red)}
+.dice-direction.forward{color:var(--green)}
+.picker-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.35rem}
+.emoji-opt,.color-opt{width:40px;height:40px;border-radius:10px;border:2px solid transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.3rem;transition:all .15s;background:var(--bg-elevated)}
+.emoji-opt:hover,.color-opt:hover{border-color:var(--text-muted)}
+.emoji-opt.selected,.color-opt.selected{border-color:var(--accent);box-shadow:0 0 0 2px rgba(124,92,255,.3)}
+.color-opt{font-size:0}
+.rules-content{font-size:.9rem;line-height:1.45;color:var(--text)}
+.rules-content h3{font-size:.95rem;margin:.65rem 0 .15rem;color:var(--accent)}
+.rules-content h3:first-child{margin-top:0}
+.rules-content h4{font-size:.88rem;margin:.45rem 0 .1rem;color:var(--text);font-weight:600}
+.rules-content ul{margin:.1rem 0 .15rem;padding-left:1.15rem}
+.rules-content li{margin:0 0 .08rem}
+.rules-content p{margin:.05rem 0 .15rem;color:var(--text-muted)}
+.toast{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--bg-elevated);border:1px solid var(--border);color:var(--text);padding:.8rem 1.2rem;border-radius:10px;box-shadow:0 8px 28px rgba(0,0,0,.4);z-index:300;transform:translateY(120%);opacity:0;transition:all .3s ease;font-size:.9rem;max-width:320px}
+.toast.show{transform:translateY(0);opacity:1}
+.toast.success{border-color:var(--green)}
+.toast.error{border-color:var(--red)}
+.empty{text-align:center;padding:2.5rem 1rem;color:var(--text-muted)}
+.empty .emoji{font-size:2.2rem;margin-bottom:.5rem}
+.wheel-result{text-align:center;padding:1.35rem 1.2rem;background:linear-gradient(135deg,rgba(124,92,255,.12),rgba(240,101,149,.1));border:1px solid var(--accent);border-radius:14px;margin-bottom:.75rem;animation:wheelReveal .4s ease}
+@keyframes wheelReveal{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+.wheel-result-title{font-size:1.35rem;font-weight:700;color:var(--accent);margin-bottom:.4rem}
+.wheel-result-desc{font-size:.9rem;color:var(--text-muted);line-height:1.5;white-space:pre-wrap}
+.wheel-items-list{display:flex;flex-direction:column;gap:.45rem}
+.wheel-item{background:var(--bg-elevated);border:1px solid var(--border);border-radius:10px;padding:.65rem .85rem}
+.wheel-item-title{font-weight:600;font-size:.92rem;margin-bottom:.15rem}
+.wheel-item-desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.wheel-spinning .wheel-result-title{animation:pulse .3s ease-in-out infinite alternate}
+@keyframes pulse{from{opacity:.5}to{opacity:1}}
+.points-pos{color:var(--green)!important}
+.points-neg{color:var(--red)!important}
+tr.spin-game-header td{background:var(--bg-elevated);font-weight:600;text-align:center;color:var(--accent);padding:.55rem .7rem;border-top:1px solid var(--border)}
+tr.spin-game-header:first-child td{border-top:none}
+.rating-slider-wrap{background:var(--bg-elevated);border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem .85rem}
+.rating-slider-value{text-align:center;font-size:2rem;font-weight:700;color:var(--accent);line-height:1.2;margin-bottom:.65rem;min-height:2.4rem}
+.rating-slider-value.is-ns{color:var(--text-muted);font-size:1.5rem}
+.rating-slider-track{display:flex;align-items:center;gap:.65rem}
+.rating-slider-min,.rating-slider-max{font-size:.8rem;color:var(--text-muted);font-weight:600;flex-shrink:0;min-width:1.4rem}
+.rating-slider-max{text-align:right}
+.rating-slider{-webkit-appearance:none;appearance:none;flex:1;height:8px;border-radius:999px;background:linear-gradient(90deg,var(--border) 0%,var(--accent) 100%);outline:none;cursor:pointer}
+.rating-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.35);cursor:grab}
+.rating-slider::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.35);cursor:grab}
+.rating-slider-hint{text-align:center;font-size:.75rem;color:var(--text-muted);margin-top:.5rem}
+.changelog-list{display:flex;flex-direction:column;gap:.85rem}
+.changelog-entry{background:var(--bg-elevated);border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem}
+.changelog-head{display:flex;align-items:baseline;gap:.6rem;margin-bottom:.45rem}
+.changelog-ver{font-weight:700;color:var(--accent);font-size:.95rem}
+.changelog-date{font-size:.78rem;color:var(--text-muted)}
+.changelog-entry ul{margin:0;padding-left:1.15rem;font-size:.85rem;color:var(--text-muted);line-height:1.5}
+.changelog-entry li{margin-bottom:.2rem}
+.win-banner{display:none;text-align:center;padding:1.5rem;background:linear-gradient(135deg,rgba(61,214,140,.15),rgba(124,92,255,.12));border:1px solid var(--green);border-radius:14px;margin-bottom:1.25rem}
+.win-banner.visible{display:block}
+.win-banner h2{color:var(--green);margin-bottom:.4rem}
+.theme-toggle{display:flex;gap:.5rem;background:var(--bg-elevated);border-radius:10px;padding:.3rem;border:1px solid var(--border)}
+.theme-btn{flex:1;padding:.6rem 1rem;border:none;border-radius:8px;background:transparent;color:var(--text-muted);font-family:inherit;font-size:.9rem;font-weight:600;cursor:pointer;transition:all .2s}
+.theme-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.theme-btn:hover:not(.active){color:var(--text);background:var(--bg-card)}
+.color-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:520px){.color-row{grid-template-columns:1fr}}
+.color-field{display:flex;align-items:center;gap:.75rem;background:var(--bg-elevated);border:1px solid var(--border);border-radius:10px;padding:.65rem .85rem}
+.color-field label{margin:0;flex:1;font-size:.88rem;color:var(--text)}
+.color-field input[type=color]{width:42px;height:36px;padding:0;border:2px solid var(--border);border-radius:8px;cursor:pointer;background:transparent}
+.color-field input[type=color]::-webkit-color-swatch-wrapper{padding:2px}
+.color-field input[type=color]::-webkit-color-swatch{border:none;border-radius:5px}
+.settings-preview{display:flex;align-items:center;gap:.75rem;padding:.85rem 1rem;background:var(--bg-elevated);border:1px solid var(--border);border-radius:12px;margin-top:.5rem}
+.settings-preview .preview-token{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;border:2px solid rgba(255,255,255,.25)}
+html.theme-light .preview-token{border-color:rgba(0,0,0,.2)}
+footer{text-align:center;padding:1.5rem .5rem;color:var(--text-muted);font-size:.8rem}
+@media(max-width:480px){.map-grid{gap:3px}.cell{border-radius:4px}}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <div class="logo">RGGV by NW</div>
+  <p class="subtitle">Random Game Gauntlet Vsolyanka by NephWolf</p>
+</header>
+<div class="main-tabs">
+  <button class="main-tab active" data-tab="map" onclick="switchMainTab('map')">🗺️ Карта и Лог</button>
+  <button class="main-tab" data-tab="wheel" onclick="switchMainTab('wheel')">🎡 Колесо добра</button>
+  <button class="main-tab" data-tab="rules" onclick="switchMainTab('rules')">📜 Правила</button>
+  <button class="main-tab" data-tab="settings" onclick="switchMainTab('settings')">⚙️ Настройки</button>
+</div>
+    <div id="panel-map" class="tab-panel active">
+      <div class="win-banner" id="win-banner">
+        <h2>🏆 Финиш достигнут!</h2>
+        <p>Поздравляем! Ты прошёл Random Game Gauntlet Vsolyanka!</p>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box"><div class="val" id="stat-pos">0</div><div class="lbl">позиция</div></div>
+        <div class="stat-box"><div class="val" id="stat-drop">0</div><div class="lbl">дропнуто</div></div>
+        <div class="stat-box"><div class="val" id="stat-done">0</div><div class="lbl">пройдено</div></div>
+        <div class="stat-box"><div class="val" id="stat-time">0</div><div class="lbl">время</div></div>
+        <div class="stat-box"><div class="val" id="stat-avg">—</div><div class="lbl">Ср. оценка</div></div>
+        <div class="stat-box"><div class="val" id="stat-points">0</div><div class="lbl">очки</div></div>
+        <div class="stat-box span3"><div class="val" id="stat-piggy" style="font-size:1rem;">0/100</div><div class="lbl">Копилка</div></div>
+        <div class="stat-box"><div class="val" id="stat-rerolls">0</div><div class="lbl">рероллы</div></div>
+      </div>
+      <div class="card">
+        <div class="map-header">
+          <div class="player-badge" id="player-badge" style="display:none;">
+            <div class="player-token" id="player-token-display">🐺</div>
+            <span class="player-name" id="player-name-display">Игрок</span>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill"></div></div>
+            <div class="progress-text"><span>Старт</span><span id="progress-label">0 / 100</span><span>Финиш</span></div>
+          </div>
+          <button class="btn btn-secondary btn-sm" id="btn-start-event" onclick="openSetup()">🚀 Начать ивент</button>
+        </div>
+        <div class="map-grid-wrap"><div class="map-grid" id="map-grid"></div></div>
+        <div class="idle-panel" id="idle-panel">
+          <p id="idle-text">Нажми «Начать ивент», чтобы стартовать</p>
+          <div class="game-actions" style="justify-content:center;margin-top:0.75rem;">
+            <button class="btn btn-primary" id="btn-roll-idle" style="display:none;" onclick="openDiceModalFromIdle()">🎲 Бросить кубик</button>
+            <button class="btn btn-primary" id="btn-pick-game" style="display:none;" onclick="openGamePickModal()">🎮 Выбрать игру</button>
+          </div>
+        </div>
+        <div class="game-panel" id="game-panel">
+          <div class="game-panel-header">
+            <div class="game-title" id="current-game-title">—</div>
+            <span class="game-cell-type" id="current-cell-type">—</span>
+          </div>
+          <div class="game-actions">
+            <button class="btn btn-success" onclick="openCompleteModal('done')">✅ Пройдено</button>
+            <button class="btn btn-danger" onclick="openCompleteModal('drop')">💀 Дроп</button>
+            <button class="btn btn-warning" onclick="openRerollModal(false)">🔄 Реролл</button>
+            <button class="btn btn-secondary" id="btn-use-reroll" onclick="openRerollModal(true)">📦 Реролл из инвентаря (0)</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>📋 Лог прохождения</h2>
+        <div class="toolbar">
+          <button class="btn btn-secondary btn-sm" onclick="openCatalogModal()">📚 Архив игр</button>
+          <button class="btn btn-secondary btn-sm" onclick="exportCSV()">⬇ CSV</button>
+          <button class="btn btn-secondary btn-sm" onclick="exportJSON()">⬇ JSON</button>
+          <button class="btn btn-primary btn-sm" onclick="publishForViewers()">📡 Для зрителей (progress.json)</button>
+          <div class="spacer"></div>
+          <button class="btn btn-danger btn-sm" onclick="resetAll()">🗑 Сбросить всё</button>
+        </div>
+        <div class="table-wrap full-log" id="log-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Ход</th><th>Дата</th><th>Кубик</th><th>Движение</th><th>Клетка</th><th>Тип</th>
+                <th>Игра</th><th>Статус</th><th>Время</th><th>Оценка</th><th>Коммент.</th>
+              </tr>
+            </thead>
+            <tbody id="log-body"></tbody>
+          </table>
+        </div>
+        <div class="empty" id="empty-log"><div class="emoji">📭</div><div>Лог пуст</div></div>
+      </div>
+    </div>
+    <div id="panel-rules" class="tab-panel">
+      <div class="card"><h2>📜 Правила ивента</h2><div id="rules-content" class="rules-content"></div></div>
+      <div class="card">
+        <h2>📚 Архив игр</h2>
+        <p style="color:var(--text-muted);font-size:.85rem;margin-bottom:.65rem;">Пройденные и дропнутые игры прошлых ивентов (SPRGGB, SPRGG, Solo RGG, SPRGG2) и текущего RGGV. Рероллы тоже в полном списке.</p>
+        <div class="form-group"><label>Поиск</label><input type="text" id="rules-catalog-search" placeholder="Название / платформа / ивент" oninput="renderCatalogList('rules-catalog-body','rules-catalog-search','rules-catalog-filter')"></div>
+        <div class="catalog-filters">
+          <button class="btn btn-secondary btn-sm" data-catfilter="all" onclick="setCatalogFilter('all','rules-catalog-filter',this)">Все</button>
+          <button class="btn btn-secondary btn-sm" data-catfilter="Пройдено" onclick="setCatalogFilter('Пройдено','rules-catalog-filter',this)">Пройдено</button>
+          <button class="btn btn-secondary btn-sm" data-catfilter="Дроп" onclick="setCatalogFilter('Дроп','rules-catalog-filter',this)">Дроп</button>
+          <button class="btn btn-secondary btn-sm" data-catfilter="Реролл" onclick="setCatalogFilter('Реролл','rules-catalog-filter',this)">Реролл</button>
+        </div>
+        <div class="table-wrap full-log">
+          <table>
+            <thead><tr><th>Ивент</th><th>Дата</th><th>Платформа</th><th>Игра</th><th>Статус</th><th>Время</th><th>Коммент.</th></tr></thead>
+            <tbody id="rules-catalog-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
+        <div class="card"><h2>🎮 Платформы</h2><div class="tags" id="platforms-list"></div></div>
+        <div class="card"><h2>⭐ Спецроллы</h2><div class="tags" id="specials-list"></div></div>
+      </div>
+    </div>
+    <div id="panel-settings" class="tab-panel">
+      <div class="card"><h2>🎨 Тема</h2>
+        <div class="theme-toggle">
+          <button class="theme-btn active" id="theme-dark" onclick="setTheme('dark')">🌙 Тёмная</button>
+          <button class="theme-btn" id="theme-light" onclick="setTheme('light')">☀️ Светлая</button>
+        </div>
+      </div>
+      <div class="card"><h2>👤 Игрок</h2>
+        <div class="form-group"><label>Имя</label><input type="text" id="settings-name" maxlength="24" placeholder="Имя игрока"></div>
+        <div class="form-group"><label>Смайлик фишки</label><div class="picker-row" id="settings-emoji-picker"></div></div>
+        <div class="form-group"><label>Цвет фишки</label><div class="picker-row" id="settings-color-picker"></div></div>
+        <div class="settings-preview">
+          <div class="preview-token" id="settings-preview-token">🐺</div>
+          <span id="settings-preview-name" style="font-weight:600;">Игрок</span>
+        </div>
+        <div style="margin-top:1rem;"><button class="btn btn-primary btn-sm" onclick="savePlayerSettings()">💾 Сохранить игрока</button></div>
+      </div>
+      <div class="card"><h2>🌈 Цвета приложения</h2>
+        <div class="color-row">
+          <div class="color-field"><label>Акцент</label><input type="color" id="color-accent" value="#7c5cff" oninput="previewAppColors()"></div>
+          <div class="color-field"><label>Акцент (hover)</label><input type="color" id="color-accent-hover" value="#9b82ff" oninput="previewAppColors()"></div>
+          <div class="color-field"><label>Платформы</label><input type="color" id="color-platform" value="#4dabf7" oninput="previewAppColors()"></div>
+          <div class="color-field"><label>Спецроллы</label><input type="color" id="color-special" value="#f06595" oninput="previewAppColors()"></div>
+          <div class="color-field"><label>Успех (зелёный)</label><input type="color" id="color-green" value="#3dd68c" oninput="previewAppColors()"></div>
+          <div class="color-field"><label>Опасность (красный)</label><input type="color" id="color-red" value="#ff6b6b" oninput="previewAppColors()"></div>
+        </div>
+        <div style="margin-top:1rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button class="btn btn-primary btn-sm" onclick="saveAppColors()">💾 Сохранить цвета</button>
+          <button class="btn btn-secondary btn-sm" onclick="resetAppColors()">↩ Сбросить цвета</button>
+        </div>
+      </div>
+      <div class="card"><h2>💾 Прогресс ивента</h2>
+        <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:1rem; line-height:1.5;">Экспорт сохраняет весь прогресс: карту, лог, очки, колесо, инвентарь, настройки. Импорт полностью заменяет текущие данные.</p>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button class="btn btn-primary btn-sm" onclick="exportFullProgress()">⬇ Экспорт прогресса</button>
+          <button class="btn btn-secondary btn-sm" onclick="document.getElementById('import-file-input').click()">⬆ Импорт прогресса</button>
+          <input type="file" id="import-file-input" accept=".json,application/json" style="display:none;" onchange="importFullProgress(event)">
+        </div>
+      </div>
+      <div class="card"><h2>📦 Версия и история</h2>
+        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">Текущая версия: <strong style="color:var(--accent);" id="settings-version">2.14</strong></p>
+        <div id="changelog-list" class="changelog-list"></div>
+      </div>
+    </div>
+    <div id="panel-wheel" class="tab-panel">
+      <div class="card">
+        <div class="map-header" style="margin-bottom:1rem;">
+          <h2 style="margin:0;">🎡 Колесо добра</h2>
+          <div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
+            <div class="stat-box" style="padding:0.45rem 0.8rem; margin:0;">
+              <div class="val" id="wheel-points-display" style="font-size:1.2rem;">0</div>
+              <div class="lbl">Сейчас</div>
+            </div>
+            <div class="stat-box" style="padding:0.45rem 0.8rem; margin:0;">
+              <div class="val points-pos" id="wheel-plus-total" style="font-size:1.2rem;">+0</div>
+              <div class="lbl">Плюс за всё</div>
+            </div>
+            <div class="stat-box" style="padding:0.45rem 0.8rem; margin:0;">
+              <div class="val points-neg" id="wheel-minus-total" style="font-size:1.2rem;">0</div>
+              <div class="lbl">Минус за всё</div>
+            </div>
+            <button class="btn btn-primary" id="btn-spin-wheel" onclick="spinWheel()">🎲 Крутить</button>
+          </div>
+        </div>
+        <div id="wheel-game-info" style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1rem;"></div>
+        <div id="wheel-result" class="wheel-result" style="display:none;">
+          <div class="wheel-result-title" id="wheel-result-title">—</div>
+          <div class="wheel-result-desc" id="wheel-result-desc"></div>
+          <div id="wheel-result-effect" style="margin-top:0.75rem; font-weight:600;"></div>
+        </div>
+        <div class="idle-panel visible" id="wheel-idle" style="margin-top:0;"><p id="wheel-idle-text">Начни игру, чтобы крутить колесо</p></div>
+      </div>
+      <div class="card">
+        <h2>📋 История прокрутов</h2>
+        <div class="table-wrap full-log" id="spin-table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Дата</th><th>Результат</th><th>Δ очков</th><th>Итого</th><th>Стоимость</th></tr></thead>
+            <tbody id="spin-history-body"></tbody>
+          </table>
+        </div>
+        
+        <div class="empty" id="spin-history-empty"><div class="emoji">🎡</div><div>История пуста</div></div>
+      </div>
+      <div class="card">
+        <h2>📜 Пункты колеса</h2>
+        <div class="toolbar" style="margin-bottom:0.75rem;">
+          <button class="btn btn-secondary btn-sm" onclick="restoreDefaultWheelItems()">↩ Восстановить стандартные</button>
+        </div>
+        <div id="wheel-items-list" class="wheel-items-list"></div>
+      </div>
+    </div>
+  <div class="modal-overlay" id="modal-setup"><div class="modal">
+    <h3>🚀 Начать ивент</h3>
+    <div class="form-group"><label>Имя игрока</label><input type="text" id="setup-name" placeholder="NephWolf" maxlength="24"></div>
+    <div class="form-group"><label>Смайлик фишки</label><div class="picker-row" id="emoji-picker"></div></div>
+    <div class="form-group"><label>Цвет фишки</label><div class="picker-row" id="color-picker"></div></div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeModal('modal-setup')">Отмена</button>
+      <button class="btn btn-primary" onclick="confirmSetup()">Старт!</button>
+    </div>
+  </div></div>
+  <div class="modal-overlay" id="modal-dice"><div class="modal">
+    <h3 id="dice-title">🎲 Бросок кубика</h3>
+    <div class="dice-direction" id="dice-direction">Вперёд</div>
+    <div class="dice-big" id="dice-face">?</div>
+    <div class="modal-actions">
+      <button class="btn btn-primary" id="btn-roll" onclick="doRoll()">Бросить!</button>
+      <button class="btn btn-success" id="btn-confirm-roll" style="display:none;" onclick="confirmRoll()">Двигаться</button>
+    </div>
+  </div></div>
+  <div class="modal-overlay" id="modal-game"><div class="modal">
+    <h3>🎮 Новая клетка!</h3>
+    <p style="text-align:center; margin-bottom:1rem; color:var(--text-muted);" id="game-reveal-info"></p>
+    <div class="form-group"><label>Название игры</label><input type="text" id="game-name-input" placeholder="Введи название..." autofocus autocomplete="off"></div>
+    <div id="game-catalog-hits" class="catalog-hits"></div>
+    <div class="modal-actions"><button class="btn btn-primary" onclick="startPlaying()">Начать играть</button></div>
+  </div></div>
+  <div class="modal-overlay" id="modal-complete"><div class="modal">
+    <h3 id="complete-title">✅ Пройдено</h3>
+    <div id="complete-time-breakdown" style="background:var(--bg-elevated); border:1px solid var(--border); border-radius:10px; padding:0.75rem 1rem; margin-bottom:1rem; font-size:0.88rem; color:var(--text-muted); line-height:1.5;"></div>
+    <div class="form-group"><label>Доп. минуты после последнего колеса</label><input type="number" id="complete-extra-min" min="0" step="1" placeholder="0" value="0"></div>
+    <div class="form-group"><label>Итоговое время</label><input type="text" id="complete-time" readonly style="opacity:0.9;"></div>
+    <div class="form-group"><label>Ваша оценка</label>
+      <div class="rating-slider-wrap">
+        <div class="rating-slider-value" id="rating-display">NS</div>
+        <div class="rating-slider-track">
+          <span class="rating-slider-min">NS</span>
+          <input type="range" id="complete-rating" min="0" max="10" step="0.1" value="0" class="rating-slider">
+          <span class="rating-slider-max">10</span>
+        </div>
+        <div class="rating-slider-hint" id="rating-hint">Сдвиньте для оценки</div>
+      </div>
+    </div>
+    <div class="form-group"><label>Комментарий</label><textarea id="complete-comment" placeholder="Заметки..."></textarea></div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeModal('modal-complete')">Отмена</button>
+      <button class="btn btn-primary" onclick="confirmComplete()">Готово</button>
+    </div>
+  </div></div>
+  <div class="modal-overlay" id="modal-wheel-resolve"><div class="modal">
+    <h3 id="resolve-title" style="text-align:center;">🎲 Разрешение</h3>
+    <p id="resolve-desc" style="text-align:center; color:var(--text-muted); margin:0.35rem 0 0.75rem; font-size:0.88rem; line-height:1.45;"></p>
+    <p id="resolve-hint" style="text-align:center; color:var(--accent); margin-bottom:1rem; font-size:0.85rem; font-weight:600;"></p>
+    <div id="resolve-display" class="dice-big" style="margin-bottom:1rem;">?</div>
+    <div id="resolve-choices" class="picker-row" style="justify-content:center; margin-bottom:1rem; display:none;"></div>
+    <div class="modal-actions">
+      <button class="btn btn-primary" id="btn-resolve-action" onclick="doResolveAction()">Бросить</button>
+      <button class="btn btn-success" id="btn-resolve-confirm" style="display:none;" onclick="confirmResolve()">Применить</button>
+    </div>
+  </div></div>
+  <div class="modal-overlay" id="modal-reroll"><div class="modal">
+    <h3 id="reroll-modal-title">🔄 Реролл</h3>
+    <p id="reroll-modal-hint" style="text-align:center; color:var(--text-muted); font-size:0.85rem; margin-bottom:0.75rem;"></p>
+    <div class="form-group"><label>Комментарий / причина</label><textarea id="reroll-comment" placeholder="Укажи причину реролла..."></textarea></div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeModal('modal-reroll')">Отмена</button>
+      <button class="btn btn-primary" onclick="confirmReroll()">Готово</button>
+    </div>
+  </div></div>
+
+</div>
+<footer>RGGV by NW · v<span id="app-version">2.14</span> · Данные хранятся локально в браузере</footer>
+<div class="modal-overlay" id="modal-catalog"><div class="modal wide">
+    <h3>📚 Архив игр</h3>
+    <div class="form-group"><label>Поиск</label><input type="text" id="catalog-search" placeholder="Название / платформа / ивент" oninput="renderCatalogList('catalog-body','catalog-search','catalog-filter')"></div>
+    <div class="catalog-filters">
+      <button class="btn btn-secondary btn-sm" data-catfilter="all" onclick="setCatalogFilter('all','catalog-filter',this)">Все</button>
+      <button class="btn btn-secondary btn-sm" data-catfilter="Пройдено" onclick="setCatalogFilter('Пройдено','catalog-filter',this)">Пройдено</button>
+      <button class="btn btn-secondary btn-sm" data-catfilter="Дроп" onclick="setCatalogFilter('Дроп','catalog-filter',this)">Дроп</button>
+      <button class="btn btn-secondary btn-sm" data-catfilter="Реролл" onclick="setCatalogFilter('Реролл','catalog-filter',this)">Реролл</button>
+    </div>
+    <div class="table-wrap" style="max-height:min(70vh,640px)">
+      <table>
+        <thead><tr><th>Ивент</th><th>Дата</th><th>Платформа</th><th>Игра</th><th>Статус</th><th>Время</th><th>Коммент.</th></tr></thead>
+        <tbody id="catalog-body"></tbody>
+      </table>
+    </div>
+    <div class="modal-actions"><button class="btn btn-secondary" onclick="closeModal('modal-catalog')">Закрыть</button></div>
+  </div></div>
+<div class="toast" id="toast"></div>
+<script>
+const APP_VERSION = '2.14';
+const ARCHIVE_GAMES = [{"event": "SPRGGB NW", "date": "2024-01-06", "platform": "GBA", "game": "Mary-Kate and Ashley: Sweet 16 - Licensed to Drive", "status": "Пройдено", "comment": "Приятная, но душноватая симулятор таксиста. 5/10", "time": "4 ч 10 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-01-07", "platform": "SNES", "game": "Resident Evil Gaiden (GBC)", "status": "Пройдено", "comment": "Прикольный портативный резик, но блять послений босс идёт нахуй 6/10", "time": "7 ч", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-01-09", "platform": "GB", "game": "Undercover Cops Gaiden: Hakaishin Garumaa (GB)", "status": "Реролл", "comment": "Джапан онли", "time": "", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-01-09", "platform": "GB", "game": "Krusty's Fun House / Asterix & Obelix", "status": "Пройдено", "comment": "Хороший платформер. 6/10", "time": "5 ч 6 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-01-10", "platform": "PSP", "game": "Asterix and Obelix Take on Caesar (GBC)", "status": "Пройдено", "comment": "Чисто мини игры для убивания времени. 5/10", "time": "3 ч 48 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-01-13", "platform": "SMD", "game": "Asterix & Obelix: Bash Them All (GBA)", "status": "Пройдено", "comment": "Прошёл ремейк уже пройденой игры на GB. Под конец игры просто бежал +D. 7/10", "time": "3 ч 17 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-01-13", "platform": "NES", "game": "F-15 Strike Eagle / Double Dribble", "status": "Пройдено", "comment": "Самый душный кликер. Автопилот просто забирает возможность нормально летать и остаётся только стрелять ракетами самонавидения. И выполнил ноудес челленж. 2/10", "time": "3 ч 55 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-01-15", "platform": "PS1", "game": "Metal Gear Solid", "status": "Пройдено", "comment": "2024-10-11 00:00:00", "time": "18 ч 5 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-01-21", "platform": "SNES", "game": "Ghoul Patrol", "status": "Реролл", "comment": "Ркролл по причине хуйня.", "time": "4 ч 6 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-12", "platform": "SNES", "game": "Donkey Kong Country", "status": "Пройдено", "comment": "В детстве была на GBA, далеко не проходил. Игра очень хорошая. 8/10", "time": "8 ч 39 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-16", "platform": "GB", "game": "Atlantis: The Lost Empire (GBA)", "status": "Пройдено", "comment": "Игра детства. 6/10", "time": "4 ч 8 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-18", "platform": "PSP", "game": "God of War: Chains of Olympus", "status": "Пройдено", "comment": "2024-10-07 00:00:00", "time": "7 ч 17 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-18", "platform": "SMD", "game": "God of War: Ghost of Sparta (PSP)", "status": "Пройдено", "comment": "2024-10-08 00:00:00", "time": "5 ч 58 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-19", "platform": "NES", "game": "Chip ’n Dale Rescue Rangers", "status": "Пройдено", "comment": "2024-10-07 00:00:00", "time": "29 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-19", "platform": "SNES", "game": "Chip ’n Dale Rescue Rangers 2 (NES)", "status": "Пройдено", "comment": "2024-10-07 00:00:00", "time": "32 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-19", "platform": "GB", "game": "Spider-Man (GBC)", "status": "Реролл", "comment": "Ркролл по причине хуйня.", "time": "", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-23", "platform": "GB", "game": "Mega Man III (GB)", "status": "Пройдено", "comment": "", "time": "7 ч 6 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-24", "platform": "SMD", "game": "Mega Man II (NES)", "status": "Пройдено", "comment": "", "time": "1 ч 45 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-24", "platform": "NES", "game": "Ginga Denshou: Galaxy Odyssey", "status": "Реролл", "comment": "Предметом", "time": "", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-24", "platform": "NES", "game": "Battle City", "status": "Реролл", "comment": "Предметом", "time": "", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-24", "platform": "NES", "game": "Rambo", "status": "Реролл", "comment": "Предметом", "time": "", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-02-24", "platform": "NES", "game": "Ikari Warriors II: Victory Road", "status": "Пройдено", "comment": "", "time": "3 ч 50 мин", "source": "archive"}, {"event": "SPRGGB NW", "date": "2024-03-18", "platform": "NES", "game": "BioShock (STEAM)", "status": "Пройдено", "comment": "", "time": "10 ч", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-07-26", "platform": "SNES", "game": "Williams Arcade's Greatest Hits", "status": "Реролл", "comment": "Сборник Аркадных игра без хайскора", "time": "", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-07-26", "platform": "SNES", "game": "Fuzzy Shooting", "status": "Реролл", "comment": "Демо", "time": "", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-07-26", "platform": "SNES", "game": "Tri-Star", "status": "Реролл", "comment": "Игра для преблуды", "time": "", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-07-26", "platform": "SNES", "game": "Super Castlevania IV", "status": "Пройдено", "comment": "", "time": "8 ч 40 мин", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-07-28", "platform": "GBA", "game": "Garfield: The Search for Pooky", "status": "Пройдено", "comment": "", "time": "5 ч 40 мин", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-07-30", "platform": "PS1", "game": "Skullmonkeys", "status": "Пройдено", "comment": "", "time": "6 ч 17 мин", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-08-15", "platform": "GB", "game": "Lion King: Simba's Mighty Adventure", "status": "Пройдено", "comment": "", "time": "56 мин", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-08-16", "platform": "NES", "game": "Castlevania III: Dracula’s Curse", "status": "Реролл", "comment": "", "time": "7 ч", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-08-23", "platform": "NES", "game": "Akumajou Densetsu", "status": "Пройдено", "comment": "", "time": "9 ч 40 мин", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-09-17", "platform": "SMD", "game": "Sonic the Hedgehog 3", "status": "Пройдено", "comment": "", "time": "6 ч 40 мин", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-10-05", "platform": "PSP", "game": "Captain Commando", "status": "Реролл", "comment": "", "time": "", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-10-05", "platform": "PSP", "game": "Sengoku Basara Chronicle Heroes", "status": "Реролл", "comment": "Джапан онли", "time": "", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-10-05", "platform": "PSP", "game": "Mobile Suit Gundam SEED: Federation vs ZAFT", "status": "Реролл", "comment": "Джапан онли", "time": "", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-10-05", "platform": "PSP", "game": "Ultimate Ghosts 'n Goblins", "status": "Реролл", "comment": "Предметом", "time": "2 ч 5 мин", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-10-06", "platform": "PSP", "game": "Mega Man Powered Up", "status": "Пройдено", "comment": "", "time": "1 ч 53 мин", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-10-06", "platform": "GBA", "game": "X-Men: The Official Game", "status": "Реролл", "comment": "Предметом", "time": "", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-10-06", "platform": "GBA", "game": "Spider-Man: Battle for New York", "status": "Пройдено", "comment": "", "time": "3 ч", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-10-07", "platform": "PS1", "game": "Tigger's Honey Hunt", "status": "Пройдено", "comment": "", "time": "1 ч 33 мин", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-10-09", "platform": "NES", "game": "Mega Man 4", "status": "Реролл", "comment": "Поддельный автограф", "time": "", "source": "archive"}, {"event": "SPRGG NW", "date": "2024-10-09", "platform": "NES", "game": "Mega Man 6", "status": "Пройдено", "comment": "", "time": "3 ч 13 мин", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-10", "platform": "GBA", "game": "Big Mutha Truckers", "status": "Реролл", "comment": "Игра является симулятором.", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-10", "platform": "GBA", "game": "Pokemon - Sapphire Version", "status": "Реролл", "comment": "Игра является RPG.", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-10", "platform": "GBA", "game": "ESPN Great Outdoor Games - Bass Tournament", "status": "Реролл", "comment": "Игра является симулятором.", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-10", "platform": "GBA", "game": "Backyard Football 2006", "status": "Реролл", "comment": "Игра является спортивной.", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-10", "platform": "GBA", "game": "Rockman & Forte", "status": "Пройдено", "comment": "", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-23", "platform": "SMD", "game": "Triple Play 96", "status": "Реролл", "comment": "Игра является спортивной.", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-23", "platform": "SMD", "game": "Wukong Waizhuan", "status": "Реролл", "comment": "Игра является RPG и UNL.", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-23", "platform": "SMD", "game": "King of Fighters '99, The", "status": "Реролл", "comment": "Игра является UNL, на китайском, не запускается.", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-23", "platform": "SMD", "game": "Nightmare Circus", "status": "Реролл", "comment": "По gречине хуйня | +1 GB", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-23", "platform": "SMD", "game": "Mars Sample Program - Gnu Sierra (32X)", "status": "Реролл", "comment": "", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-23", "platform": "SMD", "game": "Wayne's World (SMD)", "status": "Реролл", "comment": "По gречине хуйня | +1 STEAM", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-23", "platform": "SMD", "game": "Da Hanghai Shidai II (SMD)", "status": "Реролл", "comment": "", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-04-23", "platform": "SMD", "game": "Comix Zone (SMD)", "status": "Реролл", "comment": "По gречине хуйня | +1 PS2", "time": "", "source": "archive"}, {"event": "Solo RGG NW", "date": "2025-07-20", "platform": "SMD", "game": "Dashin' Desperadoes (SMD)", "status": "Играется", "comment": "", "time": "", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-03", "platform": "GBA", "game": "Ultimate Puzzle Games", "status": "Пройдено", "comment": "", "time": "2 ч 48 мин", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-03", "platform": "NES", "game": "Darkwing Duck", "status": "Пройдено", "comment": "", "time": "5 ч", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-06", "platform": "PS2", "game": "Score International Baja 1000 - World Championship Off Road Racing", "status": "Реролл", "comment": "Игра является симулятором", "time": "", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-07", "platform": "PS2", "game": "Freekstyle", "status": "Реролл", "comment": "Предметом", "time": "", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-07", "platform": "PS2", "game": "Bujingai", "status": "Пройдено", "comment": "Китайстий DMC", "time": "5 ч 23 мин", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-07", "platform": "SNES", "game": "Ultima - The False Prophet", "status": "Реролл", "comment": "Игра является RPG", "time": "", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-07", "platform": "SNES", "game": "Super Air Diver 2", "status": "Реролл", "comment": "Игра является симулятором", "time": "", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-07", "platform": "SNES", "game": "Parlor! Mini 5 - Pachinko Jikki Simulation Game", "status": "Реролл", "comment": "Игра является симулятором(казино)", "time": "", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-07", "platform": "SNES", "game": "The Pirates of Dark Water", "status": "Реролл", "comment": "Предметом", "time": "3 ч 45 мин", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-08", "platform": "SNES", "game": "Yoshi’s Island", "status": "Пройдено", "comment": "", "time": "11 ч 15 мин", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-12", "platform": "SMD", "game": "Brazooka's - Herois Nacionais", "status": "Реролл", "comment": "Игра явлчется Хоумбрю", "time": "", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-12", "platform": "SMD", "game": "Syd of Valis", "status": "Реролл", "comment": "Предметом", "time": "", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-12", "platform": "SMD", "game": "Xin Qigai Wangzi", "status": "Реролл", "comment": "Игра является RPG", "time": "", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-12", "platform": "SMD", "game": "Fatman", "status": "Реролл", "comment": "Предметом", "time": "", "source": "archive"}, {"event": "SPRGG2 NW", "date": "2025-10-12", "platform": "SMD", "game": "RoboCop Versus The Terminator", "status": "Играется", "comment": "", "time": "", "source": "archive"}];
+const PIGGY_THRESHOLD = 100;
+const PREVIEW_ROWS = 15;
+const CHANGELOG = [
+  {version:'2.14', date:'2026-09-02', changes:[
+    'Колесо: Счастливая семёрка, Домашний регион, Рикошет, Минуты в карман, Пинок удачи'
+  ]},
+  {version:'2.13', date:'2026-08-30', changes:[
+    'Колесо: Карма, Двойной риск, Смена полюса, Финишный/Попутный ветер, Стрик, Лесенка, Реролл в карман, Антиреролл'
+  ]},
+  {version:'2.12', date:'2026-08-30', changes:[
+    'Колесо добра: сумма всех плюс-очков и всех минус-очков за всю историю прокрутов',
+    'Свободные рероллы больше не пишутся в лог; остаются только рероллы из инвентаря'
+  ]},
+  {version:'2.11', date:'2026-08-25', changes:[
+    'Архив игр прошлых ивентов (KPD) + текущий RGGV: пройденные, дропы и рероллы',
+    'Кнопка «Архив игр», поиск в правилах и подсказки при выборе названия',
+    'В подсказках выбора игры только пройденные и дропы, без зелёной рамки',
+    'Стилизованный скроллбар'
+  ]},
+  {version:'2.10', date:'2026-08-25', changes:[
+    'Импорт: время игры снова считается по всем прокрутам из истории, а не по последнему колесу',
+    'При загрузке сейва пересчитывается время в логе, если оно меньше суммы прокрутов'
+  ]},
+  {version:'2.9', date:'2026-08-24', changes:[
+    'Тип клетки в подсказке «Выбрать игру» окрашен: платформа — синий, спецролл — розовый',
+    'Лог прохождения и история прокрутов показываются полностью'
+  ]},
+  {version:'2.8', date:'2026-08-24', changes:[
+    'Финиш только после прохождения игры на клетке 100',
+    'Кубик больше не открывается сам после прохождения / дропа',
+    'После «Двигаться» фишка анимированно идёт по клеткам',
+    'Кнопка «Выбрать игру» открывает окно с «Начать играть»'
+  ]},
+  {version:'2.7', date:'2026-08-24', changes:[
+    'Лог: убран лишний суффикс «ч» у уже отформатированного времени',
+    'Время игры считается по прокрутам текущей сессии, а не по совпадению названия',
+    'Реролл сохраняет накрученное за игру время колеса в лог',
+    'Финиш больше не считается отдельной «пройденной игрой»',
+    'Модалка названия игры не сбрасывает ввод при повторном рендере',
+    'Защита от падения, если нет текущей игры / ожидаемого хода',
+    'Кавычки в комментариях больше не ломают таблицу лога'
+  ]},
+  {version:'2.6', date:'2026-08-24', changes:[
+    'Лог и история прокрутов: окно на 15 строк, внутри можно листать колесиком',
+    'Кнопка со стрелкой вниз под таблицей раскрывает полный список на месте'
+  ]},
+  {version:'2.5', date:'2026-08-24', changes:[
+    'Лог прохождения и история прокрутов на главном экране показывают 15 строк',
+    'Кнопка «Полный список» открывает полный лог / историю в широком окне'
+  ]},
+  {version:'2.4', date:'2026-08-24', changes:[
+    'Исходники разделены: styles.css, markup.html, app.js + сборка в один HTML',
+    'Так правки по частям быстрее, раздача по-прежнему одним файлом'
+  ]},
+  {version:'2.3', date:'2026-08-24', changes:[
+    'Отдельный статус «Старт» для записи возврата на стартовую клетку после дропа',
+    'Бросок назад на клетку 0 больше не помечается как «Дроп» в логе'
+  ]},
+  {version:'2.2', date:'2026-08-24', changes:[
+    'Плитки статистики на главном экране: позиция, дропнуто, пройдено, время, ср. оценка / очки, копилка, рероллы',
+    'Убран счётчик «Ходов»; добавлены «дропнуто» и суммарное «время»'
+  ]},
+  {version:'2.1', date:'2026-08-24', changes:[
+    'Копилка: убрана арифметическая прогрессия порогов (100 → 110 → … → 200)',
+    'Фиксированный порог: каждые 100 мин в копилке = +1 реролл, излишек переносится'
+  ]},
+  {version:'2.0', date:'2026-08-20', changes:[
+    'Копилка на реролл: доп. минуты после колеса копятся отдельно',
+    'Пороги: 100 → 110 → … → макс. 200 мин за +1 реролл; излишек переносится',
+    'Счётчик копилки в статистике'
+  ]},
+  {version:'1.9', date:'2026-08-19', changes:['Правила обновлены под текущую механику','Правила только для чтения']},
+  {version:'1.8', date:'2026-08-19', changes:['Пункты колеса подгружаются при пустом сейве','Кнопка восстановления стандартных пунктов']},
+  {version:'1.7', date:'2026-08-19', changes:['Полный экспорт и импорт прогресса JSON']},
+  {version:'1.6', date:'2026-08-19', changes:['Оценка ползунком NS–10']},
+  {version:'1.5', date:'2026-08-19', changes:['Обнуление не сбрасывает уже накрученное время','История колеса по играм']},
+  {version:'1.4', date:'2026-08-19', changes:['Свободный реролл и реролл из инвентаря']},
+  {version:'1.3', date:'2026-08-19', changes:['Инвентарь рероллов за серию прохождений']},
+  {version:'1.2', date:'2026-08-19', changes:['Колесо добра, очки, стоимость прокрутов']},
+  {version:'1.1', date:'2026-08-18', changes:['Фикс модалки ввода игры и светлой темы']},
+  {version:'1.0', date:'2026-08-18', changes:['Первый релиз: карта, кубик, лог, сохранение']}
+];
+const PLATFORMS = ['NES','SNES','GC','SMD','Dreamcast','PS1','PS2','PSP','GB','GBA','DS','3DS','Steam'];
+const SPECIALS = ['Gold','Mario','Megaman','Castlevania','Sonic','Nintendo','Playstation','Capcom','Konami','Disney','Comix','Movies'];
+const ALL_TYPES = [...PLATFORMS, ...SPECIALS];
+function buildPool(){const pool=[]; ALL_TYPES.forEach(t=>{for(let i=0;i<4;i++)pool.push(t);}); return pool;}
+const RULES_HTML = `
+<h3>Цель</h3>
+<p>RGGV by NW — соло-ивент. Бросая кубик D6, дойти по карте от Старта (0) до Финиша (100), проходя игры по выпавшим клеткам.</p>
+<h3>Карта</h3>
+<ul><li>100 клеток, путь «змейкой». Клетки скрыты, пока на них не наступишь.</li>
+<li>Типы клеток: <strong>Платформы</strong> и <strong>Спецроллы</strong> (по 4 копии каждого типа, всего 100).</li></ul>
+<h3>Ходы</h3>
+<ul><li><strong>Пройдено</strong> — игра завершена → бросок D6 и движение <em>вперёд</em>.</li>
+<li><strong>Дроп</strong> — сдаёшься → бросок D6 и движение <em>назад</em>.</li>
+<li>После «Двигаться» фишка идёт по клеткам, затем появляется кнопка «Выбрать игру».</li>
+<li>Перелёт за 100 останавливает на клетке 100 — эту игру тоже нужно пройти.</li>
+<li>Ивент завершается только после статуса «Пройдено» на клетке 100. Дроп с финишной клетки — бросок назад.</li></ul>
+<h3>Реролл</h3>
+<p>Рероллы делятся на два типа: <strong>обязательные</strong> и <strong>по желанию</strong>.</p>
+<p>В приложении: свободный реролл (с указанием причины) или реролл из инвентаря (тратит 1 предмет). Реролл в инвентарь: за <strong>2 пройденные игры подряд</strong> — +1; за каждую следующую в серии — ещё +1. Дроп сбрасывает серию.</p>
+<p><strong>Копилка:</strong> доп. минуты после колеса (не потраченные на прокруты) копятся в копилку. За каждые <strong>100 мин</strong> — +1 реролл. Излишек переносится.</p>
+<h4>Обязательный реролл</h4>
+<p>Игра подлежит обязательному рероллу, если:</p>
+<ul>
+<li>Она не подходит ни под один критерий прохождения из раздела «Критерии прохождения игры».</li>
+<li>Это дополнение, требующее оригинальную игру для запуска.</li>
+<li>Это ММО или подобная игра, где для прохождения нужны действия в онлайне, которые невозможно выполнить в одиночку. Если онлайн нужен только для запуска — реролл не делается.</li>
+<li>Это игра на угадывание слов. Критерий: в жанре указано Trivia, Game Show или Quiz.</li>
+<li>Игра физически непроходима без участия другого человека (например, серия We Were Here).</li>
+<li>Игру нельзя стримить по правилам Twitch или есть риск бана (включая платформы рестрима).</li>
+<li>Это демоверсия или Proto-версия.</li>
+<li>Игра не была выпущена (Cancelled).</li>
+<li>Игра уже пройдена стримером в текущем сезоне RGG-LAND. Такие игры также нельзя заказать/выбрать через Колесо Добра, Предметы, Эффекты, Спецроллы и глобальные ивенты. Если та же игра выпала на другую платформу — реролл не делается.</li>
+<li>В приложении есть <strong>Архив игр</strong> прошлых ивентов (SPRGGB NW, SPRGG NW, Solo RGG NW, SPRGG2 NW) и текущего RGGV. При вводе названия игра сверяется со списком пройденных и дропнутых.</li>
+<li>Игра отсутствует в интернете.</li>
+<li>Игра в чёрном списке RGG: Welcome to the Game 1 &amp; 2; S.T.A.L.K.E.R.: Тень Чернобыля; Чистое небо; Зов Припяти; S.T.A.L.K.E.R. 2: Heart of Chornobyl.</li>
+</ul>
+<h4>Реролл по желанию</h4>
+<p>Стример может рероллить игру по желанию, если:</p>
+<ul>
+<li>Нет перевода на английский или русский, а знание другого языка нужно для прохождения. Фанатские переводы разрешены.</li>
+<li>Плохая эмуляция или баги, мешающие прохождению.</li>
+<li>Не запускается или есть технические проблемы (включая слабый ПК).</li>
+<li>Нужен специальный девайс (всё, кроме геймпада, клавиатуры и мыши). Эмулируемый стилус DS/3DS считается мышью.</li>
+<li>Визуальная новелла или текстовый квест (жанр Visual Novel / Text Adventure).</li>
+<li>RPG (жанр Role-playing).</li>
+<li>Спортивная игра (жанр Sports).</li>
+<li>Симулятор, включая казино, пачинко, автоматы и F1 (жанр Simulation).</li>
+<li>Стратегия (жанр Strategy).</li>
+<li>PS3 и тег Ingame или ниже на <a href="https://rpcs3.net/compatibility" target="_blank" rel="noopener">RPCS3 Compatibility List</a>.</li>
+<li>Wii U и тег Runs или ниже на <a href="https://compat.cemu.info/" target="_blank" rel="noopener">Cemu Compatibility List</a>.</li>
+<li>Платформа Windows и проблемы с запуском на современной Windows.</li>
+<li>Игра в раннем доступе.</li>
+</ul>
+<p>По любому из критериев реролл можно сделать в любой момент после начала игры.</p>
+<h3>Очки и движение</h3>
+<ul>
+<li>Очки копятся через <strong>Колесо добра</strong>.</li>
+<li>При движении <em>вперёд</em> положительные очки прибавляются к кубику и затем сбрасываются в 0.</li>
+<li>Отрицательные очки на ход не влияют и переносятся между играми, пока не выйдешь в плюс.</li>
+</ul>
+<h3>Колесо добра</h3>
+<ul>
+<li>Доступно только во время текущей игры.</li>
+<li>Стоимость прокрута: 1-й — <strong>30 мин</strong>, каждый следующий +5 мин (35, 40…).</li>
+<li><strong>Обнуление</strong> сбрасывает стоимость следующих прокрутов к 30 мин, очки и рероллы. Уже накрученное время за игру сохраняется.</li>
+<li>Время прохождения = сумма всех прокрутов за игру (до и после обнуления) + доп. минуты после последнего колеса.</li>
+<li>История прокрутов ведётся с привязкой к названию игры.</li>
+</ul>
+<h3>Оценка</h3>
+<p>При «Пройдено» / «Дроп» оценка выставляется ползунком NS–10 (NS = без оценки).</p>
+<h3>Сохранение</h3>
+<p>Прогресс хранится локально в браузере. В настройках доступны полный экспорт и импорт JSON.</p>
+`;
+const EMOJIS = ['🐺','😎','🎮','👾','🕹️','🎯','🔥','⚡','🌟','🦊','🐱','🚀','💀','🦄','🐸','👻'];
+const COLORS = ['#7c5cff','#f06595','#4dabf7','#3dd68c','#f5c542','#ff9f43','#ff6b6b','#20c997','#e64980','#748ffc'];
+const DEFAULT_APP_COLORS = {accent:'#7c5cff',accentHover:'#9b82ff',platform:'#4dabf7',special:'#f06595',green:'#3dd68c',red:'#ff6b6b'};
+const DEFAULT_WHEEL_ITEMS = [
+  {title:'Плюс очко',description:'Очевидное плюс очко.',key:'plus1'},
+  {title:'Минус очко',description:'Очевидное минус очко.',key:'minus1'},
+  {title:'Подсрачник',description:'Минус 2 очка.',key:'minus2'},
+  {title:'Пиздак',description:'Минус 3 очка.',key:'minus3'},
+  {title:'Двойное очко',description:'Очевидные плюс 2 очка.',key:'plus2'},
+  {title:'Тройное очко',description:'Очевидные плюс 3 очка.',key:'plus3'},
+  {title:'Орел или решка',description:'Брось монетку: один исход — плюс очко, другой — минус очко.',key:'coin1'},
+  {title:'Два по цене одного',description:'Колесо роллится ещё два раза. Выполняются оба результата (рероллы колеса игнорируются).',key:'double'},
+  {title:'Обнуление',description:'Очки = 0. Все рероллы уничтожаются. Серия прохождений сбрасывается. Стоимость следующих прокрутов — снова с 30 мин. Уже накрученное время за игру сохраняется.',key:'reset'},
+  {title:'Цепная молния',description:'Брось d6 и получи столько плюс очков, сколько выпало.',key:'chain_plus'},
+  {title:'Шаровая молния',description:'Брось d6 и получи столько минус очков, сколько выпало.',key:'chain_minus'},
+  {title:'Рандомайзер',description:'Монетка (плюс/минус), затем d6 — добавляешь или вычитаешь выпавшее.',key:'randomizer'},
+  {title:'Орел орел или решка решка',description:'Монетка: плюс 2 очка или минус 2 очка.',key:'coin2'},
+  {title:'Компетитив перхапс',description:'Случайное число от −10 до +10 без нуля.',key:'comp'},
+  {title:'Контролер рандома',description:'Загадай число 1–6, брось d6. Совпало — плюс 3, иначе минус 1.',key:'controller'},
+  {title:'Риск',description:'d4: чётное прибавляет, нечётное минусует это число.',key:'risk'},
+  {title:'Двадцатигранник',description:'d20: 1–3 = −2; 4–10 = +1; 11–17 = −1; 18–20 = +2.',key:'d20'},
+  {title:'Карма',description:'Если за эту игру плюсов уже больше, чем минусов — −2. Иначе +2.',key:'karma'},
+  {title:'Двойной риск',description:'Монетка: затем d8 в плюс или d8 в минус.',key:'double_risk'},
+  {title:'Смена полюса',description:'Все текущие очки инвертируются.',key:'polarity'},
+  {title:'Финишный ветер',description:'Если клетка ≥ 51 — +3. Иначе −1.',key:'finish_wind'},
+  {title:'Попутный ветер',description:'Если клетка ≤ 50 — +3. Иначе −1.',key:'tail_wind'},
+  {title:'Стрик',description:'Если последняя завершённая игра была «Пройдено» — +3. Если «Дроп» — −3.',key:'streak'},
+  {title:'Лесенка',description:'d6: 1–2 = −2; 3–4 = 0; 5–6 = +3.',key:'ladder'},
+  {title:'Реролл в карман',description:'+1 реролл в инвентарь.',key:'pocket_reroll'},
+  {title:'Антиреролл',description:'Минус один реролл из инвентаря. Если реролла нет — −1 очко.',key:'anti_reroll'},
+  {title:'Счастливая семёрка',description:'2d6: сумма 7 или 11 → +4, иначе +1.',key:'lucky7'},
+  {title:'Домашний регион',description:'Платформенная клетка → +3. Спецролл → +1.',key:'home_region'},
+  {title:'Рикошет',description:'+d4. Если выпало 4 — ещё +1.',key:'ricochet'},
+  {title:'Минуты в карман',description:'+15 минут в копилку. Очки не меняются.',key:'piggy15'},
+  {title:'Пинок удачи',description:'80% +2, 20% +5.',key:'luck_kick'}
+];
+function buildDefaultWheelItems(){return DEFAULT_WHEEL_ITEMS.map((it,i)=>({id:'w'+i+'_'+it.key,title:it.title,description:it.description,key:it.key}));}
+function ensureWheelItems(){
+  const fresh=buildDefaultWheelItems();
+  if(!state.wheelItems||!Array.isArray(state.wheelItems)||!state.wheelItems.length){state.wheelItems=fresh;return true;}
+  let fixed=false;
+  state.wheelItems.forEach(item=>{
+    if(!item.key&&item.title){const m=DEFAULT_WHEEL_ITEMS.find(d=>d.title===item.title); if(m){item.key=m.key;fixed=true;}}
+    if(item.key){const m2=DEFAULT_WHEEL_ITEMS.find(d=>d.key===item.key); if(m2&&item.description!==m2.description){item.description=m2.description;fixed=true;}}
+  });
+  const have=new Set(state.wheelItems.map(function(i){return i.key;}).filter(Boolean));
+  fresh.forEach(function(it){ if(it.key&&!have.has(it.key)){state.wheelItems.push(it); fixed=true;} });
+  return fixed;
+}
+let state={
+  player:{name:'',emoji:'🐺',color:'#7c5cff'},position:0,cells:[],log:[],phase:'idle',
+  currentGame:null,pendingMove:null,lastDice:null,rules:'',setupDone:false,theme:'dark',
+  appColors:Object.assign({},DEFAULT_APP_COLORS),points:0,currentGameSpins:0,currentGameWheelMinutes:0,
+  spinHistory:[],wheelItems:null,inventoryRerolls:0,consecutiveDone:0,piggyMinutes:0,piggyThreshold:PIGGY_THRESHOLD,
+  currentGameSpinCosts:[],nextDiceDir:'forward'
+};
+let settingsEmoji='🐺', settingsColor='#7c5cff';
+function normalizePiggy(){
+  state.piggyThreshold=PIGGY_THRESHOLD;
+  if(typeof state.piggyMinutes!=='number'||state.piggyMinutes<0) state.piggyMinutes=0;
+  let granted=0;
+  while(state.piggyMinutes>=PIGGY_THRESHOLD){
+    state.piggyMinutes-=PIGGY_THRESHOLD;
+    state.inventoryRerolls=(state.inventoryRerolls||0)+1;
+    granted++;
+  }
+  return granted;
+}
+function depositToPiggy(extraMin){
+  const add=Math.max(0,extraMin|0);
+  if(add<=0) return {granted:0,added:0};
+  state.piggyMinutes=(state.piggyMinutes||0)+add;
+  state.piggyThreshold=PIGGY_THRESHOLD;
+  let granted=0;
+  while(state.piggyMinutes>=PIGGY_THRESHOLD){
+    state.piggyMinutes-=PIGGY_THRESHOLD;
+    state.inventoryRerolls=(state.inventoryRerolls||0)+1;
+    granted++;
+  }
+  return {granted,added:add};
+}
+
+// ===== BOOT / INIT =====
+function init(){
+  const verEl=document.getElementById('app-version'); if(verEl) verEl.textContent=APP_VERSION;
+  PLATFORMS.forEach(p=>{const s=document.createElement('span'); s.className='tag platform'; s.textContent=p; document.getElementById('platforms-list').appendChild(s);});
+  SPECIALS.forEach(s=>{const el=document.createElement('span'); el.className='tag special'; el.textContent=s; document.getElementById('specials-list').appendChild(el);});
+  buildEmojiPicker('emoji-picker',e=>{state.player.emoji=e;});
+  buildColorPicker('color-picker',c=>{state.player.color=c;});
+  buildEmojiPicker('settings-emoji-picker',e=>{settingsEmoji=e; updateSettingsPreview();});
+  buildColorPicker('settings-color-picker',c=>{settingsColor=c; updateSettingsPreview();});
+  loadState();
+  migrateStartLogStatuses();
+  migrateFreeRerollLog();
+  if(!state.cells||state.cells.length<101) generateMap();
+  ensureWheelItems();
+  if(typeof state.points!=='number') state.points=0;
+  if(typeof state.currentGameSpins!=='number') state.currentGameSpins=0;
+  if(typeof state.currentGameWheelMinutes!=='number') state.currentGameWheelMinutes=0;
+  if(!Array.isArray(state.spinHistory)) state.spinHistory=[];
+  if(typeof state.inventoryRerolls!=='number') state.inventoryRerolls=0;
+  if(typeof state.consecutiveDone!=='number') state.consecutiveDone=0;
+  if(!Array.isArray(state.currentGameSpinCosts)) state.currentGameSpinCosts=[];
+  if(state.nextDiceDir!=='back') state.nextDiceDir='forward';
+  recoverInterruptedMove();
+  migrateWheelSessionTimes();
+  normalizePiggy();
+  saveState();
+  renderRules();
+  applyTheme(state.theme||'dark');
+  applyAppColors(state.appColors||DEFAULT_APP_COLORS);
+  selectInPicker('emoji-picker',state.player.emoji||'🐺',true);
+  selectInPicker('color-picker',state.player.color||'#7c5cff',false);
+  syncSettingsUI();
+  renderChangelog();
+  renderAll();
+}
+function renderChangelog(){
+  const list=document.getElementById('changelog-list');
+  const verEl=document.getElementById('settings-version');
+  if(verEl) verEl.textContent=APP_VERSION;
+  if(!list) return;
+  list.innerHTML='';
+  CHANGELOG.forEach(entry=>{
+    const div=document.createElement('div');
+    div.className='changelog-entry';
+    let html='<div class="changelog-head"><span class="changelog-ver">v'+esc(entry.version)+'</span><span class="changelog-date">'+esc(entry.date)+'</span></div><ul>';
+    (entry.changes||[]).forEach(c=>{html+='<li>'+esc(c)+'</li>';});
+    html+='</ul>';
+    div.innerHTML=html;
+    list.appendChild(div);
+  });
+}
+function buildEmojiPicker(id,onSelect){
+  const ep=document.getElementById(id); if(!ep) return; ep.innerHTML='';
+  EMOJIS.forEach(e=>{const d=document.createElement('div'); d.className='emoji-opt'; d.textContent=e;
+    d.onclick=()=>{ep.querySelectorAll('.emoji-opt').forEach(x=>x.classList.remove('selected')); d.classList.add('selected'); onSelect(e);}; ep.appendChild(d);});
+}
+function buildColorPicker(id,onSelect){
+  const cp=document.getElementById(id); if(!cp) return; cp.innerHTML='';
+  COLORS.forEach(c=>{const d=document.createElement('div'); d.className='color-opt'; d.style.background=c;
+    d.onclick=()=>{cp.querySelectorAll('.color-opt').forEach(x=>x.classList.remove('selected')); d.classList.add('selected'); onSelect(c);}; cp.appendChild(d);});
+}
+function selectInPicker(id,value,isEmoji){
+  const box=document.getElementById(id); if(!box) return;
+  box.querySelectorAll(isEmoji?'.emoji-opt':'.color-opt').forEach(el=>{
+    const match=isEmoji?(el.textContent===value):(el.style.background===value||rgbToHex(el.style.background)===value.toLowerCase());
+    el.classList.toggle('selected',match);
+  });
+}
+function rgbToHex(rgb){
+  if(!rgb||rgb.charAt(0)==='#') return (rgb||'').toLowerCase();
+  const m=rgb.match(/\d+/g); if(!m||m.length<3) return '';
+  return '#'+m.slice(0,3).map(n=>('0'+parseInt(n,10).toString(16)).slice(-2)).join('');
+}
+// ===== MAP =====
+function generateMap(){
+  const pool=buildPool();
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [pool[i],pool[j]]=[pool[j],pool[i]];}
+  state.cells=[null];
+  for(let i=0;i<100;i++) state.cells.push({type:pool[i],revealed:false});
+}
+function cellNumberAt(visualRow,col){
+  const fromBottom=9-visualRow, base=fromBottom*10;
+  return fromBottom%2===0 ? base+col+1 : base+(9-col)+1;
+}
+function renderMap(){
+  const grid=document.getElementById('map-grid'); grid.innerHTML='';
+  for(let r=0;r<10;r++) for(let c=0;c<10;c++){
+    const num=cellNumberAt(r,c), cellData=state.cells[num], div=document.createElement('div');
+    div.className='cell';
+    if(cellData&&cellData.revealed){
+      const isPlat=PLATFORMS.includes(cellData.type);
+      div.classList.add('revealed', isPlat?'platform':'special');
+      div.innerHTML=`<span class="num">${num}</span><span class="type">${cellData.type}</span>`;
+    } else div.innerHTML=`<span class="num">${num}</span>`;
+    if(state.position===num){
+      div.classList.add('current');
+      const token=document.createElement('div'); token.className='token';
+      token.textContent=state.player.emoji||'🐺';
+      token.style.filter=`drop-shadow(0 0 4px ${state.player.color})`;
+      div.appendChild(token);
+    }
+    if(num===100&&state.position>=100) div.classList.add('finish-reached');
+    grid.appendChild(div);
+  }
+}
+// ===== STATS / LOG / PHASE =====
+function renderAll(){renderMap();renderLog();updateStats();updateUIPhase();renderWheelUI();}
+function updateStats(){
+  document.getElementById('stat-pos').textContent=state.position;
+  document.getElementById('stat-drop').textContent=state.log.filter(e=>e.status==='Дроп').length;
+  document.getElementById('stat-done').textContent=state.log.filter(e=>e.status==='Пройдено'&&e.game&&e.game!=='—').length;
+  const totalMin=state.log.reduce((a,e)=>a+(e.timeMinutes||0),0);
+  const timeEl=document.getElementById('stat-time');
+  if(timeEl) timeEl.textContent=totalMin?formatMinutesAsHours(totalMin):'0';
+  const ratings=state.log.filter(e=>e.rating!=null&&!isNaN(e.rating)).map(e=>e.rating);
+  document.getElementById('stat-avg').textContent=ratings.length?(ratings.reduce((a,b)=>a+b,0)/ratings.length).toFixed(1):'—';
+  const ptsEl=document.getElementById('stat-points');
+  if(ptsEl){ptsEl.textContent=state.points; ptsEl.className='val '+(state.points>0?'points-pos':state.points<0?'points-neg':'');}
+  const rrEl=document.getElementById('stat-rerolls'); if(rrEl) rrEl.textContent=state.inventoryRerolls||0;
+  const piggyEl=document.getElementById('stat-piggy'); if(piggyEl) piggyEl.textContent=(state.piggyMinutes||0)+'/'+PIGGY_THRESHOLD;
+  const rrBtn=document.getElementById('btn-use-reroll');
+  if(rrBtn){const n=state.inventoryRerolls||0; rrBtn.textContent='📦 Реролл из инвентаря ('+n+')'; rrBtn.disabled=n<=0;}
+  const pct=Math.min(100,(state.position/100)*100);
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('progress-label').textContent=state.position+' / 100';
+  const badge=document.getElementById('player-badge');
+  if(state.setupDone){
+    badge.style.display='flex';
+    document.getElementById('player-token-display').textContent=state.player.emoji;
+    document.getElementById('player-token-display').style.background=state.player.color;
+    document.getElementById('player-name-display').textContent=state.player.name;
+  } else badge.style.display='none';
+  document.getElementById('win-banner').classList.toggle('visible',state.phase==='finished');
+}
+function updateUIPhase(){
+  const idle=document.getElementById('idle-panel'), game=document.getElementById('game-panel');
+  const btnStart=document.getElementById('btn-start-event'), btnRollIdle=document.getElementById('btn-roll-idle'), idleText=document.getElementById('idle-text');
+  const btnPick=document.getElementById('btn-pick-game');
+  idle.classList.remove('visible'); game.classList.remove('visible');
+  if(btnRollIdle) btnRollIdle.style.display='none';
+  if(btnPick) btnPick.style.display='none';
+  if(!state.setupDone){
+    idle.classList.add('visible'); idleText.textContent='Нажми «Начать ивент», чтобы стартовать';
+    btnStart.style.display='inline-flex'; btnStart.textContent='🚀 Начать ивент'; return;
+  }
+  btnStart.style.display='none';
+  if(state.phase==='finished'){idle.classList.add('visible'); idleText.textContent='🏆 Ивент завершён! Можешь сбросить и начать заново.'; return;}
+  if(state.phase==='playing'&&state.currentGame){
+    game.classList.add('visible');
+    document.getElementById('current-game-title').textContent=state.currentGame.name;
+    const typeEl=document.getElementById('current-cell-type');
+    typeEl.textContent=state.currentGame.cellType;
+    typeEl.className='game-cell-type '+(PLATFORMS.includes(state.currentGame.cellType)?'platform':'special');
+    return;
+  }
+  if(state.phase==='moving'){
+    idle.classList.add('visible');
+    idleText.textContent='Фишка идёт по карте…';
+    return;
+  }
+  if((state.phase==='waiting_game'||state.phase==='entering_game')&&state.pendingMove){
+    const p=state.pendingMove;
+    idle.classList.add('visible');
+    const typeName=p.cellType||'';
+    const isPlat=PLATFORMS.includes(typeName);
+    const typeHtml=typeName?(' · <span style="color:'+(isPlat?'var(--platform)':'var(--special)')+';font-weight:700">'+esc(typeName)+'</span>'):'';
+    idleText.innerHTML=(p.direction==='reroll'?'Реролл на клетке ':'Клетка ')+'<strong>'+p.to+'</strong>'+typeHtml+'. Нажми «Выбрать игру».';
+    if(btnPick) btnPick.style.display='inline-flex';
+    return;
+  }
+  idle.classList.add('visible');
+  const back=state.nextDiceDir==='back';
+  idleText.textContent=back
+    ?('Дроп: брось кубик назад'+(state.position?(' с клетки '+state.position):''))
+    :(state.position===0?'Готов к первому ходу! Бросай кубик.':'Ты на клетке '+state.position+'. Бросай кубик для следующего хода.');
+  if(btnRollIdle){
+    btnRollIdle.style.display='inline-flex';
+    btnRollIdle.textContent=back?'🎲 Бросить кубик назад':'🎲 Бросить кубик';
+  }
+}
+function appendLogRow(tbody,e){
+  const tr=document.createElement('tr');
+  const statusClass={'Пройдено':'done','Дроп':'drop','Реролл':'reroll','Играется':'playing','Старт':'start','Финиш':'finish'}[e.status]||'started';
+  const isPlat=PLATFORMS.includes(e.cellType);
+  const typeColor=isPlat?'var(--platform)':'var(--special)';
+  tr.innerHTML='<td>'+e.hod+'</td><td>'+formatDate(e.date)+'</td><td>'+(e.dice!=null?e.dice:'—')+'</td><td>'+esc(e.move||'—')+'</td><td>'+(e.cellNum||'—')+'</td><td style="color:'+typeColor+';font-weight:600">'+esc(e.cellType||'—')+'</td><td>'+esc(e.game||'—')+'</td><td><span class="badge '+statusClass+'">'+esc(e.status)+'</span></td><td>'+(e.time?esc(e.time):'—')+'</td><td>'+(e.rating!=null?e.rating+'/10':'—')+'</td><td title="'+escAttr(e.comment||'')+'">'+(e.comment?esc(e.comment.slice(0,28))+(e.comment.length>28?'…':''):'—')+'</td>';
+  tbody.appendChild(tr);
+}
+function updateExpandBtn(btnId, count){
+  const btn=document.getElementById(btnId);
+  if(!btn) return;
+  if(count<=0){btn.style.display='none'; return;}
+  btn.style.display='block';
+  const wrapId=btn.getAttribute('onclick').match(/'([^']+)'/)[1];
+  const wrap=document.getElementById(wrapId);
+  const open=wrap&&wrap.classList.contains('expanded');
+  btn.textContent=open?'↑ Свернуть список':'↓ Показать весь список';
+}
+function toggleListExpand(wrapId, btnId){
+  const wrap=document.getElementById(wrapId), btn=document.getElementById(btnId);
+  if(!wrap) return;
+  wrap.classList.toggle('expanded');
+  const open=wrap.classList.contains('expanded');
+  if(btn) btn.textContent=open?'↑ Свернуть список':'↓ Показать весь список';
+  if(!open) wrap.scrollTop=0;
+}
+function renderLog(){
+  const tbody=document.getElementById('log-body'), empty=document.getElementById('empty-log');
+  tbody.innerHTML='';
+  if(!state.log.length){
+    empty.style.display='block';
+    const wrap=document.getElementById('log-table-wrap');
+    if(wrap) wrap.style.display='none';
+    updateExpandBtn('btn-expand-log',0);
+    return;
+  }
+  empty.style.display='none';
+  const wrap=document.getElementById('log-table-wrap');
+  if(wrap) wrap.style.display='';
+  [...state.log].reverse().forEach(e=>appendLogRow(tbody,e));
+  updateExpandBtn('btn-expand-log', state.log.length);
+}
+// ===== SETUP / DICE / MOVE =====
+function openSetup(){document.getElementById('setup-name').value=state.player.name||''; openModal('modal-setup');}
+function confirmSetup(){
+  const name=document.getElementById('setup-name').value.trim();
+  if(!name){showToast('Введи имя!','error'); return;}
+  state.player.name=name; state.setupDone=true; state.phase='waiting_dice'; state.position=0;
+  if(!state.log.length) generateMap();
+  state.nextDiceDir='forward';
+  saveState(); closeModal('modal-setup'); renderAll();
+  showToast('Добро пожаловать, '+name+'! Бросай кубик.','success');
+}
+let diceDirection='forward', rolledValue=null;
+function openDiceModal(dir){
+  if(state.phase==='moving'||state.phase==='playing'||state.phase==='waiting_game'||state.phase==='finished') return;
+  diceDirection=dir; rolledValue=null;
+  document.getElementById('dice-face').textContent='?';
+  document.getElementById('dice-face').classList.remove('rolling');
+  document.getElementById('btn-roll').style.display='inline-flex';
+  document.getElementById('btn-confirm-roll').style.display='none';
+  const dirEl=document.getElementById('dice-direction');
+  if(dir==='back'){
+    dirEl.textContent='⬅ Движение НАЗАД (очки не влияют)'; dirEl.className='dice-direction back';
+    document.getElementById('dice-title').textContent='🎲 Дроп — бросок назад';
+  } else {
+    const bonus=state.points>0?state.points:0;
+    dirEl.textContent=bonus>0?'Движение ВПЕРЁД → (+'+bonus+' очк. к кубику)':'Движение ВПЕРЁД →';
+    dirEl.className='dice-direction forward';
+    document.getElementById('dice-title').textContent='🎲 Бросок кубика';
+  }
+  openModal('modal-dice');
+}
+function doRoll(){
+  const face=document.getElementById('dice-face'), btn=document.getElementById('btn-roll');
+  btn.disabled=true; face.classList.add('rolling'); let ticks=0;
+  const iv=setInterval(()=>{
+    face.textContent=Math.floor(Math.random()*6)+1; ticks++;
+    if(ticks>14){clearInterval(iv); rolledValue=Math.floor(Math.random()*6)+1; face.textContent=rolledValue; face.classList.remove('rolling'); btn.disabled=false; btn.style.display='none'; document.getElementById('btn-confirm-roll').style.display='inline-flex';}
+  },55);
+}
+function confirmRoll(){if(rolledValue==null) return; closeModal('modal-dice'); applyMove(rolledValue,diceDirection);}
+function openDiceModalFromIdle(){
+  openDiceModal(state.nextDiceDir==='back'?'back':'forward');
+}
+function pathCells(from,to){
+  const path=[];
+  if(from===to){ if(to>=1&&to<=100) path.push(to); return path; }
+  const dir=to>from?1:-1;
+  for(let i=from+dir;;i+=dir){ path.push(i); if(i===to) break; }
+  return path;
+}
+let moveAnimTimer=null;
+function finishArrivedMove(){
+  const p=state.pendingMove;
+  if(!p){ state.phase='waiting_dice'; saveState(); renderAll(); return; }
+  const to=p.to;
+  state.position=to;
+  if(to>=1&&to<=100){
+    if(!state.cells[to]) generateMap();
+    if(state.cells[to]) state.cells[to].revealed=true;
+  }
+  if(to===0){
+    state.phase='waiting_dice';
+    state.currentGame=null;
+    state.nextDiceDir='forward';
+    state.log.push({id:uid(),hod:state.log.length+1,date:today(),dice:p.dice,move:p.moveStr,cellNum:0,cellType:'Старт',game:'—',status:'Старт',time:null,rating:null,comment:'Вернулся на Старт'});
+    state.pendingMove=null;
+    saveState(); renderAll();
+    showToast('Вернулся на Старт','error');
+    return;
+  }
+  const cellType=state.cells[to]?state.cells[to].type:'—';
+  p.cellType=cellType;
+  state.phase='waiting_game';
+  saveState(); renderAll();
+  showToast((to>=100?'Финишная клетка ':'Клетка ')+to+' · '+cellType,'success');
+}
+function recoverInterruptedMove(){
+  if(state.phase==='entering_game'&&state.pendingMove) state.phase='waiting_game';
+  if(state.phase!=='moving') return;
+  finishArrivedMove();
+}
+function animateMove(from,to,done){
+  if(moveAnimTimer){clearTimeout(moveAnimTimer); moveAnimTimer=null;}
+  const path=pathCells(from,to);
+  if(!path.length){ done(); return; }
+  let i=0;
+  function step(){
+    state.position=path[i];
+    renderMap();
+    updateStats();
+    i++;
+    if(i<path.length) moveAnimTimer=setTimeout(step, 240);
+    else { moveAnimTimer=null; done(); }
+  }
+  step();
+}
+function applyMove(dice,direction){
+  const from=state.position; let bonus=0, moveNote='';
+  if(direction==='forward'&&state.points>0){bonus=state.points; state.points=0; moveNote=' (кубик '+dice+' + '+bonus+' очк.)';}
+  const steps=dice+bonus;
+  const to=direction==='forward'?Math.min(100,from+steps):Math.max(0,from-dice);
+  state.lastDice=dice;
+  const moveStr=from+' → '+to+moveNote;
+  state.pendingMove={from,to,dice,moveStr,cellType:null,direction};
+  state.phase='moving';
+  saveState();
+  renderAll();
+  animateMove(from,to,finishArrivedMove);
+}
+function openGamePickModal(){
+  const p=state.pendingMove;
+  if(!p){showToast('Сначала сделай ход','error'); return;}
+  if(p.to>=1&&p.to<=100&&!p.cellType&&state.cells[p.to]) p.cellType=state.cells[p.to].type;
+  const isPlat=PLATFORMS.includes(p.cellType);
+  const info=document.getElementById('game-reveal-info');
+  if(info) info.innerHTML=(p.direction==='reroll'?'Реролл на клетке ':'Клетка ')+'<strong>'+p.to+'</strong> · <span style="color:'+(isPlat?'var(--platform)':'var(--special)')+'">'+esc(p.cellType||'—')+'</span>';
+  const inp=document.getElementById('game-name-input');
+  if(inp) inp.value='';
+  state.phase='waiting_game';
+  openModal('modal-game');
+  updateGameCatalogHints();
+}
+function startPlaying(){
+  const name=document.getElementById('game-name-input').value.trim();
+  if(!name){showToast('Введи название игры!','error'); return;}
+  const p=state.pendingMove;
+  if(!p){showToast('Нет ожидаемого хода','error'); closeModal('modal-game'); return;}
+  const entry={id:uid(),hod:state.log.length+1,date:today(),dice:p.dice,move:p.moveStr,cellNum:p.to,cellType:p.cellType,game:name,status:'Играется',time:null,rating:null,comment:''};
+  state.log.push(entry);
+  state.currentGame={name,cellType:p.cellType,cellNum:p.to,logId:entry.id};
+  state.phase='playing'; state.currentGameSpins=0; state.currentGameWheelMinutes=0; state.currentGameSpinCosts=[]; state.pendingMove=null;
+  const resultEl=document.getElementById('wheel-result'); if(resultEl) resultEl.style.display='none';
+  saveState(); closeModal('modal-game'); renderAll(); showToast('Начинаем: '+name,'success');
+}
+let completeMode='done', ratingTouched=false;
+function updateRatingDisplay(){
+  const slider=document.getElementById('complete-rating'), display=document.getElementById('rating-display'), hint=document.getElementById('rating-hint');
+  if(!slider||!display) return;
+  if(!ratingTouched){display.textContent='NS'; display.classList.add('is-ns'); if(hint) hint.textContent='Сдвиньте для оценки'; return;}
+  const v=parseFloat(slider.value);
+  display.textContent=(Math.round(v*10)/10).toFixed(1); display.classList.remove('is-ns'); if(hint) hint.textContent='';
+}
+// ===== COMPLETE / REROLL =====
+function openCompleteModal(mode){
+  if(!state.currentGame){showToast('Нет текущей игры','error'); return;}
+  completeMode=mode;
+  document.getElementById('complete-title').textContent=mode==='done'?'✅ Пройдено':'💀 Дроп';
+  document.getElementById('complete-comment').value='';
+  document.getElementById('complete-extra-min').value='0';
+  ratingTouched=false;
+  const slider=document.getElementById('complete-rating');
+  if(slider){slider.value='5'; slider.oninput=function(){ratingTouched=true; updateRatingDisplay();};}
+  updateRatingDisplay(); updateCompleteTimePreview();
+  document.getElementById('complete-extra-min').oninput=updateCompleteTimePreview;
+  openModal('modal-complete');
+}
+function formatMinutesAsHours(mins){
+  if(!mins||mins<=0) return '0';
+  const h=Math.floor(mins/60), m=mins%60;
+  if(h===0) return m+' мин'; if(m===0) return h+' ч'; return h+' ч '+m+' мин';
+}
+function collectSpinsForCurrentGame(){
+  const g=state.currentGame;
+  const hist=state.spinHistory||[];
+  if(!g||!hist.length) return [];
+  if(g.logId){
+    const byId=hist.filter(h=>h.gameId&&h.gameId===g.logId);
+    if(byId.length) return byId;
+  }
+  const name=g.name;
+  if(!name) return [];
+  const acc=[];
+  for(let i=hist.length-1;i>=0;i--){
+    const h=hist[i];
+    if(h.gameId&&g.logId&&h.gameId!==g.logId) break;
+    if((h.game||'—')!==name) break;
+    acc.unshift(h);
+  }
+  return acc;
+}
+function getCurrentGameSpinCosts(){
+  const fromHist=collectSpinsForCurrentGame().map(h=>h.cost||0);
+  const fromState=Array.isArray(state.currentGameSpinCosts)?state.currentGameSpinCosts.filter(n=>typeof n==='number'):[];
+  if(fromHist.length>=fromState.length&&fromHist.length) return fromHist;
+  if(fromState.length) return fromState.slice();
+  if(fromHist.length) return fromHist;
+  if(typeof state.currentGameWheelMinutes==='number'&&state.currentGameWheelMinutes>0){
+    return [state.currentGameWheelMinutes];
+  }
+  return [];
+}
+function migrateWheelSessionTimes(){
+  const hist=state.spinHistory||[];
+  if(!Array.isArray(state.log)) return;
+  let hi=0;
+  state.log.forEach(function(entry){
+    if(!entry||!entry.game||entry.game==='—') return;
+    const costs=[];
+    while(hi<hist.length&&(hist[hi].game||'—')===entry.game){
+      if(!hist[hi].gameId) hist[hi].gameId=entry.id;
+      costs.push(hist[hi].cost||0);
+      hi++;
+    }
+    if(!costs.length) return;
+    const spinMin=costs.reduce(function(a,b){return a+b;},0);
+    const extra=Math.max(0,entry.piggyDeposit||0);
+    const total=spinMin+extra;
+    if(!(entry.timeMinutes>0)||entry.timeMinutes<total){
+      entry.timeMinutes=total;
+      entry.time=formatMinutesAsHours(total);
+    }
+    if(!entry.wheelSpins||entry.wheelSpins<costs.length) entry.wheelSpins=costs.length;
+  });
+  const g=state.currentGame;
+  if(g){
+    const costs=collectSpinsForCurrentGame().map(function(h){return h.cost||0;});
+    if(costs.length){
+      state.currentGameSpinCosts=costs.slice();
+      state.currentGameWheelMinutes=costs.reduce(function(a,b){return a+b;},0);
+    }
+  }
+}
+function updateCompleteTimePreview(){
+  const costs=getCurrentGameSpinCosts();
+  const spinMin=costs.reduce((a,b)=>a+b,0);
+  const extra=parseInt(document.getElementById('complete-extra-min').value,10)||0;
+  const total=spinMin+Math.max(0,extra);
+  let breakdown='Прокрутов колеса: <strong>'+costs.length+'</strong>';
+  breakdown+=costs.length?' ('+costs.map(c=>c+'м').join(' + ')+' = '+spinMin+' мин)':' (0 мин)';
+  breakdown+='<br>Доп. минуты (в копилку): <strong>'+Math.max(0,extra)+'</strong>';
+  breakdown+='<br>Копилка сейчас: <strong>'+(state.piggyMinutes||0)+' / '+PIGGY_THRESHOLD+'</strong> мин';
+  breakdown+='<br>Итого: <strong style="color:var(--accent)">'+formatMinutesAsHours(total)+'</strong> ('+total+' мин)';
+  document.getElementById('complete-time-breakdown').innerHTML=breakdown;
+  document.getElementById('complete-time').value=formatMinutesAsHours(total);
+}
+function confirmComplete(){
+  if(!state.currentGame){closeModal('modal-complete'); return;}
+  const costs=getCurrentGameSpinCosts();
+  const spinMin=costs.reduce((a,b)=>a+b,0);
+  const extra=Math.max(0,parseInt(document.getElementById('complete-extra-min').value,10)||0);
+  const totalMin=spinMin+extra, time=formatMinutesAsHours(totalMin);
+  let rating=null;
+  if(ratingTouched){const r=parseFloat(document.getElementById('complete-rating').value); if(!isNaN(r)) rating=Math.round(Math.max(0,Math.min(10,r))*10)/10;}
+  const comment=document.getElementById('complete-comment').value.trim();
+  const entry=state.log.find(e=>e.id===state.currentGame.logId);
+  if(entry){entry.status=completeMode==='done'?'Пройдено':'Дроп'; entry.time=time; entry.rating=rating; entry.comment=comment; entry.timeMinutes=totalMin; entry.wheelSpins=costs.length; entry.piggyDeposit=extra;}
+  const piggy=depositToPiggy(extra);
+  const finishedCell=(state.currentGame&&state.currentGame.cellNum>=100)||state.position>=100;
+  state.currentGame=null; state.currentGameSpins=0; state.currentGameWheelMinutes=0; state.currentGameSpinCosts=[]; closeModal('modal-complete');
+  if(completeMode==='done'){
+    state.consecutiveDone=(state.consecutiveDone||0)+1;
+    let streakGranted=false;
+    if(state.consecutiveDone>=2){state.inventoryRerolls=(state.inventoryRerolls||0)+1; streakGranted=true;}
+    state.nextDiceDir='forward';
+    if(finishedCell){
+      state.phase='finished'; saveState(); renderAll();
+      showToast('🏆 Финишная игра пройдена! Ивент завершён.','success');
+      return;
+    }
+    state.phase='waiting_dice'; saveState(); renderAll();
+    const msgs=[];
+    msgs.push(streakGranted?'+1 реролл (серия '+state.consecutiveDone+')':'серия '+state.consecutiveDone+'/2');
+    if(piggy.added>0) msgs.push('копилка +'+piggy.added+' мин ('+(state.piggyMinutes||0)+'/'+PIGGY_THRESHOLD+')');
+    if(piggy.granted>0) msgs.push('копилка: +'+piggy.granted+' реролл');
+    showToast('Игра пройдена! '+msgs.join(' · '),'success');
+  } else {
+    state.consecutiveDone=0;
+    state.nextDiceDir='back';
+    state.phase='waiting_dice'; saveState(); renderAll();
+    let dropMsg='Дроп! Серия сброшена. Брось кубик назад.';
+    if(piggy.added>0) dropMsg+=' Копилка +'+piggy.added+' мин ('+(state.piggyMinutes||0)+'/'+PIGGY_THRESHOLD+')';
+    if(piggy.granted>0) dropMsg+=' +'+piggy.granted+' реролл из копилки!';
+    showToast(dropMsg, piggy.granted>0?'success':'error');
+  }
+}
+let rerollFromInventory=false;
+function openRerollModal(fromInventory){
+  if(!state.currentGame){showToast('Нет текущей игры','error'); return;}
+  rerollFromInventory=!!fromInventory;
+  if(rerollFromInventory&&(state.inventoryRerolls||0)<=0){showToast('Нет рероллов в инвентаре. Пройди 2 игры подряд, чтобы получить.','error'); return;}
+  document.getElementById('reroll-comment').value='';
+  document.getElementById('reroll-modal-title').textContent=rerollFromInventory?'📦 Реролл из инвентаря':'🔄 Реролл';
+  document.getElementById('reroll-modal-hint').textContent=rerollFromInventory?'Будет списан 1 реролл (останется: '+((state.inventoryRerolls||0)-1)+')':'Свободный реролл по уважительной причине (укажи в комментарии)';
+  openModal('modal-reroll');
+}
+function confirmReroll(){
+  if(!state.currentGame){closeModal('modal-reroll'); return;}
+  if(rerollFromInventory&&(state.inventoryRerolls||0)<=0){showToast('Нет рероллов в инвентаре','error'); closeModal('modal-reroll'); return;}
+  const comment=document.getElementById('reroll-comment').value.trim();
+  if(!rerollFromInventory&&!comment){showToast('Укажи причину свободного реролла','error'); return;}
+  const costs=getCurrentGameSpinCosts();
+  const spinMin=costs.reduce((a,b)=>a+b,0);
+  const entry=state.log.find(e=>e.id===state.currentGame.logId);
+  if(rerollFromInventory){
+    if(entry){
+      entry.status='Реролл';
+      entry.comment=comment?(comment+' [инвентарь]'):'Реролл [инвентарь]';
+      if(spinMin>0){entry.timeMinutes=spinMin; entry.time=formatMinutesAsHours(spinMin); entry.wheelSpins=costs.length;}
+    }
+  } else if(entry){
+    state.log=state.log.filter(e=>e.id!==entry.id);
+    state.log.forEach(function(e,i){e.hod=i+1;});
+  }
+  if(rerollFromInventory) state.inventoryRerolls=Math.max(0,(state.inventoryRerolls||0)-1);
+  const cellType=state.currentGame.cellType, cellNum=state.currentGame.cellNum;
+  state.currentGame=null; state.currentGameSpins=0; state.currentGameWheelMinutes=0; state.currentGameSpinCosts=[];
+  state.phase='waiting_game';
+  state.pendingMove={from:cellNum,to:cellNum,dice:null,moveStr:cellNum+' (реролл)',cellType,direction:'reroll'};
+  closeModal('modal-reroll'); saveState(); renderAll();
+  showToast(rerollFromInventory?('Реролл из инвентаря. Осталось: '+state.inventoryRerolls):'Реролл. Выбери новую игру.','success');
+}
+// ===== STORAGE =====
+function renderRules(){const el=document.getElementById('rules-content'); if(el) el.innerHTML=RULES_HTML;}
+const storage=(function(){
+  let ok=false; try{const k='__rggv_t__'; window.localStorage.setItem(k,'1'); window.localStorage.removeItem(k); ok=true;}catch(e){ok=false;}
+  const mem={};
+  return{
+    get(key){if(ok){try{return window.localStorage.getItem(key);}catch(e){return mem[key]||null;}} return mem[key]||null;},
+    set(key,val){if(ok){try{window.localStorage.setItem(key,val);return;}catch(e){}} mem[key]=val;},
+    remove(key){if(ok){try{window.localStorage.removeItem(key);}catch(e){}} delete mem[key];}
+  };
+})();
+function saveState(){storage.set('rggv_v2',JSON.stringify(state));}
+function loadState(){
+  try{
+    const raw=storage.get('rggv_v2');
+    if(raw){
+      state=Object.assign(state,JSON.parse(raw));
+      if(!state.appColors) state.appColors=Object.assign({},DEFAULT_APP_COLORS);
+      else state.appColors=Object.assign({},DEFAULT_APP_COLORS,state.appColors);
+      if(!state.theme) state.theme='dark';
+      if(!state.cells||state.cells.length<101) generateMap();
+    }
+  }catch(e){}
+}
+function isFreeRerollLogEntry(e){
+  if(!e||e.status!=='Реролл') return false;
+  const c=String(e.comment||'');
+  if(/\[инвентарь\]/i.test(c)) return false;
+  return /\[свободный\]/i.test(c);
+}
+function migrateFreeRerollLog(){
+  if(!Array.isArray(state.log)) return;
+  const next=state.log.filter(function(e){return !isFreeRerollLogEntry(e);});
+  if(next.length===state.log.length) return;
+  state.log=next;
+  state.log.forEach(function(e,i){e.hod=i+1;});
+}
+function migrateStartLogStatuses(){
+  if(!Array.isArray(state.log)) return;
+  state.log.forEach(function(e){
+    if(e && (e.cellNum===0 || e.cellType==='Старт') && e.status==='Дроп' && (!e.game || e.game==='—')){
+      e.status='Старт';
+    }
+    if(e && e.cellNum===100 && e.status==='Пройдено' && (!e.game || e.game==='—') && e.comment && String(e.comment).indexOf('Финиш')!==-1){
+      e.status='Финиш';
+    }
+  });
+}
+function resetAll(){
+  if(!confirm('Сбросить весь прогресс, карту и лог? Это нельзя отменить.')) return;
+  const keepTheme=state.theme, keepColors=state.appColors, keepPlayer=state.player, keepWheel=state.wheelItems;
+  state={player:keepPlayer,position:0,cells:[],log:[],phase:'idle',currentGame:null,pendingMove:null,lastDice:null,rules:'',setupDone:false,theme:keepTheme||'dark',appColors:keepColors||Object.assign({},DEFAULT_APP_COLORS),points:0,currentGameSpins:0,currentGameWheelMinutes:0,currentGameSpinCosts:[],spinHistory:[],inventoryRerolls:0,consecutiveDone:0,piggyMinutes:0,piggyThreshold:PIGGY_THRESHOLD,wheelItems:keepWheel,nextDiceDir:'forward'};
+  generateMap(); saveState(); renderAll(); showToast('Всё сброшено','success');
+}
+// ===== SETTINGS / THEME / EXPORT =====
+function setTheme(theme){
+  state.theme=theme; applyTheme(theme); saveState();
+  document.getElementById('theme-dark').classList.toggle('active',theme==='dark');
+  document.getElementById('theme-light').classList.toggle('active',theme==='light');
+  showToast(theme==='dark'?'Тёмная тема':'Светлая тема','success');
+}
+function applyTheme(theme){
+  document.documentElement.classList.toggle('theme-light',theme==='light');
+  const d=document.getElementById('theme-dark'), l=document.getElementById('theme-light');
+  if(d) d.classList.toggle('active',theme==='dark');
+  if(l) l.classList.toggle('active',theme==='light');
+}
+function previewAppColors(){applyAppColors({accent:document.getElementById('color-accent').value,accentHover:document.getElementById('color-accent-hover').value,platform:document.getElementById('color-platform').value,special:document.getElementById('color-special').value,green:document.getElementById('color-green').value,red:document.getElementById('color-red').value});}
+function applyAppColors(colors){
+  const r=document.documentElement;
+  r.style.setProperty('--accent',colors.accent); r.style.setProperty('--accent-hover',colors.accentHover);
+  r.style.setProperty('--platform',colors.platform); r.style.setProperty('--special',colors.special);
+  r.style.setProperty('--green',colors.green); r.style.setProperty('--red',colors.red);
+  r.style.setProperty('--blue',colors.platform); r.style.setProperty('--pink',colors.special);
+}
+function saveAppColors(){
+  state.appColors={accent:document.getElementById('color-accent').value,accentHover:document.getElementById('color-accent-hover').value,platform:document.getElementById('color-platform').value,special:document.getElementById('color-special').value,green:document.getElementById('color-green').value,red:document.getElementById('color-red').value};
+  applyAppColors(state.appColors); saveState(); showToast('Цвета сохранены','success');
+}
+function resetAppColors(){state.appColors=Object.assign({},DEFAULT_APP_COLORS); applyAppColors(state.appColors); syncColorInputs(); saveState(); showToast('Цвета сброшены','success');}
+function syncColorInputs(){
+  const c=state.appColors||DEFAULT_APP_COLORS;
+  const map={'color-accent':c.accent,'color-accent-hover':c.accentHover,'color-platform':c.platform,'color-special':c.special,'color-green':c.green,'color-red':c.red};
+  Object.keys(map).forEach(id=>{const el=document.getElementById(id); if(el) el.value=map[id];});
+}
+function syncSettingsUI(){
+  document.getElementById('settings-name').value=state.player.name||'';
+  settingsEmoji=state.player.emoji||'🐺'; settingsColor=state.player.color||'#7c5cff';
+  selectInPicker('settings-emoji-picker',settingsEmoji,true);
+  selectInPicker('settings-color-picker',settingsColor,false);
+  updateSettingsPreview(); syncColorInputs(); applyTheme(state.theme||'dark');
+}
+function updateSettingsPreview(){
+  const token=document.getElementById('settings-preview-token'), nameEl=document.getElementById('settings-preview-name');
+  if(token){token.textContent=settingsEmoji; token.style.background=settingsColor;}
+  if(nameEl) nameEl.textContent=document.getElementById('settings-name').value.trim()||state.player.name||'Игрок';
+}
+function savePlayerSettings(){
+  const name=document.getElementById('settings-name').value.trim();
+  if(name) state.player.name=name;
+  state.player.emoji=settingsEmoji; state.player.color=settingsColor;
+  saveState(); renderAll(); showToast('Игрок сохранён','success');
+}
+function exportCSV(){
+  if(!state.log.length){showToast('Лог пуст','error'); return;}
+  const headers=['Ход','Дата','Кубик','Движение','Клетка','Тип','Игра','Статус','Время','Оценка','Комментарий'];
+  const rows=state.log.map(e=>[e.hod,e.date,e.dice??'',e.move,e.cellNum,e.cellType,e.game,e.status,e.time||'',e.rating??'',e.comment||'']);
+  const csv=[headers].concat(rows).map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  download('rggv-log.csv','\uFEFF'+csv,'text/csv;charset=utf-8'); showToast('CSV скачан','success');
+}
+function exportJSON(){exportFullProgress();}
+function exportFullProgress(){
+  const payload={app:'RGGV by NW',version:APP_VERSION,exportedAt:new Date().toISOString(),state};
+  download('rggv-progress-'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify(payload,null,2),'application/json');
+  showToast('Прогресс экспортирован','success');
+}
+function publishForViewers(){
+  const payload={app:'RGGV by NW',version:APP_VERSION,exportedAt:new Date().toISOString(),state};
+  download('progress.json',JSON.stringify(payload,null,2),'application/json');
+  showToast('Скачан progress.json — залей его в репозиторий вместо старого','success');
+}
+function importFullProgress(event){
+  const file=event.target.files&&event.target.files[0]; event.target.value=''; if(!file) return;
+  const reader=new FileReader();
+  reader.onload=function(){
+    try{
+      const raw=JSON.parse(reader.result);
+      let loaded=raw&&raw.state?raw.state:raw;
+      if(!loaded||typeof loaded!=='object'){showToast('Неверный файл сохранения','error'); return;}
+      if(!confirm('Импорт заменит весь текущий прогресс. Продолжить?')) return;
+      const defaults={player:{name:'',emoji:'🐺',color:'#7c5cff'},position:0,cells:[],log:[],phase:'idle',currentGame:null,pendingMove:null,lastDice:null,rules:'',setupDone:false,theme:'dark',appColors:Object.assign({},DEFAULT_APP_COLORS),points:0,currentGameSpins:0,currentGameWheelMinutes:0,currentGameSpinCosts:[],spinHistory:[],wheelItems:null,inventoryRerolls:0,consecutiveDone:0,piggyMinutes:0,piggyThreshold:PIGGY_THRESHOLD,nextDiceDir:'forward'};
+      state=Object.assign({},defaults,loaded);
+      if(!state.appColors) state.appColors=Object.assign({},DEFAULT_APP_COLORS);
+      else state.appColors=Object.assign({},DEFAULT_APP_COLORS,state.appColors);
+      if(!state.cells||state.cells.length<101) generateMap();
+      ensureWheelItems();
+      if(typeof state.points!=='number') state.points=0;
+      if(typeof state.currentGameSpins!=='number') state.currentGameSpins=0;
+      if(typeof state.currentGameWheelMinutes!=='number') state.currentGameWheelMinutes=0;
+      if(!Array.isArray(state.spinHistory)) state.spinHistory=[];
+      if(typeof state.inventoryRerolls!=='number') state.inventoryRerolls=0;
+      if(typeof state.consecutiveDone!=='number') state.consecutiveDone=0;
+      if(!Array.isArray(state.currentGameSpinCosts)) state.currentGameSpinCosts=[];
+      if(state.nextDiceDir!=='back') state.nextDiceDir='forward';
+      recoverInterruptedMove();
+      migrateWheelSessionTimes();
+      normalizePiggy();
+      migrateStartLogStatuses();
+      migrateFreeRerollLog();
+      renderRules(); applyTheme(state.theme||'dark'); applyAppColors(state.appColors); syncSettingsUI(); saveState(); renderAll();
+      showToast('Прогресс импортирован'+(raw.version?' (из v'+raw.version+')':''),'success');
+    }catch(err){showToast('Ошибка чтения файла: '+(err.message||'неверный JSON'),'error');}
+  };
+  reader.onerror=function(){showToast('Не удалось прочитать файл','error');};
+  reader.readAsText(file,'utf-8');
+}
+function download(name,content,type){const blob=new Blob([content],{type}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download=name; a.click(); URL.revokeObjectURL(url);}
+
+let isSpinning=false, pendingResolve=null;
+// ===== WHEEL =====
+function getNextSpinCost(){return 30+(state.currentGameSpins||0)*5;}
+function getWheelLifetimeTotals(){
+  let plus=0, minus=0;
+  (state.spinHistory||[]).forEach(function(h){
+    const d=h.delta||0;
+    if(d>0) plus+=d;
+    else if(d<0) minus+=d;
+  });
+  return {plus,minus};
+}
+function renderWheelUI(){
+  const pts=document.getElementById('wheel-points-display');
+  if(pts){pts.textContent=state.points; pts.className='val '+(state.points>0?'points-pos':state.points<0?'points-neg':'');}
+  const life=getWheelLifetimeTotals();
+  const plusEl=document.getElementById('wheel-plus-total');
+  const minusEl=document.getElementById('wheel-minus-total');
+  if(plusEl) plusEl.textContent=(life.plus>0?'+':'')+life.plus;
+  if(minusEl) minusEl.textContent=String(life.minus);
+  const info=document.getElementById('wheel-game-info'), idle=document.getElementById('wheel-idle'), idleText=document.getElementById('wheel-idle-text'), btn=document.getElementById('btn-spin-wheel');
+  if(state.phase==='playing'&&state.currentGame){
+    const cost=getNextSpinCost(), spins=state.currentGameSpins||0;
+    if(info) info.innerHTML='Игра: <strong>'+esc(state.currentGame.name)+'</strong> · Прокрутов: <strong>'+spins+'</strong> · След. стоимость: <strong style="color:var(--accent)">'+cost+' мин</strong>'+(state.points!==0?' · Очки: <strong class="'+(state.points>0?'points-pos':'points-neg')+'">'+state.points+'</strong>':'');
+    if(idle) idle.style.display='none';
+    if(btn) btn.disabled=isSpinning;
+  } else {
+    if(info) info.textContent='';
+    if(idle){idle.style.display='block'; if(idleText) idleText.textContent=state.setupDone?'Начни / продолжай игру на карте, чтобы крутить колесо':'Начни ивент, затем зайди в игру';}
+    if(btn) btn.disabled=true;
+    const resultEl=document.getElementById('wheel-result'); if(resultEl) resultEl.style.display='none';
+  }
+  renderSpinHistory(); renderWheelItemsList();
+}
+function fillSpinHistory(tbody, hist){
+  tbody.innerHTML='';
+  const groups=[];
+  hist.forEach(h=>{const gName=h.game||'—'; if(!groups.length||groups[groups.length-1].game!==gName) groups.push({game:gName,items:[]}); groups[groups.length-1].items.push(h);});
+  [...groups].reverse().forEach(group=>{
+    const header=document.createElement('tr'); header.className='spin-game-header';
+    header.innerHTML='<td colspan="6">Игра: «'+esc(group.game)+'»</td>'; tbody.appendChild(header);
+    const items=group.items;
+    for(let i=items.length-1;i>=0;i--){
+      const h=items[i], deltaCls=h.delta>0?'points-pos':h.delta<0?'points-neg':'';
+      const tr=document.createElement('tr');
+      tr.innerHTML='<td>'+(i+1)+'</td><td>'+formatDate(h.date)+'</td><td>'+esc(h.title)+(h.detail?' ('+esc(h.detail)+')':'')+'</td><td class="'+deltaCls+'" style="font-weight:600">'+(h.delta>0?'+':'')+h.delta+'</td><td class="'+(h.pointsAfter>0?'points-pos':h.pointsAfter<0?'points-neg':'')+'">'+h.pointsAfter+'</td><td>'+(h.cost||0)+' мин</td>';
+      tbody.appendChild(tr);
+    }
+  });
+}
+function renderSpinHistory(){
+  const tbody=document.getElementById('spin-history-body'), empty=document.getElementById('spin-history-empty');
+  if(!tbody) return; tbody.innerHTML='';
+  const hist=state.spinHistory||[];
+  const wrap=document.getElementById('spin-table-wrap');
+  if(!hist.length){
+    if(empty) empty.style.display='block';
+    if(wrap) wrap.style.display='none';
+    updateExpandBtn('btn-expand-spins',0);
+    return;
+  }
+  if(empty) empty.style.display='none';
+  if(wrap) wrap.style.display='';
+  fillSpinHistory(tbody, hist);
+  updateExpandBtn('btn-expand-spins', hist.length);
+}
+function renderWheelItemsList(){
+  ensureWheelItems();
+  const list=document.getElementById('wheel-items-list'); if(!list) return; list.innerHTML='';
+  const items=(state.wheelItems&&state.wheelItems.length)?state.wheelItems:buildDefaultWheelItems();
+  if(!state.wheelItems||!state.wheelItems.length) state.wheelItems=items;
+  items.forEach(item=>{const div=document.createElement('div'); div.className='wheel-item'; div.innerHTML='<div class="wheel-item-title">'+esc(item.title)+'</div><div class="wheel-item-desc">'+esc(item.description||'')+'</div>'; list.appendChild(div);});
+}
+function restoreDefaultWheelItems(){
+  if(!confirm('Восстановить стандартный список пунктов колеса? Новые пункты тоже вернутся.')) return;
+  state.wheelItems=buildDefaultWheelItems(); saveState(); renderWheelItemsList(); showToast('Пункты колеса восстановлены','success');
+}
+function spinWheel(){
+  if(isSpinning) return;
+  if(state.phase!=='playing'||!state.currentGame){showToast('Сначала начни игру на карте','error'); return;}
+  ensureWheelItems();
+  const items=(state.wheelItems&&state.wheelItems.length)?state.wheelItems:buildDefaultWheelItems();
+  if(!items.length){showToast('Колесо пусто','error'); return;}
+  isSpinning=true; const btn=document.getElementById('btn-spin-wheel'); if(btn) btn.disabled=true;
+  const resultEl=document.getElementById('wheel-result'), titleEl=document.getElementById('wheel-result-title'), descEl=document.getElementById('wheel-result-desc'), effectEl=document.getElementById('wheel-result-effect');
+  if(resultEl){resultEl.style.display='block'; resultEl.classList.add('wheel-spinning');}
+  if(effectEl) effectEl.textContent='';
+  let ticks=0; const maxTicks=16+Math.floor(Math.random()*8);
+  const iv=setInterval(function(){
+    const temp=items[Math.floor(Math.random()*items.length)];
+    if(titleEl) titleEl.textContent=temp.title; if(descEl) descEl.textContent='';
+    ticks++;
+    if(ticks>=maxTicks){
+      clearInterval(iv);
+      const final=items[Math.floor(Math.random()*items.length)];
+      if(titleEl) titleEl.textContent=final.title; if(descEl) descEl.textContent=final.description;
+      if(resultEl) resultEl.classList.remove('wheel-spinning');
+      resolveWheelItem(final, function(result){finishSpin(final,result);});
+    }
+  },65);
+}
+function finishSpin(item,result){
+  if(!result) result={delta:0};
+  const cost=getNextSpinCost();
+  state.currentGameSpins=(state.currentGameSpins||0)+1;
+  state.currentGameWheelMinutes=(state.currentGameWheelMinutes||0)+cost;
+  if(!Array.isArray(state.currentGameSpinCosts)) state.currentGameSpinCosts=[];
+  state.currentGameSpinCosts.push(cost);
+  state.points=(state.points||0)+(result.delta||0);
+  if(result.reset){state.points=0; state.currentGameSpins=0; state.inventoryRerolls=0; state.consecutiveDone=0;}
+  if(result.grantReroll) state.inventoryRerolls=(state.inventoryRerolls||0)+1;
+  if(result.takeReroll) state.inventoryRerolls=Math.max(0,(state.inventoryRerolls||0)-1);
+  let piggyNote='';
+  if(result.piggyMin){
+    const pig=depositToPiggy(result.piggyMin);
+    piggyNote='копилка +'+pig.added+' мин ('+(state.piggyMinutes||0)+'/'+PIGGY_THRESHOLD+')';
+    if(pig.granted>0) piggyNote+=' · +'+pig.granted+' реролл из копилки';
+  }
+  state.spinHistory=state.spinHistory||[];
+  state.spinHistory.push({id:uid(),date:today(),game:state.currentGame?state.currentGame.name:'—',gameId:state.currentGame?state.currentGame.logId:null,title:item.title,detail:result.detail||'',delta:result.delta||0,pointsAfter:state.points,cost});
+  const effectEl=document.getElementById('wheel-result-effect');
+  if(effectEl){
+    const sign=result.delta>0?'+':'';
+    let txt=result.detail?result.detail+' → ':'';
+    txt+=(result.delta===0&&!result.reset&&!result.grantReroll&&!result.takeReroll&&!result.piggyMin)?'без изменения очков':(sign+(result.delta||0)+' очк. · итого: '+state.points);
+    if(result.grantReroll) txt+=(txt?' · ':'')+'реролл в инвентарь ('+state.inventoryRerolls+')';
+    if(result.takeReroll) txt+=(txt?' · ':'')+'реролл списан ('+state.inventoryRerolls+')';
+    if(piggyNote) txt+=(txt?' · ':'')+piggyNote;
+    if(result.reset) txt='Обнуление! Очки = 0, рероллы уничтожены, стоимость следующих прокрутов сброшена (время уже накрученное сохраняется)';
+    effectEl.textContent=txt;
+    effectEl.className=result.delta>0?'points-pos':result.delta<0?'points-neg':'';
+    if(result.reset||result.grantReroll||result.takeReroll) effectEl.style.color='var(--yellow)';
+  }
+  isSpinning=false; saveState(); renderAll();
+  showToast(item.title+(result.delta?' ('+(result.delta>0?'+':'')+result.delta+')':''), result.delta>=0?'success':'error');
+}
+function resolveWheelItem(item,onDone){
+  const key=item.key||'';
+  switch(key){
+    case 'plus1': return onDone({delta:1,detail:'+1'});
+    case 'minus1': return onDone({delta:-1,detail:'−1'});
+    case 'minus2': return onDone({delta:-2,detail:'−2'});
+    case 'minus3': return onDone({delta:-3,detail:'−3'});
+    case 'plus2': return onDone({delta:2,detail:'+2'});
+    case 'plus3': return onDone({delta:3,detail:'+3'});
+    case 'reset': return onDone({delta:0,detail:'Обнуление',reset:true});
+    case 'coin1': return openCoinResolve(item,1,onDone);
+    case 'coin2': return openCoinResolve(item,2,onDone);
+    case 'chain_plus': return openDiceResolve(item,6,v=>onDone({delta:v,detail:'d6='+v+' → +'+v}));
+    case 'chain_minus': return openDiceResolve(item,6,v=>onDone({delta:-v,detail:'d6='+v+' → −'+v}));
+    case 'randomizer': return openRandomizerResolve(item,onDone);
+    case 'comp': {let n=0; while(n===0) n=Math.floor(Math.random()*21)-10; return onDone({delta:n,detail:'выпало '+(n>0?'+':'')+n});}
+    case 'controller': return openControllerResolve(item,onDone);
+    case 'risk': return openDiceResolve(item,4,v=>{const delta=v%2===0?v:-v; return onDone({delta,detail:'d4='+v+' → '+(delta>0?'+':'')+delta});});
+    case 'd20': return openDiceResolve(item,20,v=>{let delta=0; if(v<=3)delta=-2; else if(v<=10)delta=1; else if(v<=17)delta=-1; else delta=2; return onDone({delta,detail:'d20='+v+' → '+(delta>0?'+':'')+delta});});
+    case 'double': return openDoubleResolve(onDone);
+    case 'karma': return onDone(resolveKarma());
+    case 'double_risk': return openRandomizerResolve(item,onDone,8);
+    case 'polarity': return onDone(resolvePolarity());
+    case 'finish_wind': return onDone(resolveCellWind(51,'ge'));
+    case 'tail_wind': return onDone(resolveCellWind(50,'le'));
+    case 'streak': return onDone(resolveStreakItem());
+    case 'ladder': return openDiceResolve(item,6,v=>{let delta=0; if(v<=2)delta=-2; else if(v<=4)delta=0; else delta=3; return onDone({delta,detail:'d6='+v+' → '+(delta>0?'+':'')+delta});});
+    case 'pocket_reroll': return onDone(resolvePocketReroll());
+    case 'anti_reroll': return onDone(resolveAntiReroll());
+    case 'lucky7': return openTwoDiceResolve(item,onDone);
+    case 'home_region': return onDone(resolveHomeRegion());
+    case 'ricochet': return openDiceResolve(item,4,function(v){const extra=v===4?1:0; const delta=v+extra; return onDone({delta:delta,detail:'d4='+v+(extra?' + рикошет +1':'')+' → +'+delta});});
+    case 'piggy15': return onDone({delta:0,piggyMin:15,detail:'+15 мин в копилку'});
+    case 'luck_kick': return onDone(resolveLuckKick());
+    default: return onDone({delta:0,detail:'неизвестно'});
+  }
+}
+function currentCellNum(){
+  if(state.currentGame&&state.currentGame.cellNum!=null) return state.currentGame.cellNum;
+  return state.position||0;
+}
+function currentGamePlusMinus(){
+  const gid=state.currentGame&&state.currentGame.logId;
+  const name=state.currentGame&&state.currentGame.name;
+  let plus=0, minus=0;
+  (state.spinHistory||[]).forEach(function(h){
+    const same=gid?h.gameId===gid:(name&&h.game===name);
+    if(!same) return;
+    const d=h.delta||0;
+    if(d>0) plus+=d; else if(d<0) minus+=d;
+  });
+  return {plus,minus};
+}
+function lastFinishedStatus(){
+  const curId=state.currentGame&&state.currentGame.logId;
+  const log=state.log||[];
+  for(let i=log.length-1;i>=0;i--){
+    const e=log[i];
+    if(!e||e.id===curId) continue;
+    if(e.status==='Пройдено'||e.status==='Дроп') return e.status;
+  }
+  return null;
+}
+function resolveKarma(){
+  const pm=currentGamePlusMinus();
+  const morePlus=pm.plus>Math.abs(pm.minus);
+  const delta=morePlus?-2:2;
+  return {delta,detail:'за игру +'+pm.plus+'/'+pm.minus+' → '+(delta>0?'+':'')+delta};
+}
+function resolvePolarity(){
+  const cur=state.points||0;
+  return {delta:-2*cur,detail:cur===0?'уже 0':(cur+' → '+(-cur))};
+}
+function resolveCellWind(threshold,mode){
+  const cell=currentCellNum();
+  const ok=mode==='ge'?cell>=threshold:cell<=threshold;
+  const delta=ok?3:-1;
+  return {delta,detail:'клетка '+cell+' → '+(delta>0?'+':'')+delta};
+}
+function resolveStreakItem(){
+  const st=lastFinishedStatus();
+  if(st==='Пройдено') return {delta:3,detail:'последняя игра Пройдено → +3'};
+  if(st==='Дроп') return {delta:-3,detail:'последняя игра Дроп → −3'};
+  return {delta:0,detail:'нет пройденной/дропа'};
+}
+function resolvePocketReroll(){
+  return {delta:0,grantReroll:true,detail:'+1 реролл в инвентарь'};
+}
+function resolveAntiReroll(){
+  if((state.inventoryRerolls||0)>0) return {delta:0,takeReroll:true,detail:'реролл списан'};
+  return {delta:-1,detail:'реролла нет → −1'};
+}
+function resolveHomeRegion(){
+  const cell=currentCellNum();
+  const type=(state.currentGame&&state.currentGame.cellType)||(state.cells[cell]&&state.cells[cell].type)||'';
+  const plat=PLATFORMS.indexOf(type)!==-1;
+  const delta=plat?3:1;
+  return {delta:delta,detail:(type||'клетка '+cell)+' · '+(plat?'платформа +3':'спецролл +1')};
+}
+function resolveLuckKick(){
+  const jackpot=Math.random()<0.2;
+  return {delta:jackpot?5:2,detail:jackpot?'20% джекпот +5':'80% +2'};
+}
+function resolveLucky7(a,b){
+  const sum=a+b;
+  const delta=(sum===7||sum===11)?4:1;
+  return {delta:delta,detail:a+'+'+b+'='+sum+' → +'+delta};
+}
+function openTwoDiceResolve(item,onDone){
+  pendingResolve={type:'twodice',onDone:onDone,value:null,a:null,b:null};
+  setResolveHeader(item,'2d6: 7 или 11 = +4, иначе +1');
+  document.getElementById('resolve-display').textContent='? + ?';
+  document.getElementById('resolve-choices').style.display='none';
+  document.getElementById('btn-resolve-action').style.display='inline-flex';
+  document.getElementById('btn-resolve-action').textContent='Бросить 2d6!';
+  document.getElementById('btn-resolve-confirm').style.display='none';
+  openModal('modal-wheel-resolve');
+}
+function setResolveHeader(item,actionHint){
+  const titleEl=document.getElementById('resolve-title'), descEl=document.getElementById('resolve-desc'), hintEl=document.getElementById('resolve-hint');
+  if(titleEl) titleEl.textContent=item&&item.title?item.title:'Разрешение';
+  if(descEl) descEl.textContent=item&&item.description?item.description:'';
+  if(hintEl) hintEl.textContent=actionHint||'';
+}
+function openCoinResolve(item,amount,onDone){
+  pendingResolve={type:'coin',amount,onDone,value:null};
+  setResolveHeader(item,'Орёл = +'+amount+', решка = −'+amount);
+  document.getElementById('resolve-display').textContent='?';
+  document.getElementById('resolve-choices').style.display='none';
+  document.getElementById('btn-resolve-action').style.display='inline-flex';
+  document.getElementById('btn-resolve-action').textContent='Подбросить!';
+  document.getElementById('btn-resolve-confirm').style.display='none';
+  openModal('modal-wheel-resolve');
+}
+function openDiceResolve(item,sides,onDone){
+  pendingResolve={type:'dice',sides,onDone,value:null};
+  setResolveHeader(item,'Бросок d'+sides);
+  document.getElementById('resolve-display').textContent='?';
+  document.getElementById('resolve-choices').style.display='none';
+  document.getElementById('btn-resolve-action').style.display='inline-flex';
+  document.getElementById('btn-resolve-action').textContent='Бросить!';
+  document.getElementById('btn-resolve-confirm').style.display='none';
+  openModal('modal-wheel-resolve');
+}
+function openRandomizerResolve(item,onDone,sides){
+  pendingResolve={type:'randomizer',stage:'coin',onDone,sign:null,value:null,sides:sides||6};
+  setResolveHeader(item,'Сначала монетка: плюс или минус');
+  document.getElementById('resolve-display').textContent='?';
+  document.getElementById('resolve-choices').style.display='none';
+  document.getElementById('btn-resolve-action').style.display='inline-flex';
+  document.getElementById('btn-resolve-action').textContent='Монетка!';
+  document.getElementById('btn-resolve-confirm').style.display='none';
+  openModal('modal-wheel-resolve');
+}
+function openControllerResolve(item,onDone){
+  pendingResolve={type:'controller',onDone,guess:null,value:null};
+  setResolveHeader(item,'Загадай число от 1 до 6');
+  document.getElementById('resolve-display').textContent='?';
+  const choices=document.getElementById('resolve-choices');
+  choices.style.display='flex'; choices.innerHTML='';
+  for(let i=1;i<=6;i++){
+    const b=document.createElement('button'); b.className='btn btn-secondary btn-sm'; b.textContent=i;
+    b.onclick=function(){pendingResolve.guess=i; choices.querySelectorAll('button').forEach(x=>{x.classList.remove('btn-primary'); x.classList.add('btn-secondary');}); b.classList.remove('btn-secondary'); b.classList.add('btn-primary'); document.getElementById('btn-resolve-action').style.display='inline-flex';};
+    choices.appendChild(b);
+  }
+  document.getElementById('btn-resolve-action').style.display='none';
+  document.getElementById('btn-resolve-action').textContent='Бросить d6!';
+  document.getElementById('btn-resolve-confirm').style.display='none';
+  openModal('modal-wheel-resolve');
+}
+function openDoubleResolve(onDone){
+  const items=(state.wheelItems||DEFAULT_WHEEL_ITEMS).filter(it=>it.key!=='double'&&it.key!=='reset');
+  if(items.length<2) return onDone({delta:0,detail:'недостаточно пунктов'});
+  const a=items[Math.floor(Math.random()*items.length)], b=items[Math.floor(Math.random()*items.length)];
+  resolveSimple(a,ra=>{resolveSimple(b,rb=>{onDone({delta:(ra.delta||0)+(rb.delta||0),detail:a.title+' ('+(ra.delta>0?'+':'')+(ra.delta||0)+') + '+b.title+' ('+(rb.delta>0?'+':'')+(rb.delta||0)+')',grantReroll:!!(ra.grantReroll||rb.grantReroll),takeReroll:!!(ra.takeReroll||rb.takeReroll),piggyMin:(ra.piggyMin||0)+(rb.piggyMin||0)});});});
+}
+function resolveSimple(item,onDone){
+  const key=item.key||'';
+  if(key==='plus1') return onDone({delta:1});
+  if(key==='minus1') return onDone({delta:-1});
+  if(key==='minus2') return onDone({delta:-2});
+  if(key==='minus3') return onDone({delta:-3});
+  if(key==='plus2') return onDone({delta:2});
+  if(key==='plus3') return onDone({delta:3});
+  if(key==='coin1') return onDone({delta:Math.random()<0.5?1:-1});
+  if(key==='coin2') return onDone({delta:Math.random()<0.5?2:-2});
+  if(key==='chain_plus'){const v=1+Math.floor(Math.random()*6); return onDone({delta:v});}
+  if(key==='chain_minus'){const v=1+Math.floor(Math.random()*6); return onDone({delta:-v});}
+  if(key==='randomizer'){const sign=Math.random()<0.5?1:-1; const v=1+Math.floor(Math.random()*6); return onDone({delta:sign*v});}
+  if(key==='comp'){let n=0; while(n===0) n=Math.floor(Math.random()*21)-10; return onDone({delta:n});}
+  if(key==='controller'){const guess=1+Math.floor(Math.random()*6), roll=1+Math.floor(Math.random()*6); return onDone({delta:guess===roll?3:-1});}
+  if(key==='risk'){const v=1+Math.floor(Math.random()*4); return onDone({delta:v%2===0?v:-v});}
+  if(key==='d20'){const v=1+Math.floor(Math.random()*20); let d=0; if(v<=3)d=-2; else if(v<=10)d=1; else if(v<=17)d=-1; else d=2; return onDone({delta:d});}
+  if(key==='karma') return onDone(resolveKarma());
+  if(key==='double_risk'){const sign=Math.random()<0.5?1:-1; const v=1+Math.floor(Math.random()*8); return onDone({delta:sign*v});}
+  if(key==='polarity') return onDone(resolvePolarity());
+  if(key==='finish_wind') return onDone(resolveCellWind(51,'ge'));
+  if(key==='tail_wind') return onDone(resolveCellWind(50,'le'));
+  if(key==='streak') return onDone(resolveStreakItem());
+  if(key==='ladder'){const v=1+Math.floor(Math.random()*6); let d=0; if(v<=2)d=-2; else if(v<=4)d=0; else d=3; return onDone({delta:d});}
+  if(key==='pocket_reroll') return onDone(resolvePocketReroll());
+  if(key==='anti_reroll') return onDone(resolveAntiReroll());
+  if(key==='lucky7'){const a=1+Math.floor(Math.random()*6), b=1+Math.floor(Math.random()*6); return onDone(resolveLucky7(a,b));}
+  if(key==='home_region') return onDone(resolveHomeRegion());
+  if(key==='ricochet'){const v=1+Math.floor(Math.random()*4); return onDone({delta:v+(v===4?1:0)});}
+  if(key==='piggy15') return onDone({delta:0,piggyMin:15});
+  if(key==='luck_kick') return onDone(resolveLuckKick());
+  return onDone({delta:0});
+}
+function doResolveAction(){
+  if(!pendingResolve) return;
+  const face=document.getElementById('resolve-display'), btn=document.getElementById('btn-resolve-action'), conf=document.getElementById('btn-resolve-confirm');
+  btn.disabled=true;
+  if(pendingResolve.type==='coin'){
+    face.classList.add('rolling'); let t=0;
+    const iv=setInterval(function(){
+      face.textContent=Math.random()<0.5?'🦅':'🪙'; t++;
+      if(t>12){clearInterval(iv); const heads=Math.random()<0.5;
+        face.innerHTML='<span class="coin-emoji">'+(heads?'🦅':'🪙')+'</span><span class="coin-label">'+(heads?'Орёл':'Решка')+'</span>';
+        face.classList.remove('rolling'); pendingResolve.value=heads?pendingResolve.amount:-pendingResolve.amount;
+        btn.style.display='none'; btn.disabled=false; conf.style.display='inline-flex';}
+    },60);
+  } else if(pendingResolve.type==='dice'){
+    face.classList.add('rolling'); let t=0; const sides=pendingResolve.sides;
+    const iv=setInterval(function(){
+      face.textContent=1+Math.floor(Math.random()*sides); t++;
+      if(t>14){clearInterval(iv); const v=1+Math.floor(Math.random()*sides); face.textContent=v; face.classList.remove('rolling'); pendingResolve.value=v; btn.style.display='none'; btn.disabled=false; conf.style.display='inline-flex';}
+    },55);
+  } else if(pendingResolve.type==='randomizer'){
+    if(pendingResolve.stage==='coin'){
+      face.classList.add('rolling'); let t=0;
+      const iv=setInterval(function(){
+        face.textContent=Math.random()<0.5?'➕':'➖'; t++;
+        if(t>12){clearInterval(iv); const plus=Math.random()<0.5; face.textContent=plus?'➕ Плюс':'➖ Минус'; face.classList.remove('rolling'); pendingResolve.sign=plus?1:-1; pendingResolve.stage='dice'; const sd=pendingResolve.sides||6; document.getElementById('resolve-hint').textContent='Теперь d'+sd; btn.textContent='Бросить d'+sd+'!'; btn.disabled=false;}
+      },60);
+    } else {
+      face.classList.add('rolling'); let t=0; const sides=pendingResolve.sides||6;
+      const iv=setInterval(function(){
+        face.textContent=1+Math.floor(Math.random()*sides); t++;
+        if(t>14){clearInterval(iv); const v=1+Math.floor(Math.random()*sides); face.textContent=v; face.classList.remove('rolling'); pendingResolve.value=pendingResolve.sign*v; btn.style.display='none'; btn.disabled=false; conf.style.display='inline-flex';}
+      },55);
+    }
+  } else if(pendingResolve.type==='controller'){
+    if(pendingResolve.guess==null){showToast('Сначала загадай число!','error'); btn.disabled=false; return;}
+    face.classList.add('rolling'); let t=0;
+    const iv=setInterval(function(){
+      face.textContent=1+Math.floor(Math.random()*6); t++;
+      if(t>14){clearInterval(iv); const v=1+Math.floor(Math.random()*6); face.textContent=v; face.classList.remove('rolling'); pendingResolve.value=v;
+        document.getElementById('resolve-hint').textContent=v===pendingResolve.guess?'Совпало! +3 очка':'Не угадал (загадал '+pendingResolve.guess+') → −1';
+        btn.style.display='none'; btn.disabled=false; conf.style.display='inline-flex';}
+    },55);
+  } else if(pendingResolve.type==='twodice'){
+    face.classList.add('rolling'); let t=0;
+    const iv=setInterval(function(){
+      face.textContent=(1+Math.floor(Math.random()*6))+' + '+(1+Math.floor(Math.random()*6)); t++;
+      if(t>14){
+        clearInterval(iv);
+        const a=1+Math.floor(Math.random()*6), b=1+Math.floor(Math.random()*6);
+        face.textContent=a+' + '+b+' = '+(a+b);
+        face.classList.remove('rolling');
+        pendingResolve.a=a; pendingResolve.b=b; pendingResolve.value=a+b;
+        btn.style.display='none'; btn.disabled=false; conf.style.display='inline-flex';
+      }
+    },55);
+  }
+}
+function confirmResolve(){
+  if(!pendingResolve||pendingResolve.value==null) return;
+  const pr=pendingResolve; closeModal('modal-wheel-resolve'); pendingResolve=null;
+  if(pr.type==='coin') pr.onDone({delta:pr.value,detail:(pr.value>0?'орёл':'решка')+' → '+(pr.value>0?'+':'')+pr.value});
+  else if(pr.type==='dice') pr.onDone(pr.value);
+  else if(pr.type==='randomizer') pr.onDone({delta:pr.value,detail:(pr.sign>0?'+':'−')+'d'+(pr.sides||6)+'='+Math.abs(pr.value)});
+  else if(pr.type==='controller'){const match=pr.value===pr.guess; pr.onDone({delta:match?3:-1,detail:'загадал '+pr.guess+', d6='+pr.value+(match?' ✓':'')});}
+  else if(pr.type==='twodice') pr.onDone(resolveLucky7(pr.a,pr.b));
+}
+// ===== GAME CATALOG =====
+const catalogFilters={ 'catalog-filter':'all', 'rules-catalog-filter':'all' };
+function normGameKey(s){
+  return String(s||'').toLowerCase().replace(/ё/g,'е').replace(/['’`]/g,'').replace(/[^a-z0-9а-я]+/gi,' ').replace(/\s+/g,' ').trim();
+}
+function getCatalog(){
+  const out=(ARCHIVE_GAMES||[]).map(function(x){return Object.assign({},x);});
+  (state.log||[]).forEach(function(e){
+    if(!e||!e.game||e.game==='—') return;
+    if(e.status!=='Пройдено'&&e.status!=='Дроп'&&e.status!=='Реролл') return;
+    out.push({event:'RGGV by NW',date:e.date||'',platform:e.cellType||'',game:e.game,status:e.status,comment:e.comment||'',time:e.time||'',source:'current'});
+  });
+  return out;
+}
+function catalogMatchesQuery(row,q){
+  if(!q) return true;
+  const blob=normGameKey([row.game,row.platform,row.event,row.comment,row.status].join(' '));
+  return q.split(' ').every(function(part){return !part||blob.indexOf(part)!==-1;});
+}
+function setCatalogFilter(val,storeKey,btn){
+  catalogFilters[storeKey]=val;
+  const wrap=btn&&btn.parentNode;
+  if(wrap) wrap.querySelectorAll('[data-catfilter]').forEach(function(b){b.classList.toggle('btn-primary',b.getAttribute('data-catfilter')===val); b.classList.toggle('btn-secondary',b.getAttribute('data-catfilter')!==val);});
+  if(storeKey==='catalog-filter') renderCatalogList('catalog-body','catalog-search','catalog-filter');
+  if(storeKey==='rules-catalog-filter') renderCatalogList('rules-catalog-body','rules-catalog-search','rules-catalog-filter');
+}
+function renderCatalogList(tbodyId,searchId,filterKey){
+  const tbody=document.getElementById(tbodyId); if(!tbody) return;
+  const q=normGameKey((document.getElementById(searchId)||{}).value||'');
+  const st=catalogFilters[filterKey]||'all';
+  const rows=getCatalog().filter(function(r){
+    if(st!=='all'&&r.status!==st) return false;
+    return catalogMatchesQuery(r,q);
+  });
+  tbody.innerHTML='';
+  if(!rows.length){
+    const tr=document.createElement('tr');
+    tr.innerHTML='<td colspan="7" style="color:var(--text-muted);text-align:center;padding:1rem;">Ничего не найдено</td>';
+    tbody.appendChild(tr); return;
+  }
+  rows.forEach(function(r){
+    const statusClass={'Пройдено':'done','Дроп':'drop','Реролл':'reroll','Играется':'playing'}[r.status]||'started';
+    const tr=document.createElement('tr');
+    tr.innerHTML='<td>'+esc(r.event||'—')+'</td><td>'+formatDate(r.date)+'</td><td>'+esc(r.platform||'—')+'</td><td>'+esc(r.game)+'</td><td><span class="badge '+statusClass+'">'+esc(r.status)+'</span></td><td>'+(r.time?esc(r.time):'—')+'</td><td title="'+escAttr(r.comment||'')+'">'+(r.comment?esc(String(r.comment).slice(0,40))+(String(r.comment).length>40?'…':''):'—')+'</td>';
+    tbody.appendChild(tr);
+  });
+}
+function openCatalogModal(){
+  catalogFilters['catalog-filter']='all';
+  const inp=document.getElementById('catalog-search'); if(inp) inp.value='';
+  openModal('modal-catalog');
+  const bar=document.querySelector('#modal-catalog .catalog-filters');
+  if(bar) bar.querySelectorAll('[data-catfilter]').forEach(function(b){const on=b.getAttribute('data-catfilter')==='all'; b.classList.toggle('btn-primary',on); b.classList.toggle('btn-secondary',!on);});
+  renderCatalogList('catalog-body','catalog-search','catalog-filter');
+}
+function findCatalogHits(name){
+  const q=normGameKey(name);
+  if(q.length<2) return [];
+  return getCatalog().filter(function(r){
+    if(r.status==='Реролл'||r.status==='Играется') return false;
+    return normGameKey(r.game).indexOf(q)!==-1||q.indexOf(normGameKey(r.game))!==-1;
+  });
+}
+function updateGameCatalogHints(){
+  const inp=document.getElementById('game-name-input');
+  const hitsEl=document.getElementById('game-catalog-hits');
+  if(!inp||!hitsEl) return;
+  const name=inp.value.trim();
+  const hits=findCatalogHits(name);
+  hitsEl.innerHTML='';
+  if(name.length<2) return;
+  hits.slice(0,8).forEach(function(h){
+    const div=document.createElement('div');
+    div.className='catalog-hit';
+    const statusClass={'Пройдено':'done','Дроп':'drop'}[h.status]||'started';
+    div.innerHTML='<div class="hit-title">'+esc(h.game)+' <span class="badge '+statusClass+'">'+esc(h.status)+'</span></div><div class="hit-meta">'+esc(h.event)+(h.platform?' · '+esc(h.platform):'')+(h.date?' · '+formatDate(h.date):'')+(h.time?' · '+esc(h.time):'')+'</div>';
+    div.onclick=function(){inp.value=h.game; updateGameCatalogHints(); inp.focus();};
+    hitsEl.appendChild(div);
+  });
+}
+// ===== UI HELPERS =====
+function switchMainTab(name){
+  document.querySelectorAll('.main-tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===name));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.id==='panel-'+name));
+  if(name==='settings'){syncSettingsUI(); renderChangelog();}
+  if(name==='wheel') renderWheelUI();
+  if(name==='rules') renderCatalogList('rules-catalog-body','rules-catalog-search','rules-catalog-filter');
+}
+function openModal(id){
+  const el=document.getElementById(id); if(!el) return;
+  el.classList.add('open');
+  if(id==='modal-game'){
+    const inp=document.getElementById('game-name-input');
+    if(inp) setTimeout(function(){inp.focus();},40);
+  }
+}
+function closeModal(id){const el=document.getElementById(id); if(el) el.classList.remove('open');}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7);}
+function today(){return new Date().toISOString().slice(0,10);}
+function formatDate(d){if(!d) return '—'; const p=String(d).slice(0,10).split('-'); return p.length===3?p[2]+'.'+p[1]+'.'+p[0]:d;}
+function esc(s){if(!s) return ''; const d=document.createElement('div'); d.textContent=s; return d.innerHTML;}
+function escAttr(s){return String(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function showToast(msg,type){const t=document.getElementById('toast'); t.textContent=msg; t.className='toast show '+(type||''); setTimeout(()=>t.classList.remove('show'),2800);}
+document.querySelectorAll('.modal-overlay').forEach(ov=>{
+  ov.addEventListener('click',e=>{
+    if(e.target!==ov) return;
+    if(ov.id==='modal-game'||ov.id==='modal-wheel-resolve') return;
+    if(ov.id==='modal-dice'&&rolledValue!=null) return;
+    ov.classList.remove('open');
+  });
+});
+document.getElementById('settings-name').addEventListener('input',updateSettingsPreview);
+const gameNameInput=document.getElementById('game-name-input');
+if(gameNameInput){
+  gameNameInput.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault(); startPlaying();}});
+  gameNameInput.addEventListener('input',updateGameCatalogHints);
+}
+init();
+</script>
+</body>
+</html>
