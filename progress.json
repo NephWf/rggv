@@ -1,7 +1,7 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-10-01T15:24:48.473Z",
+  "exportedAt": "2026-10-01T16:00:31.626Z",
   "state": {
     "player": {
       "name": "NephWolf",
@@ -794,8 +794,8 @@
       "red": "#ff6b6b"
     },
     "points": -2,
-    "currentGameSpins": 1,
-    "currentGameWheelMinutes": 30,
+    "currentGameSpins": 2,
+    "currentGameWheelMinutes": 65,
     "spinHistory": [
       {
         "id": "mt0hx8qcufow8",
@@ -1313,6 +1313,17 @@
         "delta": -1,
         "pointsAfter": -2,
         "cost": 30
+      },
+      {
+        "id": "mupq0eoaivkxp",
+        "date": "2026-10-01",
+        "game": "Castlevania II: Belmont's Revenge (GBC)",
+        "gameId": "mtudaw2wutcod",
+        "title": "Реролл в карман",
+        "detail": "+1 реролл в инвентарь",
+        "delta": 0,
+        "pointsAfter": -2,
+        "cost": 35
       }
     ],
     "wheelItems": [
@@ -1503,12 +1514,13 @@
         "key": "luck_kick"
       }
     ],
-    "inventoryRerolls": 0,
+    "inventoryRerolls": 1,
     "consecutiveDone": 0,
     "piggyMinutes": 50,
     "piggyThreshold": 100,
     "currentGameSpinCosts": [
-      30
+      30,
+      35
     ],
     "nextDiceDir": "back"
   }
