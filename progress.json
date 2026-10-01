@@ -1,7 +1,7 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-10-01T16:00:31.626Z",
+  "exportedAt": "2026-10-01T16:41:08.175Z",
   "state": {
     "player": {
       "name": "NephWolf",
@@ -793,9 +793,9 @@
       "green": "#3dd68c",
       "red": "#ff6b6b"
     },
-    "points": -2,
-    "currentGameSpins": 2,
-    "currentGameWheelMinutes": 65,
+    "points": -10,
+    "currentGameSpins": 3,
+    "currentGameWheelMinutes": 105,
     "spinHistory": [
       {
         "id": "mt0hx8qcufow8",
@@ -1324,6 +1324,17 @@
         "delta": 0,
         "pointsAfter": -2,
         "cost": 35
+      },
+      {
+        "id": "muprgmpxenu4b",
+        "date": "2026-10-01",
+        "game": "Castlevania II: Belmont's Revenge (GBC)",
+        "gameId": "mtudaw2wutcod",
+        "title": "Компетитив перхапс",
+        "detail": "выпало -8",
+        "delta": -8,
+        "pointsAfter": -10,
+        "cost": 40
       }
     ],
     "wheelItems": [
@@ -1520,7 +1531,8 @@
     "piggyThreshold": 100,
     "currentGameSpinCosts": [
       30,
-      35
+      35,
+      40
     ],
     "nextDiceDir": "back"
   }
