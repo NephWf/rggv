@@ -1,7 +1,7 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-10-01T18:08:25.132Z",
+  "exportedAt": "2026-10-02T09:59:09.132Z",
   "state": {
     "player": {
       "name": "NephWolf",
@@ -768,9 +768,11 @@
         "cellType": "Castlevania",
         "game": "Castlevania II: Belmont's Revenge (GBC)",
         "status": "Играется",
-        "time": null,
+        "time": "2 ч 30 мин",
         "rating": null,
-        "comment": ""
+        "comment": "",
+        "timeMinutes": 150,
+        "wheelSpins": 4
       }
     ],
     "phase": "playing",
