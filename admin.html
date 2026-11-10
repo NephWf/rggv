@@ -445,19 +445,19 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px soli
     <p style="text-align:center; margin-bottom:1rem; color:var(--text-muted);" id="game-reveal-info"></p>
     <div class="form-group">
         <label>Название игры</label>
-        <div id="game-roll-area" style="background:var(--bg-elevated); border:1px solid var(--border); border-radius:12px; padding:1rem; text-align:center; min-height:180px; position:relative; overflow:hidden;">
-          <div id="game-roll-titles" style="font-size:1.05rem; font-weight:600; line-height:1.6; color:var(--text);">
+        <div id="game-roll-area" style="background:var(--bg-elevated); border:1px solid var(--border); border-radius:12px; padding:0.75rem 1rem; text-align:center; height:210px; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between;">
+          <div id="game-roll-titles" style="font-size:1.05rem; font-weight:600; line-height:1.5; color:var(--text); flex:1; display:flex; flex-direction:column; justify-content:center; min-height:110px;">
             <div style="opacity:.4">Нажми «Крутить» чтобы выбрать игру</div>
           </div>
-          <div id="game-roll-controls" style="margin-top:1rem; display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap;">
+          <div id="game-roll-controls" style="display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap;">
             <button class="btn btn-primary" type="button" id="btn-start-roll" onclick="startGameRoll()">🎲 Крутить</button>
             <button class="btn btn-secondary" type="button" id="btn-stop-roll" onclick="stopGameRoll()" style="display:none;">Стоп</button>
             <button class="btn btn-secondary" type="button" id="btn-instant-roll" onclick="instantGameRoll()">На ультратоненького</button>
           </div>
-          <div id="game-roll-links" style="margin-top:1rem; display:none; gap:.5rem; justify-content:center; flex-wrap:wrap;">
-            <a id="link-youtube" class="btn btn-secondary" target="_blank" style="text-decoration:none;">YouTube</a>
-            <a id="link-gamefaqs" class="btn btn-secondary" target="_blank" style="text-decoration:none;">GameFAQs</a>
-            <button class="btn btn-secondary" type="button" onclick="copyRolledGame()">Копировать</button>
+          <div id="game-roll-links" style="display:none; gap:.5rem; justify-content:center; flex-wrap:wrap; margin-top:.5rem;">
+            <a id="link-youtube" class="btn" target="_blank" style="text-decoration:none; border:2px solid #ff0000; color:#ff0000; background:transparent; padding:.35rem .7rem; border-radius:8px; font-weight:700;">YT</a>
+            <a id="link-gamefaqs" class="btn" target="_blank" style="text-decoration:none; border:2px solid #4da6ff; color:#4da6ff; background:transparent; padding:.35rem .7rem; border-radius:8px; font-weight:700;">GFAQs</a>
+            <button class="btn" type="button" onclick="copyRolledGame()" title="Копировать" style="border:2px solid var(--border); background:transparent; padding:.35rem .55rem; border-radius:8px; font-size:1.1rem;">📋</button>
           </div>
         </div>
         <input type="text" id="game-name-input" placeholder="Или введи вручную" autocomplete="off" style="margin-top:.75rem; width:100%;">
@@ -1139,12 +1139,21 @@ function renderRollTitles(centerIdx){
   el.innerHTML = lines.join('');
 }
 
+function shuffleArray(arr){
+  const a = arr.slice();
+  for(let i=a.length-1; i>0; i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 function startGameRoll(){
   const list = getCurrentGameList();
   if(!list || !list.length){ showToast('Нет списка для этой клетки','error'); return; }
-  gameRoll.list = list.slice();
-  gameRoll.target = Math.floor(Math.random()*list.length);
-  gameRoll.currentIndex = Math.floor(Math.random()*list.length);
+  gameRoll.list = shuffleArray(list);
+  gameRoll.target = Math.floor(Math.random()*gameRoll.list.length);
+  gameRoll.currentIndex = Math.floor(Math.random()*gameRoll.list.length);
   gameRoll.phase = 'fast';
   gameRoll.speed = 40;
   document.getElementById('btn-start-roll').style.display = 'none';
@@ -1199,8 +1208,8 @@ function stopGameRoll(){
 function instantGameRoll(){
   const list = getCurrentGameList();
   if(!list || !list.length){ showToast('Нет списка','error'); return; }
-  gameRoll.list = list.slice();
-  gameRoll.target = Math.floor(Math.random()*list.length);
+  gameRoll.list = shuffleArray(list);
+  gameRoll.target = Math.floor(Math.random()*gameRoll.list.length);
   gameRoll.currentIndex = gameRoll.target;
   finishGameRoll();
 }
