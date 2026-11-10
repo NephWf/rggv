@@ -1170,13 +1170,11 @@ function setRollLinksActive(active, name){
   if(active && name){
     const cellType = (state.pendingMove && state.pendingMove.cellType) || '';
     const isPlatform = (typeof PLATFORMS !== 'undefined') && PLATFORMS.includes(cellType);
+    const hasParen = /\([^)]+\)\s*$/.test(name);
     let searchPlat = '';
-    if(isPlatform){
+    // only append platform if it is not already in parentheses in the title
+    if(!hasParen && isPlatform){
       searchPlat = cellType;
-    } else {
-      // special roll: try to take platform from title parentheses, e.g. "Game (GBC)"
-      const m = name.match(/\(([^)]+)\)\s*$/);
-      if(m) searchPlat = m[1];
     }
     const q = encodeURIComponent(searchPlat ? (name + ' ' + searchPlat) : name);
     yt.href = 'https://www.youtube.com/results?search_query=' + q;
