@@ -1,7 +1,7 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-11-10T18:11:24.574Z",
+  "exportedAt": "2026-11-10T18:11:37.396Z",
   "state": {
     "player": {
       "name": "NephWolf",
@@ -859,18 +859,30 @@
         "timeMinutes": 0,
         "wheelSpins": 0,
         "piggyDeposit": 0
+      },
+      {
+        "id": "mwb0b2lrp8on0",
+        "hod": 28,
+        "date": "2026-11-10",
+        "dice": 1,
+        "move": "46 → 47",
+        "cellNum": 47,
+        "cellType": "Castlevania",
+        "game": "Castlevania (NES)",
+        "status": "Играется",
+        "time": null,
+        "rating": null,
+        "comment": ""
       }
     ],
-    "phase": "waiting_game",
-    "currentGame": null,
-    "pendingMove": {
-      "from": 46,
-      "to": 47,
-      "dice": 1,
-      "moveStr": "46 → 47",
+    "phase": "playing",
+    "currentGame": {
+      "name": "Castlevania (NES)",
       "cellType": "Castlevania",
-      "direction": "forward"
+      "cellNum": 47,
+      "logId": "mwb0b2lrp8on0"
     },
+    "pendingMove": null,
     "lastDice": 1,
     "rules": "",
     "setupDone": true,
