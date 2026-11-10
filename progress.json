@@ -1,14 +1,14 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-11-10T18:10:57.127Z",
+  "exportedAt": "2026-11-10T18:11:24.574Z",
   "state": {
     "player": {
       "name": "NephWolf",
       "emoji": "🐺",
       "color": "#20c997"
     },
-    "position": 46,
+    "position": 47,
     "cells": [
       null,
       {
@@ -197,7 +197,7 @@
       },
       {
         "type": "Castlevania",
-        "revealed": false
+        "revealed": true
       },
       {
         "type": "Nintendo",
@@ -842,19 +842,36 @@
         "timeMinutes": 0,
         "wheelSpins": 0,
         "piggyDeposit": 0
+      },
+      {
+        "id": "mwb0anf70qx04",
+        "hod": 27,
+        "date": "2026-11-10",
+        "dice": 6,
+        "move": "40 → 46",
+        "cellNum": 46,
+        "cellType": "Konami",
+        "game": "Ganbare Goemon: Sarawareta Ebisumaru! (GB)",
+        "status": "Пройдено",
+        "time": "0",
+        "rating": null,
+        "comment": "",
+        "timeMinutes": 0,
+        "wheelSpins": 0,
+        "piggyDeposit": 0
       }
     ],
     "phase": "waiting_game",
     "currentGame": null,
     "pendingMove": {
-      "from": 40,
-      "to": 46,
-      "dice": 6,
-      "moveStr": "40 → 46",
-      "cellType": "Konami",
+      "from": 46,
+      "to": 47,
+      "dice": 1,
+      "moveStr": "46 → 47",
+      "cellType": "Castlevania",
       "direction": "forward"
     },
-    "lastDice": 6,
+    "lastDice": 1,
     "rules": "",
     "setupDone": true,
     "theme": "dark",
@@ -869,7 +886,6 @@
     "points": 0,
     "currentGameSpins": 0,
     "currentGameWheelMinutes": 0,
-    "currentGameSpinCosts": [],
     "spinHistory": [
       {
         "id": "mt0hx8qcufow8",
@@ -1632,10 +1648,11 @@
         "key": "luck_kick"
       }
     ],
-    "inventoryRerolls": 4,
-    "consecutiveDone": 5,
+    "inventoryRerolls": 5,
+    "consecutiveDone": 6,
     "piggyMinutes": 50,
     "piggyThreshold": 100,
+    "currentGameSpinCosts": [],
     "nextDiceDir": "forward"
   }
 }
