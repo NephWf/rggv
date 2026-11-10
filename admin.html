@@ -370,7 +370,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px soli
         </div>
       </div>
       <div class="card"><h2>📦 Версия и история</h2>
-        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">Текущая версия: <strong style="color:var(--accent);" id="settings-version">2.14</strong></p>
+        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">Текущая версия: <strong style="color:var(--accent);" id="settings-version">2.15</strong></p>
         <div id="changelog-list" class="changelog-list"></div>
       </div>
     </div>
@@ -534,6 +534,16 @@ const ARCHIVE_GAMES = [{"event": "SPRGGB NW", "date": "2024-01-06", "platform": 
 const PIGGY_THRESHOLD = 100;
 const PREVIEW_ROWS = 15;
 const CHANGELOG = [
+  {version:'2.15', date:'2026-11-10', changes:[
+    'Рандомный ролл игр из списков платформ и спецроллов (вместо ручного ввода)',
+    'Визуальный ролл в стиле слот-машины: нормальная скорость → замедление → «перчинка»',
+    'Кнопки: «Крутить», «Стоп» (пропуск быстрого этапа), «На ультратоненького» (мгновенный результат)',
+    'После ролла: YT (красная обводка), GFAQs (синяя), копирование названия',
+    'Список перемешивается перед визуальной прокруткой',
+    'В строке платформы показывается количество игр: «Клетка N · TYPE · X игр»',
+    'Длинные названия переносятся, интервал внутри названия обычный, между играми шире',
+    'В списках с колонкой платформы название формируется как «Игра (Платформа)»'
+  ]},
   {version:'2.14', date:'2026-09-02', changes:[
     'Колесо: Счастливая семёрка, Домашний регион, Рикошет, Минуты в карман, Пинок удачи'
   ]},
