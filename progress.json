@@ -1,14 +1,14 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-11-10T18:09:55.134Z",
+  "exportedAt": "2026-11-10T18:10:57.127Z",
   "state": {
     "player": {
       "name": "NephWolf",
       "emoji": "🐺",
       "color": "#20c997"
     },
-    "position": 29,
+    "position": 46,
     "cells": [
       null,
       {
@@ -149,7 +149,7 @@
       },
       {
         "type": "Dreamcast",
-        "revealed": false
+        "revealed": true
       },
       {
         "type": "GC",
@@ -169,7 +169,7 @@
       },
       {
         "type": "SNES",
-        "revealed": false
+        "revealed": true
       },
       {
         "type": "PS2",
@@ -193,7 +193,7 @@
       },
       {
         "type": "Konami",
-        "revealed": false
+        "revealed": true
       },
       {
         "type": "Castlevania",
@@ -791,19 +791,70 @@
         "timeMinutes": 0,
         "wheelSpins": 0,
         "piggyDeposit": 0
+      },
+      {
+        "id": "mwb09fitiyle4",
+        "hod": 24,
+        "date": "2026-11-10",
+        "dice": 1,
+        "move": "28 → 29",
+        "cellNum": 29,
+        "cellType": "SMD",
+        "game": "Garfield: Caught in the Act",
+        "status": "Пройдено",
+        "time": "0",
+        "rating": null,
+        "comment": "",
+        "timeMinutes": 0,
+        "wheelSpins": 0,
+        "piggyDeposit": 0
+      },
+      {
+        "id": "mwb09pzy4j63m",
+        "hod": 25,
+        "date": "2026-11-10",
+        "dice": 6,
+        "move": "29 → 35",
+        "cellNum": 35,
+        "cellType": "Dreamcast",
+        "game": "Toy Racer",
+        "status": "Пройдено",
+        "time": "0",
+        "rating": null,
+        "comment": "",
+        "timeMinutes": 0,
+        "wheelSpins": 0,
+        "piggyDeposit": 0
+      },
+      {
+        "id": "mwb0a242md4ya",
+        "hod": 26,
+        "date": "2026-11-10",
+        "dice": 5,
+        "move": "35 → 40",
+        "cellNum": 40,
+        "cellType": "SNES",
+        "game": "Kyle Petty's No Fear Racing",
+        "status": "Пройдено",
+        "time": "0",
+        "rating": null,
+        "comment": "",
+        "timeMinutes": 0,
+        "wheelSpins": 0,
+        "piggyDeposit": 0
       }
     ],
     "phase": "waiting_game",
     "currentGame": null,
     "pendingMove": {
-      "from": 28,
-      "to": 29,
-      "dice": 1,
-      "moveStr": "28 → 29",
-      "cellType": "SMD",
+      "from": 40,
+      "to": 46,
+      "dice": 6,
+      "moveStr": "40 → 46",
+      "cellType": "Konami",
       "direction": "forward"
     },
-    "lastDice": 1,
+    "lastDice": 6,
     "rules": "",
     "setupDone": true,
     "theme": "dark",
@@ -1581,8 +1632,8 @@
         "key": "luck_kick"
       }
     ],
-    "inventoryRerolls": 1,
-    "consecutiveDone": 2,
+    "inventoryRerolls": 4,
+    "consecutiveDone": 5,
     "piggyMinutes": 50,
     "piggyThreshold": 100,
     "nextDiceDir": "forward"
