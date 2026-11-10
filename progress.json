@@ -1,14 +1,14 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-11-10T18:08:39.224Z",
+  "exportedAt": "2026-11-10T18:09:55.134Z",
   "state": {
     "player": {
       "name": "NephWolf",
       "emoji": "🐺",
       "color": "#20c997"
     },
-    "position": 28,
+    "position": 29,
     "cells": [
       null,
       {
@@ -774,19 +774,36 @@
         "timeMinutes": 230,
         "wheelSpins": 6,
         "piggyDeposit": 0
+      },
+      {
+        "id": "mwb08r49rjktk",
+        "hod": 23,
+        "date": "2026-11-10",
+        "dice": 2,
+        "move": "23 → 28 (кубик 2 + 3 очк.)",
+        "cellNum": 28,
+        "cellType": "DS",
+        "game": "Kamen Rider Battle Ganbaride: Card Battle Taisen",
+        "status": "Пройдено",
+        "time": "0",
+        "rating": null,
+        "comment": "",
+        "timeMinutes": 0,
+        "wheelSpins": 0,
+        "piggyDeposit": 0
       }
     ],
     "phase": "waiting_game",
     "currentGame": null,
     "pendingMove": {
-      "from": 23,
-      "to": 28,
-      "dice": 2,
-      "moveStr": "23 → 28 (кубик 2 + 3 очк.)",
-      "cellType": "DS",
+      "from": 28,
+      "to": 29,
+      "dice": 1,
+      "moveStr": "28 → 29",
+      "cellType": "SMD",
       "direction": "forward"
     },
-    "lastDice": 2,
+    "lastDice": 1,
     "rules": "",
     "setupDone": true,
     "theme": "dark",
@@ -1564,8 +1581,8 @@
         "key": "luck_kick"
       }
     ],
-    "inventoryRerolls": 0,
-    "consecutiveDone": 1,
+    "inventoryRerolls": 1,
+    "consecutiveDone": 2,
     "piggyMinutes": 50,
     "piggyThreshold": 100,
     "nextDiceDir": "forward"
