@@ -445,10 +445,22 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px soli
     <p style="text-align:center; margin-bottom:1rem; color:var(--text-muted);" id="game-reveal-info"></p>
     <div class="form-group">
         <label>Название игры</label>
-        <div style="display:flex; gap:.5rem; align-items:center;">
-          <input type="text" id="game-name-input" placeholder="Введи название или нажми Рандом" autofocus autocomplete="off" style="flex:1;">
-          <button class="btn btn-secondary" type="button" onclick="rollRandomGame()" style="white-space:nowrap;">🎲 Рандом</button>
+        <div id="game-roll-area" style="background:var(--bg-elevated); border:1px solid var(--border); border-radius:12px; padding:1rem; text-align:center; min-height:180px; position:relative; overflow:hidden;">
+          <div id="game-roll-titles" style="font-size:1.05rem; font-weight:600; line-height:1.6; color:var(--text);">
+            <div style="opacity:.4">Нажми «Крутить» чтобы выбрать игру</div>
+          </div>
+          <div id="game-roll-controls" style="margin-top:1rem; display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap;">
+            <button class="btn btn-primary" type="button" id="btn-start-roll" onclick="startGameRoll()">🎲 Крутить</button>
+            <button class="btn btn-secondary" type="button" id="btn-stop-roll" onclick="stopGameRoll()" style="display:none;">Стоп</button>
+            <button class="btn btn-secondary" type="button" id="btn-instant-roll" onclick="instantGameRoll()">На ультратоненького</button>
+          </div>
+          <div id="game-roll-links" style="margin-top:1rem; display:none; gap:.5rem; justify-content:center; flex-wrap:wrap;">
+            <a id="link-youtube" class="btn btn-secondary" target="_blank" style="text-decoration:none;">YouTube</a>
+            <a id="link-gamefaqs" class="btn btn-secondary" target="_blank" style="text-decoration:none;">GameFAQs</a>
+            <button class="btn btn-secondary" type="button" onclick="copyRolledGame()">Копировать</button>
+          </div>
         </div>
+        <input type="text" id="game-name-input" placeholder="Или введи вручную" autocomplete="off" style="margin-top:.75rem; width:100%;">
       </div>
     <div id="game-catalog-hits" class="catalog-hits"></div>
     <div class="modal-actions"><button class="btn btn-primary" onclick="startPlaying()">Начать играть</button></div>
@@ -1103,18 +1115,128 @@ function openGamePickModal(){
   updateGameCatalogHints();
 }
 
-function rollRandomGame(){
+let gameRoll = { timer:null, phase:'idle', list:[], target:null, currentIndex:0, speed:40 };
+
+function getCurrentGameList(){
   const p = state.pendingMove;
-  if(!p || !p.cellType){ showToast('Нет типа клетки', 'error'); return; }
-  const type = p.cellType;
-  const list = (typeof GAME_LISTS !== 'undefined' && GAME_LISTS[type]) ? GAME_LISTS[type] : null;
-  if(!list || !list.length){ showToast('Нет списка для ' + type, 'error'); return; }
-  const name = list[Math.floor(Math.random() * list.length)];
-  const inp = document.getElementById('game-name-input');
-  if(inp){ inp.value = name; inp.focus(); }
-  showToast('Выпало: ' + name, 'success');
-  if(typeof updateGameCatalogHints === 'function') updateGameCatalogHints();
+  if(!p || !p.cellType) return null;
+  return (typeof GAME_LISTS !== 'undefined' && GAME_LISTS[p.cellType]) ? GAME_LISTS[p.cellType] : null;
 }
+
+function renderRollTitles(centerIdx){
+  const el = document.getElementById('game-roll-titles');
+  if(!el || !gameRoll.list.length) return;
+  const list = gameRoll.list;
+  const n = list.length;
+  const lines = [];
+  for(let i=-2; i<=2; i++){
+    const idx = (centerIdx + i + n) % n;
+    const opacity = i===0 ? 1 : Math.max(0.25, 1 - Math.abs(i)*0.3);
+    const weight = i===0 ? '700' : '500';
+    const size = i===0 ? '1.2rem' : '0.95rem';
+    lines.push('<div style="opacity:'+opacity+'; font-weight:'+weight+'; font-size:'+size+'; transition:all .08s;">'+esc(list[idx])+'</div>');
+  }
+  el.innerHTML = lines.join('');
+}
+
+function startGameRoll(){
+  const list = getCurrentGameList();
+  if(!list || !list.length){ showToast('Нет списка для этой клетки','error'); return; }
+  gameRoll.list = list.slice();
+  gameRoll.target = Math.floor(Math.random()*list.length);
+  gameRoll.currentIndex = Math.floor(Math.random()*list.length);
+  gameRoll.phase = 'fast';
+  gameRoll.speed = 40;
+  document.getElementById('btn-start-roll').style.display = 'none';
+  document.getElementById('btn-stop-roll').style.display = 'inline-flex';
+  document.getElementById('btn-instant-roll').style.display = 'inline-flex';
+  document.getElementById('game-roll-links').style.display = 'none';
+  runGameRoll();
+}
+
+function runGameRoll(){
+  if(gameRoll.timer) clearTimeout(gameRoll.timer);
+  const step = ()=>{
+    gameRoll.currentIndex = (gameRoll.currentIndex + 1) % gameRoll.list.length;
+    renderRollTitles(gameRoll.currentIndex);
+    if(gameRoll.phase === 'fast'){
+      gameRoll.speed = Math.min(gameRoll.speed + 0.3, 80);
+      if(Math.random() < 0.008) gameRoll.phase = 'slow'; // auto slow sometimes
+    } else if(gameRoll.phase === 'slow'){
+      gameRoll.speed = Math.min(gameRoll.speed + 8, 280);
+      if(gameRoll.speed > 200 && Math.random() < 0.15){
+        // перчинка
+        const dir = Math.random() < 0.5 ? 1 : -1;
+        const jumps = 3 + Math.floor(Math.random()*8);
+        gameRoll.currentIndex = (gameRoll.currentIndex + dir*jumps + gameRoll.list.length) % gameRoll.list.length;
+        gameRoll.phase = 'finish';
+      }
+      if(gameRoll.speed >= 260) gameRoll.phase = 'finish';
+    } else if(gameRoll.phase === 'finish'){
+      // snap to target gradually
+      const diff = (gameRoll.target - gameRoll.currentIndex + gameRoll.list.length) % gameRoll.list.length;
+      if(diff === 0 || gameRoll.speed > 400){
+        finishGameRoll();
+        return;
+      }
+      gameRoll.speed += 15;
+    }
+    gameRoll.timer = setTimeout(step, gameRoll.speed);
+  };
+  step();
+}
+
+function stopGameRoll(){
+  // skip fast phase
+  if(gameRoll.phase === 'fast'){
+    gameRoll.phase = 'slow';
+    gameRoll.speed = 120;
+  } else {
+    finishGameRoll();
+  }
+}
+
+function instantGameRoll(){
+  const list = getCurrentGameList();
+  if(!list || !list.length){ showToast('Нет списка','error'); return; }
+  gameRoll.list = list.slice();
+  gameRoll.target = Math.floor(Math.random()*list.length);
+  gameRoll.currentIndex = gameRoll.target;
+  finishGameRoll();
+}
+
+function finishGameRoll(){
+  if(gameRoll.timer) clearTimeout(gameRoll.timer);
+  gameRoll.phase = 'done';
+  gameRoll.currentIndex = gameRoll.target;
+  renderRollTitles(gameRoll.currentIndex);
+  const name = gameRoll.list[gameRoll.target];
+  const inp = document.getElementById('game-name-input');
+  if(inp) inp.value = name;
+  document.getElementById('btn-start-roll').style.display = 'inline-flex';
+  document.getElementById('btn-stop-roll').style.display = 'none';
+  document.getElementById('btn-instant-roll').style.display = 'inline-flex';
+  const links = document.getElementById('game-roll-links');
+  if(links){
+    links.style.display = 'flex';
+    const plat = (state.pendingMove && state.pendingMove.cellType) || '';
+    const q = encodeURIComponent(name + ' ' + plat);
+    document.getElementById('link-youtube').href = 'https://www.youtube.com/results?search_query=' + q;
+    document.getElementById('link-gamefaqs').href = 'https://gamefaqs.gamespot.com/search?game=' + encodeURIComponent(name);
+  }
+  if(typeof updateGameCatalogHints === 'function') updateGameCatalogHints();
+  showToast('Выпало: ' + name, 'success');
+}
+
+function copyRolledGame(){
+  const name = document.getElementById('game-name-input').value.trim();
+  if(!name) return;
+  navigator.clipboard.writeText(name).then(()=>showToast('Скопировано','success')).catch(()=>showToast('Не удалось скопировать','error'));
+}
+
+// keep old name for compatibility
+function rollRandomGame(){ startGameRoll(); }
+
 function startPlaying(){
   const name=document.getElementById('game-name-input').value.trim();
   if(!name){showToast('Введи название игры!','error'); return;}
