@@ -445,19 +445,19 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px soli
     <p style="text-align:center; margin-bottom:1rem; color:var(--text-muted);" id="game-reveal-info"></p>
     <div class="form-group">
         <label>Название игры</label>
-        <div id="game-roll-area" style="background:var(--bg-elevated); border:1px solid var(--border); border-radius:12px; padding:0.7rem 0.75rem; text-align:center; height:680px; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between; box-sizing:border-box;">
-          <div id="game-roll-titles" style="font-size:0.9rem; font-weight:600; color:var(--text); flex:1; display:flex; flex-direction:column; justify-content:center; gap:2.1rem; min-height:340px; overflow:hidden; text-align:center;">
+        <div id="game-roll-area" style="background:var(--bg-elevated); border:1px solid var(--border); border-radius:12px; padding:0.6rem 0.75rem; text-align:center; box-sizing:border-box;">
+          <div id="game-roll-titles" style="font-size:0.9rem; font-weight:600; color:var(--text); display:flex; flex-direction:column; justify-content:center; gap:0.85rem; min-height:180px; max-height:220px; overflow:hidden; text-align:center; margin-bottom:.6rem;">
             <div style="opacity:.4; font-size:0.9rem;">Нажми «Крутить» чтобы выбрать игру</div>
           </div>
-          <div id="game-roll-controls" style="display:flex; gap:.4rem; justify-content:center; flex-wrap:wrap; margin-top:.25rem;">
+          <div id="game-roll-controls" style="display:flex; gap:.4rem; justify-content:center; flex-wrap:wrap; margin-bottom:.5rem;">
             <button class="btn btn-primary" type="button" id="btn-start-roll" onclick="startGameRoll()" style="padding:.45rem .8rem; font-size:.9rem;">🎲 Крутить</button>
             <button class="btn btn-secondary" type="button" id="btn-stop-roll" onclick="stopGameRoll()" style="display:none; padding:.45rem .8rem; font-size:.9rem;">Стоп</button>
             <button class="btn btn-secondary" type="button" id="btn-instant-roll" onclick="instantGameRoll()" style="padding:.45rem .7rem; font-size:.85rem;">На ультратоненького</button>
           </div>
-          <div id="game-roll-links" style="display:none; gap:.4rem; justify-content:center; flex-wrap:wrap; margin-top:.4rem;">
-            <a id="link-youtube" class="btn" target="_blank" style="text-decoration:none; border:2px solid #ff0000; color:#ff0000; background:transparent; padding:.3rem .6rem; border-radius:7px; font-weight:700; font-size:.85rem;">YT</a>
-            <a id="link-gamefaqs" class="btn" target="_blank" style="text-decoration:none; border:2px solid #4da6ff; color:#4da6ff; background:transparent; padding:.3rem .6rem; border-radius:7px; font-weight:700; font-size:.85rem;">GFAQs</a>
-            <button class="btn" type="button" onclick="copyRolledGame()" title="Копировать" style="border:2px solid var(--border); background:transparent; padding:.3rem .5rem; border-radius:7px; font-size:1rem;">📋</button>
+          <div id="game-roll-links" style="display:flex; gap:.4rem; justify-content:center; flex-wrap:wrap;">
+            <a id="link-youtube" class="btn" target="_blank" style="text-decoration:none; border:2px solid #555; color:#666; background:transparent; padding:.3rem .6rem; border-radius:7px; font-weight:700; font-size:.85rem; pointer-events:none; opacity:.45;">YT</a>
+            <a id="link-gamefaqs" class="btn" target="_blank" style="text-decoration:none; border:2px solid #555; color:#666; background:transparent; padding:.3rem .6rem; border-radius:7px; font-weight:700; font-size:.85rem; pointer-events:none; opacity:.45;">GFAQs</a>
+            <button class="btn" type="button" id="btn-copy-roll" onclick="copyRolledGame()" title="Копировать" disabled style="border:2px solid #555; color:#666; background:transparent; padding:.3rem .5rem; border-radius:7px; font-size:1rem; opacity:.45; cursor:not-allowed;">📋</button>
           </div>
         </div>
         <input type="text" id="game-name-input" placeholder="Или введи вручную" autocomplete="off" style="margin-top:.75rem; width:100%;">
@@ -1160,6 +1160,28 @@ function shuffleArray(arr){
   return a;
 }
 
+
+function setRollLinksActive(active, name){
+  const yt = document.getElementById('link-youtube');
+  const gf = document.getElementById('link-gamefaqs');
+  const cp = document.getElementById('btn-copy-roll');
+  if(!yt || !gf || !cp) return;
+  if(active && name){
+    const plat = (state.pendingMove && state.pendingMove.cellType) || '';
+    const q = encodeURIComponent(name + ' ' + plat);
+    yt.href = 'https://www.youtube.com/results?search_query=' + q;
+    gf.href = 'https://gamefaqs.gamespot.com/search?game=' + encodeURIComponent(name);
+    yt.style.borderColor = '#ff0000'; yt.style.color = '#ff0000'; yt.style.opacity = '1'; yt.style.pointerEvents = 'auto';
+    gf.style.borderColor = '#4da6ff'; gf.style.color = '#4da6ff'; gf.style.opacity = '1'; gf.style.pointerEvents = 'auto';
+    cp.disabled = false; cp.style.borderColor = 'var(--border)'; cp.style.color = 'var(--text)'; cp.style.opacity = '1'; cp.style.cursor = 'pointer';
+  } else {
+    yt.href = '#'; gf.href = '#';
+    yt.style.borderColor = '#555'; yt.style.color = '#666'; yt.style.opacity = '.45'; yt.style.pointerEvents = 'none';
+    gf.style.borderColor = '#555'; gf.style.color = '#666'; gf.style.opacity = '.45'; gf.style.pointerEvents = 'none';
+    cp.disabled = true; cp.style.borderColor = '#555'; cp.style.color = '#666'; cp.style.opacity = '.45'; cp.style.cursor = 'not-allowed';
+  }
+}
+
 function startGameRoll(){
   const list = getCurrentGameList();
   if(!list || !list.length){ showToast('Нет списка для этой клетки','error'); return; }
@@ -1173,7 +1195,7 @@ function startGameRoll(){
   document.getElementById('btn-start-roll').style.display = 'none';
   document.getElementById('btn-stop-roll').style.display = 'inline-flex';
   document.getElementById('btn-instant-roll').style.display = 'inline-flex';
-  document.getElementById('game-roll-links').style.display = 'none';
+  setRollLinksActive(false);
   runGameRoll();
 }
 
@@ -1265,14 +1287,7 @@ function finishGameRoll(){
   document.getElementById('btn-start-roll').style.display = 'inline-flex';
   document.getElementById('btn-stop-roll').style.display = 'none';
   document.getElementById('btn-instant-roll').style.display = 'inline-flex';
-  const links = document.getElementById('game-roll-links');
-  if(links){
-    links.style.display = 'flex';
-    const plat = (state.pendingMove && state.pendingMove.cellType) || '';
-    const q = encodeURIComponent(name + ' ' + plat);
-    document.getElementById('link-youtube').href = 'https://www.youtube.com/results?search_query=' + q;
-    document.getElementById('link-gamefaqs').href = 'https://gamefaqs.gamespot.com/search?game=' + encodeURIComponent(name);
-  }
+  setRollLinksActive(true, name);
   if(typeof updateGameCatalogHints === 'function') updateGameCatalogHints();
   showToast('Выпало: ' + name, 'success');
 }
