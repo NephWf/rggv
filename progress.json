@@ -1,14 +1,14 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-11-10T17:57:54.025Z",
+  "exportedAt": "2026-11-10T17:58:05.590Z",
   "state": {
     "player": {
       "name": "NephWolf",
       "emoji": "🐺",
       "color": "#20c997"
     },
-    "position": 32,
+    "position": 23,
     "cells": [
       null,
       {
@@ -767,38 +767,23 @@
         "cellNum": 23,
         "cellType": "Castlevania",
         "game": "Castlevania II: Belmont's Revenge (GBC)",
-        "status": "Пройдено",
+        "status": "Играется",
         "time": "3 ч 50 мин",
         "rating": null,
         "comment": "",
         "timeMinutes": 230,
-        "wheelSpins": 6,
-        "piggyDeposit": 0
-      },
-      {
-        "id": "mwaztfad5uz5q",
-        "hod": 23,
-        "date": "2026-11-10",
-        "dice": 6,
-        "move": "23 → 32 (кубик 6 + 3 очк.)",
-        "cellNum": 32,
-        "cellType": "Sonic",
-        "game": "Sonic Rivals 2",
-        "status": "Играется",
-        "time": null,
-        "rating": null,
-        "comment": ""
+        "wheelSpins": 6
       }
     ],
     "phase": "playing",
     "currentGame": {
-      "name": "Sonic Rivals 2",
-      "cellType": "Sonic",
-      "cellNum": 32,
-      "logId": "mwaztfad5uz5q"
+      "name": "Castlevania II: Belmont's Revenge (GBC)",
+      "cellType": "Castlevania",
+      "cellNum": 23,
+      "logId": "mtudaw2wutcod"
     },
     "pendingMove": null,
-    "lastDice": 6,
+    "lastDice": 5,
     "rules": "",
     "setupDone": true,
     "theme": "dark",
@@ -810,9 +795,17 @@
       "green": "#3dd68c",
       "red": "#ff6b6b"
     },
-    "points": 0,
-    "currentGameSpins": 0,
-    "currentGameWheelMinutes": 0,
+    "points": 3,
+    "currentGameSpins": 1,
+    "currentGameWheelMinutes": 230,
+    "currentGameSpinCosts": [
+      30,
+      35,
+      40,
+      45,
+      50,
+      30
+    ],
     "spinHistory": [
       {
         "id": "mt0hx8qcufow8",
@@ -1576,10 +1569,9 @@
       }
     ],
     "inventoryRerolls": 0,
-    "consecutiveDone": 1,
+    "consecutiveDone": 0,
     "piggyMinutes": 50,
     "piggyThreshold": 100,
-    "currentGameSpinCosts": [],
-    "nextDiceDir": "forward"
+    "nextDiceDir": "back"
   }
 }
