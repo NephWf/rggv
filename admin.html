@@ -445,8 +445,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px soli
     <p style="text-align:center; margin-bottom:1rem; color:var(--text-muted);" id="game-reveal-info"></p>
     <div class="form-group">
         <label>Название игры</label>
-        <div id="game-roll-area" style="background:var(--bg-elevated); border:1px solid var(--border); border-radius:12px; padding:0.7rem 0.75rem; text-align:center; height:290px; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between; box-sizing:border-box;">
-          <div id="game-roll-titles" style="font-size:0.9rem; font-weight:600; line-height:1.7; color:var(--text); flex:1; display:flex; flex-direction:column; justify-content:center; min-height:140px; overflow:hidden;">
+        <div id="game-roll-area" style="background:var(--bg-elevated); border:1px solid var(--border); border-radius:12px; padding:0.7rem 0.75rem; text-align:center; height:310px; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between; box-sizing:border-box;">
+          <div id="game-roll-titles" style="font-size:0.9rem; font-weight:600; color:var(--text); flex:1; display:flex; flex-direction:column; justify-content:center; gap:0.65rem; min-height:150px; overflow:hidden; text-align:center;">
             <div style="opacity:.4; font-size:0.9rem;">Нажми «Крутить» чтобы выбрать игру</div>
           </div>
           <div id="game-roll-controls" style="display:flex; gap:.4rem; justify-content:center; flex-wrap:wrap; margin-top:.25rem;">
@@ -1136,7 +1136,7 @@ function renderRollTitles(centerIdx){
     const opacity = i===0 ? 1 : Math.max(0.3, 1 - Math.abs(i)*0.28);
     const weight = i===0 ? '700' : '500';
     const size = i===0 ? '1.02rem' : '0.8rem';
-    lines.push('<div style="opacity:'+opacity+'; font-weight:'+weight+'; font-size:'+size+'; transition:all .08s;">'+esc(list[idx])+'</div>');
+    lines.push('<div style="opacity:'+opacity+'; font-weight:'+weight+'; font-size:'+size+'; line-height:1.25; transition:all .08s; word-break:break-word;">'+esc(list[idx])+'</div>');
   }
   el.innerHTML = lines.join('');
 }
