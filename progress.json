@@ -1,7 +1,7 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-11-10T17:57:15.069Z",
+  "exportedAt": "2026-11-10T17:57:54.025Z",
   "state": {
     "player": {
       "name": "NephWolf",
@@ -774,18 +774,30 @@
         "timeMinutes": 230,
         "wheelSpins": 6,
         "piggyDeposit": 0
+      },
+      {
+        "id": "mwaztfad5uz5q",
+        "hod": 23,
+        "date": "2026-11-10",
+        "dice": 6,
+        "move": "23 → 32 (кубик 6 + 3 очк.)",
+        "cellNum": 32,
+        "cellType": "Sonic",
+        "game": "Sonic Rivals 2",
+        "status": "Играется",
+        "time": null,
+        "rating": null,
+        "comment": ""
       }
     ],
-    "phase": "waiting_game",
-    "currentGame": null,
-    "pendingMove": {
-      "from": 23,
-      "to": 32,
-      "dice": 6,
-      "moveStr": "23 → 32 (кубик 6 + 3 очк.)",
+    "phase": "playing",
+    "currentGame": {
+      "name": "Sonic Rivals 2",
       "cellType": "Sonic",
-      "direction": "forward"
+      "cellNum": 32,
+      "logId": "mwaztfad5uz5q"
     },
+    "pendingMove": null,
     "lastDice": 6,
     "rules": "",
     "setupDone": true,
