@@ -1168,8 +1168,17 @@ function setRollLinksActive(active, name){
   const cp = document.getElementById('btn-copy-roll');
   if(!yt || !gf || !cp) return;
   if(active && name){
-    const plat = (state.pendingMove && state.pendingMove.cellType) || '';
-    const q = encodeURIComponent(name + ' ' + plat);
+    const cellType = (state.pendingMove && state.pendingMove.cellType) || '';
+    const isPlatform = (typeof PLATFORMS !== 'undefined') && PLATFORMS.includes(cellType);
+    let searchPlat = '';
+    if(isPlatform){
+      searchPlat = cellType;
+    } else {
+      // special roll: try to take platform from title parentheses, e.g. "Game (GBC)"
+      const m = name.match(/\(([^)]+)\)\s*$/);
+      if(m) searchPlat = m[1];
+    }
+    const q = encodeURIComponent(searchPlat ? (name + ' ' + searchPlat) : name);
     yt.href = 'https://www.youtube.com/results?search_query=' + q;
     gf.href = 'https://gamefaqs.gamespot.com/search?game=' + encodeURIComponent(name);
     yt.style.borderColor = '#ff0000'; yt.style.color = '#ff0000'; yt.style.opacity = '1'; yt.style.pointerEvents = 'auto';
