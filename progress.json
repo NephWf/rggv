@@ -1,14 +1,14 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-11-10T17:58:05.590Z",
+  "exportedAt": "2026-11-10T18:08:39.224Z",
   "state": {
     "player": {
       "name": "NephWolf",
       "emoji": "🐺",
       "color": "#20c997"
     },
-    "position": 23,
+    "position": 28,
     "cells": [
       null,
       {
@@ -767,23 +767,26 @@
         "cellNum": 23,
         "cellType": "Castlevania",
         "game": "Castlevania II: Belmont's Revenge (GBC)",
-        "status": "Играется",
+        "status": "Пройдено",
         "time": "3 ч 50 мин",
         "rating": null,
         "comment": "",
         "timeMinutes": 230,
-        "wheelSpins": 6
+        "wheelSpins": 6,
+        "piggyDeposit": 0
       }
     ],
-    "phase": "playing",
-    "currentGame": {
-      "name": "Castlevania II: Belmont's Revenge (GBC)",
-      "cellType": "Castlevania",
-      "cellNum": 23,
-      "logId": "mtudaw2wutcod"
+    "phase": "waiting_game",
+    "currentGame": null,
+    "pendingMove": {
+      "from": 23,
+      "to": 28,
+      "dice": 2,
+      "moveStr": "23 → 28 (кубик 2 + 3 очк.)",
+      "cellType": "DS",
+      "direction": "forward"
     },
-    "pendingMove": null,
-    "lastDice": 5,
+    "lastDice": 2,
     "rules": "",
     "setupDone": true,
     "theme": "dark",
@@ -795,17 +798,10 @@
       "green": "#3dd68c",
       "red": "#ff6b6b"
     },
-    "points": 3,
-    "currentGameSpins": 1,
-    "currentGameWheelMinutes": 230,
-    "currentGameSpinCosts": [
-      30,
-      35,
-      40,
-      45,
-      50,
-      30
-    ],
+    "points": 0,
+    "currentGameSpins": 0,
+    "currentGameWheelMinutes": 0,
+    "currentGameSpinCosts": [],
     "spinHistory": [
       {
         "id": "mt0hx8qcufow8",
@@ -1569,9 +1565,9 @@
       }
     ],
     "inventoryRerolls": 0,
-    "consecutiveDone": 0,
+    "consecutiveDone": 1,
     "piggyMinutes": 50,
     "piggyThreshold": 100,
-    "nextDiceDir": "back"
+    "nextDiceDir": "forward"
   }
 }
