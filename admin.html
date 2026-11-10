@@ -1167,7 +1167,9 @@ function startGameRoll(){
   gameRoll.target = Math.floor(Math.random()*gameRoll.list.length);
   gameRoll.currentIndex = Math.floor(Math.random()*gameRoll.list.length);
   gameRoll.phase = 'fast';
-  gameRoll.speed = 40;
+  gameRoll.speed = 50;
+  gameRoll.ticks = 0;
+  gameRoll.peppered = false;
   document.getElementById('btn-start-roll').style.display = 'none';
   document.getElementById('btn-stop-roll').style.display = 'inline-flex';
   document.getElementById('btn-instant-roll').style.display = 'inline-flex';
@@ -1177,41 +1179,62 @@ function startGameRoll(){
 
 function runGameRoll(){
   if(gameRoll.timer) clearTimeout(gameRoll.timer);
+  // init timing state
+  if(!gameRoll.ticks){
+    gameRoll.ticks = 0;
+    gameRoll.fastTicks = 28 + Math.floor(Math.random()*12); // ~1.5-2.5s of steady spin
+    gameRoll.slowTicks = 18 + Math.floor(Math.random()*8);
+    gameRoll.peppered = false;
+  }
   const step = ()=>{
+    gameRoll.ticks++;
     gameRoll.currentIndex = (gameRoll.currentIndex + 1) % gameRoll.list.length;
     renderRollTitles(gameRoll.currentIndex);
+
     if(gameRoll.phase === 'fast'){
-      gameRoll.speed = Math.min(gameRoll.speed + 0.3, 80);
-      if(Math.random() < 0.008) gameRoll.phase = 'slow'; // auto slow sometimes
-    } else if(gameRoll.phase === 'slow'){
-      gameRoll.speed = Math.min(gameRoll.speed + 8, 280);
-      if(gameRoll.speed > 200 && Math.random() < 0.15){
-        // перчинка
-        const dir = Math.random() < 0.5 ? 1 : -1;
-        const jumps = 3 + Math.floor(Math.random()*8);
-        gameRoll.currentIndex = (gameRoll.currentIndex + dir*jumps + gameRoll.list.length) % gameRoll.list.length;
-        gameRoll.phase = 'finish';
+      // steady normal speed
+      gameRoll.speed = 48 + Math.sin(gameRoll.ticks * 0.15) * 4;
+      if(gameRoll.ticks >= gameRoll.fastTicks){
+        gameRoll.phase = 'slow';
+        gameRoll.slowStartTick = gameRoll.ticks;
       }
-      if(gameRoll.speed >= 260) gameRoll.phase = 'finish';
+    } else if(gameRoll.phase === 'slow'){
+      const t = (gameRoll.ticks - gameRoll.slowStartTick) / gameRoll.slowTicks;
+      // smooth ease-out curve: starts near 55ms, ends ~320ms
+      const eased = 1 - Math.pow(1 - Math.min(t, 1), 2.2);
+      gameRoll.speed = 55 + eased * 270;
+      // optional pepper near the end of slowdown
+      if(!gameRoll.peppered && t > 0.65 && Math.random() < 0.18){
+        gameRoll.peppered = true;
+        const dir = Math.random() < 0.5 ? 1 : -1;
+        const jumps = 2 + Math.floor(Math.random()*6);
+        gameRoll.currentIndex = (gameRoll.currentIndex + dir*jumps + gameRoll.list.length) % gameRoll.list.length;
+      }
+      if(t >= 1){
+        gameRoll.phase = 'finish';
+        gameRoll.finishTicks = 0;
+      }
     } else if(gameRoll.phase === 'finish'){
-      // snap to target gradually
+      gameRoll.finishTicks = (gameRoll.finishTicks||0) + 1;
       const diff = (gameRoll.target - gameRoll.currentIndex + gameRoll.list.length) % gameRoll.list.length;
-      if(diff === 0 || gameRoll.speed > 400){
+      // gentle final crawl
+      gameRoll.speed = 180 + gameRoll.finishTicks * 22;
+      if(diff === 0 || gameRoll.finishTicks > 14 || gameRoll.speed > 480){
         finishGameRoll();
         return;
       }
-      gameRoll.speed += 15;
     }
-    gameRoll.timer = setTimeout(step, gameRoll.speed);
+    gameRoll.timer = setTimeout(step, Math.max(30, gameRoll.speed));
   };
   step();
 }
 
 function stopGameRoll(){
-  // skip fast phase
+  // skip remaining fast phase and go into slowdown
   if(gameRoll.phase === 'fast'){
     gameRoll.phase = 'slow';
-    gameRoll.speed = 120;
+    gameRoll.slowStartTick = gameRoll.ticks || 0;
+    gameRoll.speed = 90;
   } else {
     finishGameRoll();
   }
