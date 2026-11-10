@@ -1204,25 +1204,30 @@ function runGameRoll(){
       const eased = 1 - Math.pow(1 - Math.min(t, 1), 2.2);
       gameRoll.speed = 55 + eased * 270;
       // optional pepper near the end of slowdown
-      if(!gameRoll.peppered && t > 0.65 && Math.random() < 0.18){
+      if(!gameRoll.peppered && t > 0.72 && Math.random() < 0.12){
         gameRoll.peppered = true;
         const dir = Math.random() < 0.5 ? 1 : -1;
-        const jumps = 2 + Math.floor(Math.random()*6);
+        const jumps = 1 + Math.floor(Math.random()*3);
         gameRoll.currentIndex = (gameRoll.currentIndex + dir*jumps + gameRoll.list.length) % gameRoll.list.length;
+        gameRoll.target = gameRoll.currentIndex; // stay consistent with what is shown
       }
       if(t >= 1){
         gameRoll.phase = 'finish';
         gameRoll.finishTicks = 0;
+        gameRoll.target = gameRoll.currentIndex; // lock to what is on screen
       }
     } else if(gameRoll.phase === 'finish'){
+      // lock onto whatever is currently centered — no jump to a different target
+      gameRoll.target = gameRoll.currentIndex;
       gameRoll.finishTicks = (gameRoll.finishTicks||0) + 1;
-      const diff = (gameRoll.target - gameRoll.currentIndex + gameRoll.list.length) % gameRoll.list.length;
-      // gentle final crawl
-      gameRoll.speed = 180 + gameRoll.finishTicks * 22;
-      if(diff === 0 || gameRoll.finishTicks > 14 || gameRoll.speed > 480){
+      gameRoll.speed = 220 + gameRoll.finishTicks * 30;
+      if(gameRoll.finishTicks > 6 || gameRoll.speed > 400){
         finishGameRoll();
         return;
       }
+      // do not advance further
+      gameRoll.timer = setTimeout(step, Math.max(30, gameRoll.speed));
+      return;
     }
     gameRoll.timer = setTimeout(step, Math.max(30, gameRoll.speed));
   };
