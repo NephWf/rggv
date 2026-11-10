@@ -1,14 +1,14 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-11-10T18:16:51.129Z",
+  "exportedAt": "2026-11-10T18:17:17.043Z",
   "state": {
     "player": {
       "name": "NephWolf",
       "emoji": "🐺",
       "color": "#20c997"
     },
-    "position": 47,
+    "position": 49,
     "cells": [
       null,
       {
@@ -205,7 +205,7 @@
       },
       {
         "type": "Comix",
-        "revealed": false
+        "revealed": true
       },
       {
         "type": "GB",
@@ -869,21 +869,26 @@
         "cellNum": 47,
         "cellType": "Castlevania",
         "game": "Castlevania (NES)",
-        "status": "Играется",
-        "time": null,
+        "status": "Пройдено",
+        "time": "0",
         "rating": null,
-        "comment": ""
+        "comment": "",
+        "timeMinutes": 0,
+        "wheelSpins": 0,
+        "piggyDeposit": 0
       }
     ],
-    "phase": "playing",
-    "currentGame": {
-      "name": "Castlevania (NES)",
-      "cellType": "Castlevania",
-      "cellNum": 47,
-      "logId": "mwb0b2lrp8on0"
+    "phase": "waiting_game",
+    "currentGame": null,
+    "pendingMove": {
+      "from": 47,
+      "to": 49,
+      "dice": 2,
+      "moveStr": "47 → 49",
+      "cellType": "Comix",
+      "direction": "forward"
     },
-    "pendingMove": null,
-    "lastDice": 1,
+    "lastDice": 2,
     "rules": "",
     "setupDone": true,
     "theme": "dark",
@@ -1660,8 +1665,8 @@
         "key": "luck_kick"
       }
     ],
-    "inventoryRerolls": 5,
-    "consecutiveDone": 6,
+    "inventoryRerolls": 6,
+    "consecutiveDone": 7,
     "piggyMinutes": 50,
     "piggyThreshold": 100,
     "currentGameSpinCosts": [],
