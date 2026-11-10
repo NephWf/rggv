@@ -1,14 +1,14 @@
 {
   "app": "RGGV by NW",
   "version": "2.14",
-  "exportedAt": "2026-11-10T18:43:22.680Z",
+  "exportedAt": "2026-11-10T18:43:56.298Z",
   "state": {
     "player": {
       "name": "NephWolf",
       "emoji": "🐺",
       "color": "#20c997"
     },
-    "position": 49,
+    "position": 23,
     "cells": [
       null,
       {
@@ -149,7 +149,7 @@
       },
       {
         "type": "Dreamcast",
-        "revealed": true
+        "revealed": false
       },
       {
         "type": "GC",
@@ -169,7 +169,7 @@
       },
       {
         "type": "SNES",
-        "revealed": true
+        "revealed": false
       },
       {
         "type": "PS2",
@@ -193,11 +193,11 @@
       },
       {
         "type": "Konami",
-        "revealed": true
+        "revealed": false
       },
       {
         "type": "Castlevania",
-        "revealed": true
+        "revealed": false
       },
       {
         "type": "Nintendo",
@@ -205,7 +205,7 @@
       },
       {
         "type": "Comix",
-        "revealed": true
+        "revealed": false
       },
       {
         "type": "GB",
@@ -767,128 +767,23 @@
         "cellNum": 23,
         "cellType": "Castlevania",
         "game": "Castlevania II: Belmont's Revenge (GBC)",
-        "status": "Пройдено",
+        "status": "Играется",
         "time": "3 ч 50 мин",
         "rating": null,
         "comment": "",
         "timeMinutes": 230,
-        "wheelSpins": 6,
-        "piggyDeposit": 0
-      },
-      {
-        "id": "mwb08r49rjktk",
-        "hod": 23,
-        "date": "2026-11-10",
-        "dice": 2,
-        "move": "23 → 28 (кубик 2 + 3 очк.)",
-        "cellNum": 28,
-        "cellType": "DS",
-        "game": "Kamen Rider Battle Ganbaride: Card Battle Taisen",
-        "status": "Пройдено",
-        "time": "0",
-        "rating": null,
-        "comment": "",
-        "timeMinutes": 0,
-        "wheelSpins": 0,
-        "piggyDeposit": 0
-      },
-      {
-        "id": "mwb09fitiyle4",
-        "hod": 24,
-        "date": "2026-11-10",
-        "dice": 1,
-        "move": "28 → 29",
-        "cellNum": 29,
-        "cellType": "SMD",
-        "game": "Garfield: Caught in the Act",
-        "status": "Пройдено",
-        "time": "0",
-        "rating": null,
-        "comment": "",
-        "timeMinutes": 0,
-        "wheelSpins": 0,
-        "piggyDeposit": 0
-      },
-      {
-        "id": "mwb09pzy4j63m",
-        "hod": 25,
-        "date": "2026-11-10",
-        "dice": 6,
-        "move": "29 → 35",
-        "cellNum": 35,
-        "cellType": "Dreamcast",
-        "game": "Toy Racer",
-        "status": "Пройдено",
-        "time": "0",
-        "rating": null,
-        "comment": "",
-        "timeMinutes": 0,
-        "wheelSpins": 0,
-        "piggyDeposit": 0
-      },
-      {
-        "id": "mwb0a242md4ya",
-        "hod": 26,
-        "date": "2026-11-10",
-        "dice": 5,
-        "move": "35 → 40",
-        "cellNum": 40,
-        "cellType": "SNES",
-        "game": "Kyle Petty's No Fear Racing",
-        "status": "Пройдено",
-        "time": "0",
-        "rating": null,
-        "comment": "",
-        "timeMinutes": 0,
-        "wheelSpins": 0,
-        "piggyDeposit": 0
-      },
-      {
-        "id": "mwb0anf70qx04",
-        "hod": 27,
-        "date": "2026-11-10",
-        "dice": 6,
-        "move": "40 → 46",
-        "cellNum": 46,
-        "cellType": "Konami",
-        "game": "Ganbare Goemon: Sarawareta Ebisumaru! (GB)",
-        "status": "Пройдено",
-        "time": "0",
-        "rating": null,
-        "comment": "",
-        "timeMinutes": 0,
-        "wheelSpins": 0,
-        "piggyDeposit": 0
-      },
-      {
-        "id": "mwb0b2lrp8on0",
-        "hod": 28,
-        "date": "2026-11-10",
-        "dice": 1,
-        "move": "46 → 47",
-        "cellNum": 47,
-        "cellType": "Castlevania",
-        "game": "Castlevania (NES)",
-        "status": "Пройдено",
-        "time": "0",
-        "rating": null,
-        "comment": "",
-        "timeMinutes": 0,
-        "wheelSpins": 0,
-        "piggyDeposit": 0
+        "wheelSpins": 6
       }
     ],
-    "phase": "waiting_game",
-    "currentGame": null,
-    "pendingMove": {
-      "from": 47,
-      "to": 49,
-      "dice": 2,
-      "moveStr": "47 → 49",
-      "cellType": "Comix",
-      "direction": "forward"
+    "phase": "playing",
+    "currentGame": {
+      "name": "Castlevania II: Belmont's Revenge (GBC)",
+      "cellType": "Castlevania",
+      "cellNum": 23,
+      "logId": "mtudaw2wutcod"
     },
-    "lastDice": 2,
+    "pendingMove": null,
+    "lastDice": 5,
     "rules": "",
     "setupDone": true,
     "theme": "dark",
@@ -900,9 +795,17 @@
       "green": "#3dd68c",
       "red": "#ff6b6b"
     },
-    "points": 0,
-    "currentGameSpins": 0,
-    "currentGameWheelMinutes": 0,
+    "points": 3,
+    "currentGameSpins": 1,
+    "currentGameWheelMinutes": 230,
+    "currentGameSpinCosts": [
+      30,
+      35,
+      40,
+      45,
+      50,
+      30
+    ],
     "spinHistory": [
       {
         "id": "mt0hx8qcufow8",
@@ -1665,11 +1568,10 @@
         "key": "luck_kick"
       }
     ],
-    "inventoryRerolls": 6,
-    "consecutiveDone": 7,
+    "inventoryRerolls": 0,
+    "consecutiveDone": 0,
     "piggyMinutes": 50,
     "piggyThreshold": 100,
-    "currentGameSpinCosts": [],
-    "nextDiceDir": "forward"
+    "nextDiceDir": "back"
   }
 }
